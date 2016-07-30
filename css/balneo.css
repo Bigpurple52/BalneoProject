@@ -56,6 +56,11 @@
     margin: 0 1rem;
 }
 
+#AccueilContent{
+    background-color: red;
+    height: calc(100vh - 50px);
+}
+
 /* Sidebar Styles */
 
 .sidebar-nav {
