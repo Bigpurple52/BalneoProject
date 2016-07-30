@@ -48,6 +48,7 @@
                             <label class="control-label" for="mail">Email</label>
                             <input id="mail" class="form-control required email" type="text" placeholder="Mon email" name="mail" data-placement="right" data-trigger="manual" value="<?php if(isset($_POST['mail'])) { echo htmlentities($_POST['mail']);}?>" data-content="Doit etre une adresse mail valide (user@gmail.com)"/>
                         </div>
+                        <hr/>
                         <input type="submit" class="btn btn-primary" name="submit" value="S'incrire"/>
                     </div>
                 </form>
