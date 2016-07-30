@@ -22,6 +22,40 @@
 	border: 0;
 }
 
+.page-header{
+    position: absolute;
+    text-align: center;
+    min-width: 100%;
+    margin: 0 0 0 20rem;
+    background-color: darkred;
+    color: #fff;
+}
+
+.footer{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0 0 0 450px;
+    color: #fff;
+}
+
+.navbar-inverse{
+    border-radius: 0;
+}
+
+.footerContent{
+   min-height: 50px;
+   margin-left: -450px;
+   margin-top: 1.5rem;
+   text-align: center;
+}
+
+.separator{
+    height: 1rem;
+    border-right: 2px solid rgba(40,40,40,0.8);
+    margin: 0 1rem;
+}
+
 /* Sidebar Styles */
 
 .sidebar-nav {

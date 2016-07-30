@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <title>Inscription</title>
-        <link rel="stylesheet" href="../../css/balneo.css">
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/balneo.css">
     </head>
  
     <body>
