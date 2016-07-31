@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8" />
@@ -25,9 +25,9 @@
                         <li class="sidebar-brand">
                             <a href="#">
                                 <h2 class="sideMenuTitle">Au centre Balnéo'H-Kylé</h2>
+                                <hr/>
                             </a>
                         </li>
-                        <hr/>
                         <li>
                             <a href="#">AquaDouce</a>
                         </li>
@@ -58,7 +58,7 @@
 
                     <!-- top nav -->
                     <div class="navbar navbar-blue navbar-static-top">
-                        <nav class="collapse navbar-collapse no-margin" role="navigation">
+                        <nav class="collapse navbar-collapse no-margin">
                             <h3>" L'Eau de Noé "</h3>
                             <h3>Cours de natation / Aquagym / Aquabike / Aquaphobie</h3>
                             <h3>A votre domicile ou dans le centre NEOS à Montpellier (34)</h3>
