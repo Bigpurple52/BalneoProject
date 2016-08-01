@@ -11,81 +11,59 @@ html, body {
 }
 
 a {
-  color:#222222;
+  color:#fff;
 }
 
 a:hover {
   text-decoration:none;
+  color: #fff
+}
+
+a:focus {
+  color: #fff
 }
 
 hr {
   border-color:#dedede;
 }
 
-.wrapper, .row {
+.row {
    height: 100%;
    margin-left:0;
    margin-right:0;
 }
 
-.wrapper:before, .wrapper:after,
-.column:before, .column:after {
+.wrapper {
+   height: 100vh;
+   margin-left:0;
+   margin-right:0;
+   background-color: rgb(90,90,90);
+}
+
+.wrapper:before, .wrapper:after,{
     content: "";
     display: table;
 }
 
-.wrapper:after,
-.column:after {
+.wrapper:after,{
     clear: both;
-}
-
-.column {
-    height: 100%;
-    *zoom:1;
-}
-
-.column .padding {
-    padding: 20px;
 }
 
 .full{
 	padding-top:108px;
 }
 
-.box {
-  	bottom: 0; /* increase for footer use */
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color:#444444;
-}
-
 .divider {
 	margin-top:32px;
 }
 
-.navbar-blue {
-    border-width:0;
-	background-color:#3B5999;
-    color:#ffffff;
-    font-family:arial,sans-serif;
-    top:0;
-    position:fixed;
-    width:inherit;
-    text-align: center;
-}
-
-.navbar-blue li > a,.navbar-toggle  {
-   color:#efefef;
-}
-
-.navbar-blue .dropdown-menu li a {color:#2A4888;}
-.navbar-blue .dropdown-menu li > a {padding-left:30px;}
-
-.navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
-   background-color:#2A4888;
-   color:#fff;
+header{
+    background-image: url("../assets/aquafitness.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: #fff;
+    text-align: left;
 }
 
 .center{
@@ -94,7 +72,7 @@ hr {
 
 #main {
    background-color:#e9eaed;
-   padding-left:0;
+   padding-left:20px;
    padding-right:0;
 }
 #main .img-circle {
@@ -111,18 +89,14 @@ hr {
 #sidebar, #sidebar a, #sidebar-footer a {
     color:#ffffff;
     background-color:transparent;
-	text-shadow:0 0 2px #000000;
+	text-shadow:0 0 2px #fff;
     padding-left:5px;
-}
-
-#footer {
-  margin-bottom:20px;
-  
 }
 
 .footerContent{
     width: 100%;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .footerContent > a {
@@ -133,6 +107,10 @@ hr {
 
 h1,h2,h3 {
    font-weight:800;
+}
+
+.navbar {
+    width: 100%;
 }
 
 .navbar-toggle, .close {
@@ -157,11 +135,6 @@ h1,h2,h3 {
   letter-spacing:2px;
 }
 
-.panel-default .panel-heading {
-    background-color:#f9fafb;
-    color:#555555;
-}
-
 .col-sm-9.full {
     width: 100%;
 }
@@ -175,12 +148,22 @@ h1,h2,h3 {
 }
 
 .sidebar-nav li:not(.sidebar-brand) {
-    padding: 16px 46px 16px 16px;
+    padding: 16px 46px 16px 0;
     font-size: 22px;
 }
 
+.sidebar-nav li.sidebar-brand a:focus {
+    text-decoration:none; 
+}
+
 .sidebar-nav li:not(.sidebar-brand):hover {
-     background-color:#393939;
+     background-color:#333;
+     font-weight: bold;
+     font-size: 20px;
+}
+
+ul {
+    padding-left: 10px;
 }
 
 .separator{
@@ -190,6 +173,6 @@ h1,h2,h3 {
 }
 
 .acceuil-content{
-    height: calc( 100vh - 170px );
+    height: calc( 100vh - 96px );
     text-align: justify;
 }
