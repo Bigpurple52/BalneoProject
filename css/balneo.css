@@ -40,12 +40,12 @@ hr {
     background-color: rgb(90,90,90);
 }
 
-.wrapper:before, .wrapper:after,{
+.wrapper:before, .wrapper:after{
     content: "";
     display: table;
 }
 
-.wrapper:after,{
+.wrapper:after{
     clear: both;
 }
 
@@ -97,7 +97,7 @@ header{
 }
 
 .footerContent > a {
-    color :2A4888;
+    color :#2A4888;
 }
 
 /* bootstrap overrides */
