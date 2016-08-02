@@ -173,3 +173,8 @@ ul {
     height: calc( 100vh - 96px );
     text-align: justify;
 }
+
+.logoTitle{
+    display: inline;
+    margin-left: 3%;
+}
