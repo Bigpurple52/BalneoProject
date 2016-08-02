@@ -92,11 +92,6 @@ header{
 .footerContent{
     width: 100%;
     text-align: center;
-    margin-top: 1rem;
-}
-
-.footerContent > a {
-    color :#2A4888;
 }
 
 /* bootstrap overrides */
@@ -155,10 +150,10 @@ h2.inscription{
     text-decoration:none;
 }
 
-.sidebar-nav li:not(.sidebar-brand):hover {
-    background-color:#333;
+.sidebar-nav li:not(.sidebar-brand) a:hover {
     font-weight: bold;
     font-size: 20px;
+    text-decoration: underline;
 }
 
 ul {
