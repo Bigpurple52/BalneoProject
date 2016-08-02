@@ -103,6 +103,18 @@
                                     <label class="control-label" for="lieunaissance">Lieu de naissance</label>
                                     <input id="lieunaissance" class="form-control" type="text" placeholder="Mon lieu de naissance" name="tel" data-placement="right" data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)"/>
                                 </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="adresse">Adresse</label>
+                                    <input id="adresse" class="form-control" type="text" placeholder="Mon adresse" name="adresse" data-placement="right" data-trigger="manual" value="" data-content="Adresse"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="ville">Ville</label>
+                                    <input id="ville" class="form-control" type="text" placeholder="Ma ville" name="ville" data-placement="right" data-trigger="manual" value="" data-content="ville actuelle"/>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="codepostal">Code Postal</label>
+                                    <input id="codepostal" class="form-control" type="text" placeholder="Code Postale" name="codepostal" data-placement="right" data-trigger="manual" value="" data-content="Code Postal"/>
+                                </div>
                                 <hr/>
                                 <input type="submit" class="btn btn-primary" name="submit" value="S'incrire"/>
                             </div>
