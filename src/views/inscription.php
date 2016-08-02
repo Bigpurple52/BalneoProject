@@ -19,7 +19,10 @@
                 <header>
                     <nav class="collapse navbar-collapse">
                         <br/>
-                        <h3>Au centre Balnéo K-Hylé</h3>
+                        <div>
+                            <img src="../../assets/logo K-HYLE.png">
+                            <h3 class="logoTitle">Au centre Balnéo K-Hylé</h3>
+                        </div>
                         <br/>
                     </nav>
                 </header>
