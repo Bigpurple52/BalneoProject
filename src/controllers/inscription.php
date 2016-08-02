@@ -71,7 +71,7 @@
                         <h2 class="inscription">Inscription</h2>
                         <hr class="hrtrait"/>
                         <h2 class="inscription">Vos informations personnelles</h2><hr />
-                        <form role="form" class="well" name="inscription1" method="POST" action="">
+                        <form role="form" class="well" name="inscription1" method="POST" action="InscriptionCheck.php">
                             <div class="form-group" id="login-form">
                                 <div class="form-group">
                                     <label class="control-label" for="nom">Nom</label>
