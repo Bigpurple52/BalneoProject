@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/balneo.css">
+        <meta name="robots" content="noindex,nofollow" />
     </head>
 
     <body>
@@ -69,7 +70,7 @@
                         <h2 class="inscription">Inscription</h2>
                         <hr class="hrtrait"/>
                         <h2 class="inscription">Vos informations personnelles</h2><hr />
-                        <form role="form" class="well" name="inscription1" method="POST" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>>
+                        <form role="form" class="well" name="inscription1" method="POST" action="">
                             <div class="form-group" id="login-form">
                                 <div class="form-group">
                                     <label class="control-label" for="nom">Nom</label>
