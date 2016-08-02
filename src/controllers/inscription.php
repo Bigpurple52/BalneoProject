@@ -7,6 +7,7 @@
         <meta name="description" content="activité aquatique à Montpellier : Aquadynamic">
         <meta name="keywords" content="Activités aquatiques;Aquadynamic;">
         <title>aqua-balneo.fr : Aquadynamic</title>
+        <link rel="icon" href="../../favicon.ico"/>
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/balneo.css">
