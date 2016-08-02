@@ -65,7 +65,7 @@
                     <!-- /sidebar -->
 
                     <!-- content -->
-                    <div class="col-sm-10">
+                    <div class="col-sm-8">
                         <h2 class="inscription">Inscription</h2>
                         <hr class="hrtrait"/>
                         <h2 class="inscription">Vos informations personnelles</h2><hr />
@@ -120,7 +120,7 @@
                             </div>
                         </form>
                     </div>
-
+                    <div class="col-sm-2"></div>
                     <footer>
                         <div class="col-sm-6 footerContent">
                             <a href="#" rel="section">Mix Aqua-training</a>
