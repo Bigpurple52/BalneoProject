@@ -32,7 +32,7 @@
             </div>
             <div class="wrapper">
                 <div class="row">
-                    <!-- sidebar -->
+                     <!-- sidebar gauche-->
                     <nav class="col-sm-2" role="navigation">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
@@ -42,32 +42,38 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./aquadouce.html" rel="section">AquaDouce</a>
+                                <a href="../views/aquadouce.html" rel="section">AquaDouce</a>
                             </li>
                             <li>
-                                <a href="#" rel="section">AquaDynamic</a>
+                                <a href="../views/aquadynamic.html" rel="section">AquaDynamic</a>
                             </li>
                             <li>
-                                <a href="./aquabike.html" rel="section">AquaBike</a>
+                                <a href="../views/aquabike.html" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.html" rel="section">AquaPhobie</a>
+                                <a href="../views/aquaphobie.html" rel="section">AquaPhobie</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.html" rel="section">Mix Aqua-training</a>
+                                <a href="../views/aquatraining.html" rel="section">Mix Aqua-training</a>
                             </li>
                             <li>
-                                <a href="./jardin.html" rel="section">Jardin Aquatique enfant</a>
+                                <a href="../views/jardin.html" rel="section">Jardin Aquatique enfant</a>
                             </li>
                             <li>
-                                <a href="./stage.html" rel="section">Stage de natation enfant</a>
+                                <a href="../views/stage.html" rel="section">Stage de natation enfant</a>
+                            </li>
+                            <li>
+                                <a href="../views/balneotherapie.html" rel="section">Balnéothérapie</a>
+                            </li>
+                            <li>
+                                <a href="../views/professionel.html" rel="section">Professionels santé</a>
                             </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
 
                     <!-- content -->
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 accueilContent">
                         <h2 class="inscription">Inscription</h2>
                         <hr class="hrtrait"/>
                         <h2 class="inscription">Vos informations personnelles</h2><hr />
@@ -122,7 +128,18 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <!-- sidebar droite-->
+                    <nav class="col-sm-2" role="navigation">
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#" rel="noindex, nofollow">Inscription</a>
+                            </li>
+                            <li>
+                                <a href="../views/planning.html" rel="section">Planning</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--sidebar droite -->
                     <footer>
                         <div class="col-sm-6 footerContent">
                             <a href="#" rel="section">Mix Aqua-training</a>
