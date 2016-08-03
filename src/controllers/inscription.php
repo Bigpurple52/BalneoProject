@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="pass">Mot de passe</label>
-                                    <input id="pass" class="form-control" type="password" placeholder="Mon mot de passe" name="pass" data-placement="right" data-trigger="manual" data-content="Doit contenir au moins 6 caracteres, dont au moins un chiffre, une lettre majuscule et minuscule."/>
+                                    <input id="pass" class="form-control" type="password" placeholder="Mon mot de passe" name="password" data-placement="right" data-trigger="manual" data-content="Doit contenir au moins 6 caracteres, dont au moins un chiffre, une lettre majuscule et minuscule."/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="pass2">Confirmation du mot de passe</label>
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="mail">Email</label>
-                                    <input id="mail" class="form-control" type="text" placeholder="Mon email" name="mail" data-placement="right" data-trigger="manual" value="" data-content="Doit etre une adresse mail valide (user@gmail.com)"/>
+                                    <input id="mail" class="form-control" type="text" placeholder="Mon email" name="email" data-placement="right" data-trigger="manual" value="" data-content="Doit etre une adresse mail valide (user@gmail.com)"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="tel">Telephone</label>
@@ -105,11 +105,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="datenaissance">Date de naissance</label>
-                                    <input id="datenaissance" class="form-control" type="datetime" placeholder="Date de naissance" name="Date de naissance" data-placement="right" data-trigger="manual" value="" data-content="Date de naissance"/>
+                                    <input id="datenaissance" class="form-control" type="datetime" placeholder="Date de naissance" name="datenaissance" data-placement="right" data-trigger="manual" value="" data-content="Date de naissance"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="lieunaissance">Lieu de naissance</label>
-                                    <input id="lieunaissance" class="form-control" type="text" placeholder="Mon lieu de naissance" name="tel" data-placement="right" data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)"/>
+                                    <input id="lieunaissance" class="form-control" type="text" placeholder="Mon lieu de naissance" name="villenaissance" data-placement="right" data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="adresse">Adresse</label>
