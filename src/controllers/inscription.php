@@ -77,7 +77,7 @@
                         <h2 class="inscription">Inscription</h2>
                         <hr class="hrtrait"/>
                         <h2 class="inscription">Vos informations personnelles</h2><hr />
-                        <form role="form" class="well" name="inscription1" method="POST" action="InscriptionCheck.php">
+                        <form role="form" class="well" name="inscription1" method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
                             <div class="form-group" id="login-form">
                                 <div class="form-group">
                                     <label class="control-label" for="nom">Nom</label>
@@ -121,10 +121,23 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="codepostal">Code Postal</label>
-                                    <input id="codepostal" class="form-control" type="text" placeholder="Code Postale" name="codepostal" data-placement="right" data-trigger="manual" value="" data-content="Code Postal"/>
+                                    <input id="codepostal" class="form-control" type="number" placeholder="Code Postale" name="codepostal" data-placement="right" data-trigger="manual" value="" data-content="Code Postal"/>
                                 </div>
                                 <hr/>
-                                <p class="alert-danger">Tous les champs sont obligatoires <?php echo $_SESSION['nom'] ?></p>
+                                <?php
+                                if (htmlentities($_SERVER['REQUEST_METHOD']) === 'POST') {
+                                    include_once('./InscriptionCheck.php');
+                                    insertUser();
+                                    if ($etatInscription) {
+                                        echo '<p class = "alert-success">Inscription réussie avec succès.</p>';
+                                    } elseif (!$etatInscription) {
+                                        echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
+                                    }
+                                } else {
+                                    echo '<p class = "alert-danger">* Tous les champs sont obligatoires.</p>';
+                                }
+                                unset($etatInscription);
+                                ?>
                                 <input type="submit" class="btn btn-primary" name="submit" value="S'incrire"/>
                             </div>
                         </form>
@@ -162,3 +175,4 @@
 
     </body>
 </html>
+
