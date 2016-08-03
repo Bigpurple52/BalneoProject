@@ -32,7 +32,7 @@
             </div>
             <div class="wrapper">
                 <div class="row">
-                     <!-- sidebar gauche-->
+                    <!-- sidebar gauche-->
                     <nav class="col-sm-2" role="navigation">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="datenaissance">Date de naissance</label>
-                                    <input id="datenaissance" class="form-control" type="datetime" placeholder="Date de naissance" name="datenaissance" data-placement="right" data-trigger="manual" value="" data-content="Date de naissance"/>
+                                    <input id="datenaissance" class="form-control" type="date" placeholder="Date de naissance" name="datenaissance" data-placement="right" data-trigger="manual" value="" data-content="Date de naissance"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label" for="lieunaissance">Lieu de naissance</label>
@@ -124,6 +124,7 @@
                                     <input id="codepostal" class="form-control" type="text" placeholder="Code Postale" name="codepostal" data-placement="right" data-trigger="manual" value="" data-content="Code Postal"/>
                                 </div>
                                 <hr/>
+                                <p class="alert-danger">Tous les champs sont obligatoires <?php echo $_SESSION['nom'] ?></p>
                                 <input type="submit" class="btn btn-primary" name="submit" value="S'incrire"/>
                             </div>
                         </form>
