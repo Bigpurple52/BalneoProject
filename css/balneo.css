@@ -282,6 +282,7 @@ header{
 h1,h2,h3 {
     font-weight:800;
 }
+
 h2.inscription{
     color: #f5f5f5;
 }
@@ -352,4 +353,5 @@ ul {
 .logoTitle{
     display: inline;
     margin-left: 3%;
+    font-size: 24px;
 }

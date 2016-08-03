@@ -23,7 +23,7 @@
                         <br/>
                         <div>
                             <img src="../../assets/logo K-HYLE.png">
-                            <h3 class="logoTitle">Au centre Balnéo K-Hylé</h3>
+                            <h1 class="logoTitle">Centre Balnéo K-Hylé à Teyran</h1>
                         </div>
                         <br/>
                     </nav>
@@ -129,7 +129,7 @@
                                     include_once('./InscriptionCheck.php');
                                     insertUser();
                                     if ($etatInscription) {
-                                        echo '<p class = "alert-success">Inscription réussie avec succès.</p>';
+                                        echo '<p class = "alert-success">Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.</p>';
                                     } elseif (!$etatInscription) {
                                         echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
                                     }
