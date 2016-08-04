@@ -33,21 +33,6 @@ hr {
     margin-right:0;
 }
 
-.wrapper {
-    height: 100vh;
-    margin-left:0;
-    margin-right:0;
-}
-
-.wrapper:before, .wrapper:after{
-    content: "";
-    display: table;
-}
-
-.wrapper:after{
-    clear: both;
-}
-
 .divider {
     margin-top:32px;
 }
@@ -167,8 +152,9 @@ ul {
 }
 
 .accueilContent{
-    min-height: 100vh;
+    min-height: 70vh;
     text-align: justify;
+    margin-right: 1.5%;
 }
 
 .logoTitle{
@@ -219,7 +205,6 @@ hr {
     height: 100vh;
     margin-left:0;
     margin-right:0;
-    background-color: rgb(90,90,90);
 }
 
 .wrapper:before, .wrapper:after{
@@ -366,4 +351,8 @@ th{
 
 .first{
     width:5.5%;
+}
+
+#imgJardin{
+    width: 100%;
 }
