@@ -342,7 +342,8 @@ ul {
 }
 
 .planning{
-    width:100%;min-height:75VH
+    width:100%;
+    min-height:75VH;
 }
 th{
     width: 13.5%;
