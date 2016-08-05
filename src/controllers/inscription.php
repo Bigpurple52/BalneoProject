@@ -142,7 +142,7 @@
                     <nav class="col-sm-2">
                         <ul class="sidebar-nav">
                             <li>
-                                <a href="#" rel="noindex, nofollow">Inscription</a>
+                                <a href="#" rel="nofollow">Inscription</a>
                             </li>
                             <li>
                                 <a href="../views/planning.html" rel="section">Planning</a>
