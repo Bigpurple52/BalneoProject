@@ -164,7 +164,7 @@ ul {
 }
 
 .accueilContent{
-    min-height: 70vh;
+    min-height: 85vh;
     text-align: justify;
     margin-right: 1.5%;
 }
@@ -385,4 +385,8 @@ em, strong{
 .info-supp2 > a{
     background-color: whitesmoke;
     padding: 2px 2px 4px 2px;
+}
+
+.img-thumbnail{
+    margin-top: 25px;
 }
