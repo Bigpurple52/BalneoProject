@@ -75,30 +75,30 @@
                     <div class="accueilContent">
                         <h1 class="contentTitle">Centre Balnéo K-Hylé à Teyran</h1>
                         <ul>
-                            <li>Jardin aquatique enfant de 3 à 5 ans: familiarisation avec l'eau dans un contexte ludique</li>
-                            <li>Apprentissage de la natation cours particulier de natation enfant à partir de 6 ans</li>
-                            <li>Aquaphobie cours pour adulte permettant de vaincre la peur de l'eau</li>
-                            <li>Aquagym Tonique cours d'aquagym dynamique</li>
-                            <li>Mix Aqua-training cours comprenant différents ateliers: Aquabike, Step, Aquajump, ainsi que des
-                                exercices d'Aquagym avec matériel</li>
+                            <li><strong>Jardin aquatique</strong> enfant de 3 à 5 ans: familiarisation avec l'eau dans un contexte ludique</li>
+                            <li>Apprentissage de la <em>natation</em> cours particulier de <em>natation enfant</em> à partir de 6 ans</li>
+                            <li><strong>Aquaphobie</strong> cours pour adulte permettant de vaincre la peur de l'eau</li>
+                            <li><strong>Aquagym</strong> Tonique cours d'<strong>aquagym dynamique</strong></li>
+                            <li><strong>Mix Aqua-training</strong> cours comprenant différents ateliers: <strong>Aquabike</strong>, <em>Step</em>, <em>Aquajump</em>, ainsi que des
+                                exercices d'<strong>Aquagym</strong> avec matériel</li>
                         </ul>
                         <div>
-                            Les séances de qualités sont toutes dispensés en petits groupes, dans la détente et bonne humeur! L'eau de la piscine comprise
-                            entre 30 et 32° permettra des séances aquatiques agréable, ou le travail est de rigueur!
+                            Les séances de qualités sont toutes dispensés en petits groupes, dans la détente et bonne humeur! L'eau de la <em>piscine</em> comprise
+                            entre 30 et 32° permettra des séances <em>aquatiques</em> agréable, ou le travail est de rigueur!
                         </div>
                         <div>
-                            Attention: les cours apprentissage de la natation sont proposés uniquement pour les enfants, les dimensions du bassin (3m
+                            Attention: les cours apprentissage de la <em>natation</em> sont proposés uniquement pour les enfants, les dimensions du <em>bassin</em> (3m
                             sur 6m) n'étant pas adapté à des entrainements adultes.
                         </div>
                         <div>
                             *
                         </div>
                         <div>
-                            Les cours de natation et d'aquagym à Montpellier (ou dans les environs) sont dispensés à votre domicile Des séances sont
-                            également proposé au centre de kinésithérapie NEOS SANTE à Montpellier
+                            Les <em>cours de natation</em> et d'<strong>aquagym</strong> à Montpellier (ou dans les environs) sont dispensés à votre domicile. Des séances sont
+                            également proposé au centre de <em>kinésithérapie</em> <em>NEOS SANTE</em> à Montpellier.
                         </div>
                         <div>
-                            ACCES : 1 avenue Emile Bertin Sans, 34090 Montpellier TRAM 1 Arrêt "Saint Eloi"
+                            ACCES : 1 avenue Emile Bertin Sans, 34090 Montpellier TRAM 1 Arrêt "Saint Eloi".
                         </div>
                         <div>
                             « Le sport va chercher la peur pour la dominer, la fatigue pour en triompher, la difficulté pour la vaincre »
@@ -110,7 +110,7 @@
                 <nav class="col-sm-2" role="navigation">
                     <ul class="sidebar-nav">
                         <li>
-                            <a href="./src/controllers/inscription.php" rel="noindex, nofollow">Inscription</a>
+                            <a href="./src/controllers/inscription.php" rel="nofollow">Inscription</a>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalco">Connexion</button>
                         </li>
                         <li>
