@@ -36,7 +36,7 @@
                     <nav class="col-sm-2">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
-                                <a href="../../index.html" rel="contents">
+                                <a href="../../index.php" rel="contents">
                                     <h2>Accueil</h2>
                                     <hr/>
                                 </a>
@@ -77,7 +77,7 @@
                         <h2 class="inscription">Inscription</h2>
                         <hr class="hrtrait"/>
                         <h2 class="inscription">Vos informations personnelles</h2><hr />
-                        <form role="form" class="well" name="inscription1" method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
+                        <form role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                             <div class="form-group" id="login-form">
                                 <div class="form-group">
                                     <label class="control-label" for="nom">Nom</label>

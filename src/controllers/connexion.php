@@ -1,10 +1,6 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+session_start();
 
 try {
     $sql = new PDO('mysql:host=localhost;port=3306;dbname=balneodb', 'root', 'MySQL');
@@ -21,7 +17,6 @@ try {
     if ($stmt->execute()) {
         $result = $stmt->fetch();
         if (password_verify($password, $result['password'])) {
-            session_start();
             $_SESSION['user'] = $email;
             $_SESSION['isConnected'] = true;
             header('Location: ' . filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING));
