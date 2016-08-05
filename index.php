@@ -21,8 +21,7 @@
                 <nav class="collapse navbar-collapse">
                     <br/>
                     <div>
-                        <img src="./assets/logoK-HYLE.png">
-                        <h1 class="logoTitle">Centre Balnéo K-Hylé à Teyran</h1>
+                        <img src="./assets/logoK-HYLE.png" />
                     </div>
                     <br/>
                 </nav>
@@ -75,27 +74,33 @@
                     <div class="accueilContent">
                         <h1 class="contentTitle">Centre Balnéo K-Hylé à Teyran</h1>
                         <ul>
-                            <li><strong>Jardin aquatique</strong> enfant de 3 à 5 ans: familiarisation avec l'eau dans un contexte ludique</li>
-                            <li>Apprentissage de la <em>natation</em> cours particulier de <em>natation enfant</em> à partir de 6 ans</li>
+                            <li><strong>Jardin aquatique</strong> enfant de 3 à 5 ans: familiarisation avec l'eau dans un contexte
+                                ludique
+                            </li>
+                            <li>Apprentissage de la <em>natation</em> cours particulier de <em>natation enfant</em> à partir
+                                de 6 ans</li>
                             <li><strong>Aquaphobie</strong> cours pour adulte permettant de vaincre la peur de l'eau</li>
                             <li><strong>Aquagym</strong> Tonique cours d'<strong>aquagym dynamique</strong></li>
-                            <li><strong>Mix Aqua-training</strong> cours comprenant différents ateliers: <strong>Aquabike</strong>, <em>Step</em>, <em>Aquajump</em>, ainsi que des
-                                exercices d'<strong>Aquagym</strong> avec matériel</li>
+                            <li><strong>Mix Aqua-training</strong> cours comprenant différents ateliers: <strong>Aquabike</strong>,
+                                <em>Step</em>, <em>Aquajump</em>, ainsi que des exercices d'<strong>Aquagym</strong> avec
+                                matériel
+                            </li>
                         </ul>
                         <div>
-                            Les séances de qualités sont toutes dispensés en petits groupes, dans la détente et bonne humeur! L'eau de la <em>piscine</em> comprise
-                            entre 30 et 32° permettra des séances <em>aquatiques</em> agréable, ou le travail est de rigueur!
+                            Les séances de qualités sont toutes dispensés en petits groupes, dans la détente et bonne humeur! L'eau de la <em>piscine</em> comprise entre 30 et 32° permettra des séances
+                            <em>aquatiques</em> agréable, ou le travail est de rigueur!
                         </div>
                         <div>
-                            Attention: les cours apprentissage de la <em>natation</em> sont proposés uniquement pour les enfants, les dimensions du <em>bassin</em> (3m
-                            sur 6m) n'étant pas adapté à des entrainements adultes.
+                            Attention: les cours apprentissage de la <em>natation</em> sont proposés uniquement pour les
+                            enfants, les dimensions du <em>bassin</em> (3m sur 6m) n'étant pas adapté à des entrainements
+                            adultes.
                         </div>
                         <div>
                             *
                         </div>
                         <div>
-                            Les <em>cours de natation</em> et d'<strong>aquagym</strong> à Montpellier (ou dans les environs) sont dispensés à votre domicile. Des séances sont
-                            également proposé au centre de <em>kinésithérapie</em> <em>NEOS SANTE</em> à Montpellier.
+                            Les <em>cours de natation</em> et d'<strong>aquagym</strong> à Montpellier (ou dans les environs)
+                            sont dispensés à votre domicile. Des séances sont également proposé au centre de <em>kinésithérapie</em> <em>NEOS SANTE</em> à Montpellier.
                         </div>
                         <div>
                             ACCES : 1 avenue Emile Bertin Sans, 34090 Montpellier TRAM 1 Arrêt "Saint Eloi".
@@ -154,27 +159,30 @@
                     <h4 class="modal-title" id="modal-label">Connexion</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group" id="login-form">
-                        <div>
-                            <label></label>
-                            <input type="text" name="email" placeholder="Mon email" />
+                    <form class="well" name='connexion' method="POST" action='./src/controllers/connexion.php'>
+                        <div class="form-group" id="login-form">
+                            <div>
+                                <label></label>
+                                <input class="form-control" type="text" name="email" placeholder="Mon email" />
+                            </div>
+                            <div>
+                                <label></label>
+                                <input class="form-control" type="password" name="password" placeholder="Mon mot de passe" />
+                            </div>
+                            <br>
+                            <div>
+                                <button type="submit" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Se connecter</button>
+                            </div>
+                            <hr/>
+                            <div>
+                                <strong>Pas encore membre ?</strong>
+                                <br/>
+                                <a href="./src/controllers/Inscription.php">
+                                        Inscrivez-vous gratuitement
+                                    </a>
+                            </div>
                         </div>
-                        <div>
-                            <label></label>
-                            <input type="password" name="password" placeholder="Mon mot de passe" />
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Se connecter</button>
-                        </div>
-                        <hr/>
-                        <div>
-                            <strong>Pas encore membre ?</strong>
-                            <br/>
-                            <a href="./src/controllers/Inscription.php">
-                                Inscrivez-vous gratuitement
-                            </a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
