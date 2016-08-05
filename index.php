@@ -67,6 +67,11 @@
                             <li>
                                 <a href="./src/views/professionel.html" rel="section">Professionels santé</a>
                             </li>
+                            <?php
+                            if (session_status() !== PHP_SESSION_NONE) {
+                                echo '<a href="./src/views/professionel.html" rel="section">Professionels santé</a>';
+                            }
+                            ?>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
