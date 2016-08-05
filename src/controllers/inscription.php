@@ -92,10 +92,6 @@
                                     <input id="pass" class="form-control" type="password" placeholder="Mon mot de passe" name="password" data-placement="right" data-trigger="manual" data-content="Doit contenir au moins 6 caracteres, dont au moins un chiffre, une lettre majuscule et minuscule."/>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label" for="pass2">Confirmation du mot de passe</label>
-                                    <input id="pass2" class="form-control" type="password" placeholder="Mon mot de passe" name="pass2" data-placement="right" data-trigger="manual" data-content="Doit etre identique au precedent mot de passe"/>
-                                </div>
-                                <div class="form-group">
                                     <label class="control-label" for="mail">Email</label>
                                     <input id="mail" class="form-control" type="text" placeholder="Mon email" name="email" data-placement="right" data-trigger="manual" value="" data-content="Doit etre une adresse mail valide (user@gmail.com)"/>
                                 </div>
@@ -125,7 +121,7 @@
                                 </div>
                                 <hr/>
                                 <?php
-                                if (htmlentities($_SERVER['REQUEST_METHOD']) === 'POST') {
+                                if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
                                     include_once('./InscriptionCheck.php');
                                     insertUser();
                                     if ($etatInscription) {
