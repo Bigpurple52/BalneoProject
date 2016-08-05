@@ -162,7 +162,7 @@
                             <a href="#" rel="nofollow">Inscription</a>
                         </li>
                         <li>
-                            <a href="../views/planning.html" rel="section">Planning</a>
+                            <a href="../views/planning2.html" rel="section">Planning</a>
                         </li>
                     </ul>
                 </nav>

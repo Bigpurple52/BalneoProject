@@ -119,7 +119,7 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalco">Connexion</button>
                         </li>
                         <li>
-                            <a href="./src/views/planning.html" rel="section">Planning</a>
+                            <a href="./src/views/planning2.html" rel="section">Planning</a>
                         </li>
                     </ul>
                     <hr/>
