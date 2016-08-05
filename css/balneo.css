@@ -74,6 +74,13 @@ header{
     padding-left:5px;
 }
 
+.sidebar-right{
+    color:#ffffff;
+}
+
+.sidebar-right h2{
+    font-size: 1.6em;
+}
 .footerContent{
     width: 100%;
     text-align: center;
@@ -83,6 +90,9 @@ header{
 
 h1,h2,h3 {
     font-weight:800;
+}
+h4{
+    text-decoration: underline;
 }
 h2.inscription{
     color: #f5f5f5;
@@ -139,6 +149,10 @@ h2.inscription{
     font-weight: bold;
     font-size: 20px;
     text-decoration: underline;
+}
+
+.sidebar-right li{
+    list-style: none;
 }
 
 ul {
@@ -356,4 +370,9 @@ th{
 
 #imgJardin{
     width: 100%;
+}
+
+em, strong{
+    font-weight: inherit;
+    font-style:inherit;
 }

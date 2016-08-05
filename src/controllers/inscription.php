@@ -37,7 +37,7 @@
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
                                 <a href="../../index.html" rel="contents">
-                                    <h2 class="sideMenuTitle">Accueil</h2>
+                                    <h2>Accueil</h2>
                                     <hr/>
                                 </a>
                             </li>

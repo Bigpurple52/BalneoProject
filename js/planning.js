@@ -6,15 +6,15 @@ $(document).ready(function () {
         // enable theme
         theme: true,
         // emphasizes business hours
-        businessHours: true,
+        businessHours: false,
         // header
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: '',
+            right: ''
         },
         //Enlève le we
-        weekends: false,
+        weekends: true,
         //Vue semaine avec heures
         defaultView: 'agendaWeek',
         //heure début
@@ -24,12 +24,10 @@ $(document).ready(function () {
         allDaySlot: false,
         //Hauteur
         contentHeight: "auto",
-
         //Config des slots
         slotDuration: "00:15:00",
         slotLabelFormat: 'LT',
         slotLabelInterval: "01:00:00",
-
         events: [
             // http://fullcalendar.io/docs/event_data/Event_Object/
             {
