@@ -1,3 +1,9 @@
+<?php
+//if (isset($_SESSION['user'])) {
+//    session_unset();
+//    session_destroy();
+//}
+?>
 <!DOCTYPE html>
 <html lang="fr-FR">
 
@@ -73,7 +79,9 @@
                     <!-- content -->
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
-                            <?php echo '<p>' . $_SESSION['user'] . 'SALUT</p>' ?>
+                            <?php
+                            echo '<p>' . $_SESSION['user'] . '</p>';
+                            ?>
                             <ul>
                                 <li>Jardin aquatique enfant de 3 à 5 ans: familiarisation avec l'eau dans un contexte ludique</li>
                                 <li>Apprentissage de la natation cours particulier de natation enfant à partir de 6 ans</li>
@@ -83,7 +91,7 @@
                                     exercices d'Aquagym avec matériel</li>
                             </ul>
                             <div>
-                                Les séances de qualités sont toutes dispensés en petits groupes, dans la détente et bonne humeur! L'eau de la piscine comprise
+                                Les séances de qualités sont toutes dispensés en petits groupes, dans la détente et bonne humeur!L'eau de la piscine comprise
                                 entre 30 et 32° permettra des séances aquatiques agréable, ou le travail est de rigueur!
                             </div>
                             <div>
@@ -104,6 +112,30 @@
                                 « Le sport va chercher la peur pour la dominer, la fatigue pour en triompher, la difficulté pour la vaincre »
                                 <br/>Pierre de Coubertin
                             </div>
+                            <form class="well" name='connexion' method="POST" action='./src/controllers/connexion.php'>
+                                <div class="form-group" id="login-form">
+                                    <div>
+                                        <label class="control-label" for="emailId">Mon adresse email</label>
+                                        <input id="emailId" class="form-control" type="text" name="email" placeholder="Mon email" />
+                                    </div>
+                                    <div>
+                                        <label for="passwordId" class="control-label">Mot de passe</label>
+                                        <input id="passwordId" class="form-control" type="password" name="password" placeholder="Mon mot de passe" />
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Se connecter</button>
+                                    </div>
+                                    <hr/>
+                                    <div>
+                                        <strong>Pas encore membre ?</strong>
+                                        <br/>
+                                        <a href="./src/controllers/Inscription.php">
+                                            Inscrivez-vous gratuitement
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </section>
                     <!-- sidebar droite-->
@@ -145,24 +177,25 @@
             </div>
         </div>
 
-        <!-- Modal -->
+        <!--Modal -->
         <div class="modal fade" id="modalco" tabindex="-1" role="dialog" aria-labelledby="modal-connexion" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                        </button>
                         <h4 class="modal-title" id="modal-label">Connexion</h4>
                     </div>
                     <div class="modal-body">
                         <form class="well" name='connexion' method="POST" action='./src/controllers/connexion.php'>
                             <div class="form-group" id="login-form">
                                 <div>
-                                    <label></label>
-                                    <input class="form-control" type="text" name="email" placeholder="Mon email" />
+                                    <label class="control-label" for="emailId">Mon adresse email</label>
+                                    <input id="emailId" class="form-control" type="text" name="email" placeholder="Mon email" />
                                 </div>
                                 <div>
-                                    <label></label>
-                                    <input class="form-control" type="password" name="password" placeholder="Mon mot de passe" />
+                                    <label for="passwordId" class="control-label">Mot de passe</label>
+                                    <input id="passwordId" class="form-control" type="password" name="password" placeholder="Mon mot de passe" />
                                 </div>
                                 <br>
                                 <div>
@@ -182,7 +215,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal end -->
+        <!--Modal end -->
 
         <script src="./js/jquery-3.1.0.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>

@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Aquadynamic">
-        <meta name="keywords" content="Activités aquatiques;Aquadynamic;">
+        <meta name="keywords" content="Activités aquatiques;">
         <title>aqua-balneo.fr : Aquadynamic</title>
         <link rel="icon" href="../../favicon.ico"/>
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">

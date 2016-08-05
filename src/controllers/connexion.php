@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 try {
     $sql = new PDO('mysql:host=localhost;port=3306;dbname=balneodb', 'root', 'MySQL');
 } catch (PDOException $e) {
@@ -11,16 +9,19 @@ try {
 
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
-$stmt->bindParam(':email', $email);
 $stmt = $sql->prepare('SELECT email, password FROM usertable WHERE email = :email');
+$stmt->bindParam(':email', $email);
+//$path = filter_input(INPUT_SERVER, 'HTTP_HOST', FILTER_SANITIZE_STRING) . '/BalneoProject/index.php';
 try {
+    session_start();
     if ($stmt->execute()) {
         $result = $stmt->fetch();
-        if (password_verify($password, $result['password'])) {
+        $test = password_verify($password, $result['password']);
+        if ($test) {
             $_SESSION['user'] = $email;
-            $_SESSION['isConnected'] = true;
-            header('Location: ' . filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING));
-            die;
+            //header('Location: ' . $path);
+            header('location: localhost:8080/BalneoProject/index.php');
+//            die();
         }
     } else {
 
