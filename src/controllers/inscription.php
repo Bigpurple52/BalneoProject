@@ -22,7 +22,7 @@
                     <nav class="collapse navbar-collapse">
                         <br/>
                         <div>
-                            <img src="../../assets/logo K-HYLE.png">
+                            <img src="../../assets/logoK-HYLE.png">
                             <h1 class="logoTitle">Centre Balnéo K-Hylé à Teyran</h1>
                         </div>
                         <br/>
@@ -33,7 +33,7 @@
             <div class="wrapper">
                 <div class="row">
                     <!-- sidebar gauche-->
-                    <nav class="col-sm-2" role="navigation">
+                    <nav class="col-sm-2">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
                                 <a href="../../index.html" rel="contents">
@@ -143,7 +143,7 @@
                         </form>
                     </div>
                     <!-- sidebar droite-->
-                    <nav class="col-sm-2" role="navigation">
+                    <nav class="col-sm-2">
                         <ul class="sidebar-nav">
                             <li>
                                 <a href="#" rel="noindex, nofollow">Inscription</a>

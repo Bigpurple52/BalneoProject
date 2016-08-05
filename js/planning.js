@@ -5,16 +5,12 @@ $(document).ready(function () {
     $('#calendar').fullCalendar({
         // enable theme
         theme: true,
-        // emphasizes business hours
-        businessHours: false,
         // header
         header: {
             left: 'prev,next today',
             center: 'title',
             right: ''
         },
-        //Enlève le we
-        weekends: true,
         //Vue semaine avec heures
         defaultView: 'agendaWeek',
         //heure début
