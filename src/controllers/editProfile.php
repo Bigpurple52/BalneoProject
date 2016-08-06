@@ -29,8 +29,6 @@ function editUser()
             . '`email` = :email,'
             . '`adresse`= :adresse,'
             . '`ville`= :ville,'
-            . '`villenaissance` = :villenaissance,'
-            . '`datenaissance` = :datenaissance,'
             . '`tel` = :tel,'
             . '`codepostal` = :codepostal'
             . ' WHERE email =  :user');
@@ -39,17 +37,17 @@ function editUser()
     $stmt->bindParam(':prenom', $prenom);
     $prenom = !empty($filteredPost['prenom']) ? $filteredPost['prenom'] : ' ';
     $stmt->bindParam(':password', $myHash);
-    $myHash = password_hash($filteredPost['password'], PASSWORD_DEFAULT);
+    if ($filteredPost['password'] !== $_SESSION['password']) {
+        $myHash = password_hash($filteredPost['password'], PASSWORD_DEFAULT);
+    } else {
+        $myHash = $_SESSION['password'];
+    }
     $stmt->bindParam(':email', $email);
     $email = !empty($filteredPost['email']) ? $filteredPost['email'] : ' ';
     $stmt->bindParam(':adresse', $adresse);
     $adresse = !empty($filteredPost['adresse']) ? $filteredPost['adresse'] : ' ';
     $stmt->bindParam(':ville', $ville);
     $ville = !empty($filteredPost['ville']) ? $filteredPost['ville'] : ' ';
-    $stmt->bindParam(':villenaissance', $villenaissance);
-    $villenaissance = !empty($filteredPost['villenaissance']) ? $filteredPost['villenaissance'] : ' ';
-    $stmt->bindParam(':datenaissance', $datenaissance);
-    $datenaissance = !empty($filteredPost['datenaissance']) ? $filteredPost['datenaissance'] : ' ';
     $stmt->bindParam(':tel', $tel);
     $tel = !empty($filteredPost['tel']) ? $filteredPost['tel'] : ' ';
     $stmt->bindParam(':codepostal', $codepostal);

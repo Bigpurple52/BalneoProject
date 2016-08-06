@@ -117,17 +117,6 @@ if (!isset($_SESSION['user'])) {
                                                />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="datenaissance">Date de naissance</label>
-                                        <input id="datenaissance" class="form-control" type="date" placeholder="Date de naissance" name="datenaissance" data-placement="right"
-                                               data-trigger="manual" value="<?php echo $_SESSION['datenaissance'] ?>" data-content="Date de naissance" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label" for="lieunaissance">Lieu de naissance</label>
-                                        <input id="lieunaissance" class="form-control" type="text" placeholder="Mon lieu de naissance" name="villenaissance" data-placement="right"
-                                               data-trigger="manual" value="<?php echo $_SESSION['villenaissance'] ?>" data-content="Doit être un numéro de téléphone valide(0611223344)"
-                                               />
-                                    </div>
-                                    <div class="form-group">
                                         <label class="control-label" for="adresse">Adresse</label>
                                         <input id="adresse" class="form-control" type="text" placeholder="Mon adresse" name="adresse" data-placement="right" data-trigger="manual"
                                                value="<?php echo $_SESSION['adresse'] ?>" data-content="Adresse" />
@@ -164,7 +153,7 @@ if (!isset($_SESSION['user'])) {
                     <nav class="col-sm-2">
                         <?php
                         if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . ' et ' . $_SESSION['prenom'] . '</div>';
+                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '</div>';
                         } else {
                             echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
                             echo '<div class = "form-group" id = "login-form">';

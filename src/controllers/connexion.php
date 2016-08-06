@@ -1,23 +1,21 @@
 <?php
 
+session_start();
 try {
     $sql = new PDO('mysql:host=localhost;port=3306;dbname=balneodb', 'root', 'MySQL');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
 }
-
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
 $stmt = $sql->prepare('SELECT * FROM usertable WHERE email = :email');
 $stmt->bindParam(':email', $email);
 try {
-    session_destroy();
     if ($stmt->execute()) {
         $result = $stmt->fetch();
         $test = password_verify($password, $result['password']);
         if ($test) {
-            session_start();
             $_SESSION['user'] = $email;
             $_SESSION['nom'] = $result['nom'];
             $_SESSION['prenom'] = $result['prenom'];
@@ -26,8 +24,6 @@ try {
             $_SESSION['adresse'] = $result['adresse'];
             $_SESSION['ville'] = $result['ville'];
             $_SESSION['codepostal'] = $result['codepostal'];
-            $_SESSION['villenaissance'] = $result['villenaissance'];
-            $_SESSION['datenaissance'] = $result['datenaissance'];
             $_SESSION['tel'] = $result['tel'];
 
             header('Content-Type: text/html; charset=utf-8');
@@ -35,7 +31,9 @@ try {
             die();
         }
     } else {
-
+        header('Content-Type: text/html; charset=utf-8');
+        header('Location: ../../index.php');
+        die();
     }
 } catch (Exception $e) {
     print "La connexion a échoué!<br/>";
