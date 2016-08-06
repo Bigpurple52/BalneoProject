@@ -390,3 +390,12 @@ em, strong{
 .img-thumbnail{
     margin-top: 25px;
 }
+
+.user-info{
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.user-info a:hover{
+    font-weight: bold;
+}

@@ -11,17 +11,18 @@ $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
 $stmt = $sql->prepare('SELECT email, password FROM usertable WHERE email = :email');
 $stmt->bindParam(':email', $email);
-//$path = filter_input(INPUT_SERVER, 'HTTP_HOST', FILTER_SANITIZE_STRING) . '/BalneoProject/index.php';
 try {
-    session_start();
+    session_destroy();
     if ($stmt->execute()) {
         $result = $stmt->fetch();
         $test = password_verify($password, $result['password']);
         if ($test) {
+            session_start();
             $_SESSION['user'] = $email;
             //header('Location: ' . $path);
-            header('location: localhost:8080/BalneoProject/index.php');
-//            die();
+            header('Content-Type: text/html; charset=utf-8');
+            header('Location: ../../index.php');
+            die();
         }
     } else {
 

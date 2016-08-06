@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    session_unset();
+    session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr-FR">
 
@@ -41,28 +48,28 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./aquadouce.html" rel="section">AquaDouce</a>
+                                <a href="./aquadouce.php" rel="section">AquaDouce</a>
                             </li>
                             <li>
-                                <a href="./aquadynamic.html" rel="section">AquaDynamic</a>
+                                <a href="./aquadynamic.php" rel="section">AquaDynamic</a>
                             </li>
                             <li>
-                                <a href="./aquabike.html" rel="section">AquaBike</a>
+                                <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.html" rel="section">AquaPhobie</a>
+                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.html" rel="section">Mix Aqua-training</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
                             </li>
                             <li>
-                                <a href="./jardin.html" rel="section">Jardin Aquatique enfant</a>
+                                <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
                             </li>
                             <li>
-                                <a href="./stage.html" rel="section">Stage de natation enfant</a>
+                                <a href="./stage.php" rel="section">Stage de natation enfant</a>
                             </li>
                             <li>
-                                <a href="./balneotherapie.html" rel="section">Balnéothérapie</a>
+                                <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
                                 <a href="#" rel="section">Professionels santé</a>
@@ -79,14 +86,50 @@
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
-                        <ul class="sidebar-nav">
+                        <?php
+                        if (isset($_SESSION['user'])) {
+                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '</div>';
+                        } else {
+                            echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
+                            echo '<div class = "form-group" id = "login-form">';
+                            echo '<div>';
+                            echo 'label class = "control-label" for = "emailId">Mon adresse email</label>';
+                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                            echo '</div>';
+                            echo '<div>';
+                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                            echo '</div>';
+                            echo '<br>';
+                            echo '<div>';
+                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                            echo '</div>';
+                            echo '<hr/>';
+                            echo '<div>';
+                            echo '<strong>Pas encore membre ?</strong>';
+                            echo '<br/>';
+                            echo '<a href = "./src/controllers/Inscription.php">';
+                            echo 'Inscrivez-vous gratuitement';
+                            echo '</a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</form>';
+                        }
+                        ?>
+                        <ul class = "sidebar-nav">
                             <li>
-                                <a href="../controllers/inscription.php" rel="nofollow">Inscription</a>
+                                <a href = "./src/controllers/inscription.php" rel = "nofollow">Inscription</a>
                             </li>
                             <li>
-                                <a href="./planning2.html" rel="section">Planning</a>
+                                <a href = "./src/views/planning2.php" rel = "section">Planning</a>
                             </li>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                echo'<li> <a href = "./src/views/profil.php" rel = "section">Mon Profil</a></li>';
+                            }
+                            ?>
                         </ul>
+                        <hr/>
                     </nav>
                     <!--sidebar droite -->
                     <footer>
