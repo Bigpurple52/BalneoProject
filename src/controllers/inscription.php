@@ -40,7 +40,7 @@ if (!isset($_SESSION['user'])) {
             <div class="wrapper">
                 <div class="row">
                     <!-- sidebar gauche-->
-                    <nav class="col-sm-2">
+                    <nav class="col-sm-2" role="navigation">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
                                 <a href="../../index.php" rel="contents">
