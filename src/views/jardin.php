@@ -82,8 +82,6 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">Jardin Aquatique enfant</h1>
-
-                            <!--Left part-->
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h3>Description</h3>
@@ -92,16 +90,12 @@ if (!isset($_SESSION['user'])) {
                                     <p>La température de l’eau d’environ 32° permettra à vos enfants de bénéficier de cette activité
                                         dans des conditions optimales.</p>
                                 </div>
-                                <!--Left part-->
-
-                                <!--Right part-->
                                 <div class="col-sm-12 col-sm-offset-3">
-                                    <img src="../../assets/test.jpg" id="imgJardin" class="img-thumbnail" alt="jardin aquatique enfant" style="width:50%;height: 50%"
+                                    <img src="../../assets/jardin-aqua.jpg" id="imgJardin" class="img-thumbnail" alt="jardin aquatique enfant" style="width:50%;height: 50%"
                                          />
                                 </div>
                             </div>
                         </div>
-                        <!--Right part-->
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">

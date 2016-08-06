@@ -81,23 +81,18 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">AquaDouce</h1>
-                            <!--Left part-->
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h3>Description</h3>
                                     <p>Cours d’<strong>aquagym</strong> modéré, le principe repose sur un renforcement musculaire généralisé.</p>
                                     <br/>
-                                </div>
-                                <!--Left part-->
-
-                                <!--Right part-->
+                                </div>                            
                                 <div class="col-sm-12 col-sm-offset-3">
-                                    <img src="../../assets/test.jpg" id="imgJardin" class="img-thumbnail" alt="jardin aquatique enfant" style="width:50%;height: 50%"
+                                    <img src="../../assets/aquadouce.jpg" id="imgJardin" class="img-thumbnail" alt="aquaDouce" style="width:50%;height: 50%"
                                          />
                                 </div>
                             </div>
                         </div>
-                        <!--Right part-->
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">

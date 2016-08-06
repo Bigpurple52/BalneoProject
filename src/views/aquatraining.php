@@ -82,7 +82,6 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">Mix Aqua-training</h1>
-                            <!--Left part-->
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h3>Description</h3>
@@ -91,11 +90,8 @@ if (!isset($_SESSION['user'])) {
                                         fessiers, cuisses (…)</p>
                                     <br/>
                                 </div>
-                                <!--Left part-->
-
-                                <!--Right part-->
                                 <div class="col-sm-12 col-sm-offset-3">
-                                    <img src="../../assets/test.jpg" id="imgJardin" class="img-thumbnail" alt="jardin aquatique enfant" style="width:50%;height: 50%"
+                                    <img src="../../assets/cours-MIX.JPG" id="imgJardin" class="img-thumbnail" alt="aqua-training" style="width:50%;height: 50%"
                                          />
                                 </div>
                             </div>

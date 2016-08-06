@@ -9,9 +9,18 @@ if (!isset($_SESSION['user'])) {
         die();
     }
 }
+
+require('./src/controllers/GoogleMapAPI.class.php');
+
+$map = new GoogleMapAPI('map');
+$map->setAPIKey('AIzaSyB4Zequ5SM5gKyxCPE4jRRxhsq2ycT4LC4');
+$map->setWidth("260px");
+$map->setHeight("220px");
+$map->setCenterCoords ('3.9285471 ', '43.6917806');
+$map->setZoomLevel (6);
 ?>
-<!DOCTYPE html>
-<html lang="fr-FR">
+    <!DOCTYPE html>
+    <html lang="fr-FR">
 
     <head>
         <meta charset="utf-8" />
@@ -23,6 +32,8 @@ if (!isset($_SESSION['user'])) {
         <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/balneo.css">
+        <?php $map->printHeaderJS(); ?>
+        <?php $map->printMapJS(); ?>
     </head>
 
     <body>
@@ -82,75 +93,31 @@ if (!isset($_SESSION['user'])) {
                     </nav>
                     <!--/sidebar -->
                     <!--content -->
-                    <section class = "col-sm-8" id = "main">
-                        <div class = "accueilContent">
-                            <h1 class = "contentTitle">Centre Balnéo K-Hylé à Teyran</h1>
-                            <ul>
-                                <li><strong>Jardin aquatique</strong> enfant de 3 à 5 ans: familiarisation avec l'eau dans un contexte
-                                    ludique
-                                </li>
-                                <li>Apprentissage de la <em>natation</em> cours particulier de <em>natation enfant</em> à partir
-                                    de 6 ans</li>
-                                <li><strong>Aquaphobie</strong> cours pour adulte permettant de vaincre la peur de l'eau</li>
-                                <li><strong>Aquagym</strong> Tonique cours d'<strong>aquagym dynamique</strong></li>
-                                <li><strong>Mix Aqua-training</strong> cours comprenant différents ateliers: <strong>Aquabike</strong>,
-                                    <em>Step</em>, <em>Aquajump</em>, ainsi que des exercices d'<strong>Aquagym</strong> avec
-                                    matériel
-                                </li>
-                            </ul>
-                            </nav>
-                            <!--/sidebar -->
-                            <!--content -->
-                            <section class = "col-sm-8" id = "main">
-                                <div class = "accueilContent">
-                                    <ul>
-                                        <li>Jardin aquatique enfant de 3 à 5 ans: familiarisation avec l'eau dans un contexte ludique</li>
-                                        <li>Apprentissage de la natation cours particulier de natation enfant à partir de 6 ans</li>
-                                        <li>Aquaphobie cours pour adulte permettant de vaincre la peur de l'eau</li>
-                                        <li>Aquagym Tonique cours d'aquagym dynamique</li>
-                                        <li>Mix Aqua-training cours comprenant différents ateliers: Aquabike, Step, Aquajump, ainsi que des
-                                            exercices d'Aquagym avec matériel</li>
-                                    </ul>
-                                    <div>
-                                        Les séances de qualités sont toutes dispensés en petits groupes, dans la détente et bonne humeur!L'eau de la piscine comprise
-                                        entre 30 et 32° permettra des séances aquatiques agréable, ou le travail est de rigueur!
-                                    </div>
-                                    <div>
-                                        Attention: les cours apprentissage de la natation sont proposés uniquement pour les enfants, les dimensions du bassin (3m
-                                        sur 6m) n'étant pas adapté à des entrainements adultes.
-                                    </div>
-                                    <div>
-                                        *
-                                    </div>
-                                    <div>
-                                        Les cours de natation et d'aquagym à Montpellier (ou dans les environs) sont dispensés à votre domicile Des séances sont
-                                        également proposé au centre de kinésithérapie NEOS SANTE à Montpellier
-                                    </div>
-                                    <div>
-                                        ACCES : 1 avenue Emile Bertin Sans, 34090 Montpellier TRAM 1 Arrêt "Saint Eloi"
-                                    </div>
-                                    <div>
-                                        « Le sport va chercher la peur pour la dominer, la fatigue pour en triompher, la difficulté pour la vaincre »
-                                        <br/>Pierre de Coubertin
-                                    </div>
-                                    <div>
-                                        Attention: les cours apprentissage de la <em>natation</em> sont proposés uniquement pour les
-                                        enfants, les dimensions du <em>bassin</em> (3m sur 6m) n'étant pas adapté à des entrainements
-                                        adultes.
-                                    </div>
-                                    <div>
-                                        Les <em>cours de natation</em> et d'<strong>aquagym</strong> à Montpellier (ou dans les environs)
-                                        sont dispensés à votre domicile. Des séances sont également proposé au centre de <em>kinésithérapie</em> <em>NEOS SANTE</em> à Montpellier.
-                                    </div>
-                                    <div>
-                                        ACCES : 1 avenue Emile Bertin Sans, 34090 Montpellier TRAM 1 Arrêt "Saint Eloi".
-                                    </div>
-                                    <div>
-                                        « Le sport va chercher la peur pour la dominer, la fatigue pour en triompher, la difficulté pour la vaincre »
-                                        <br/>Pierre de Coubertin
-                                    </div>
-                                </div>
-
+                    <section class="col-sm-8" id="main">
+                        <div class="accueilContent">
+                            <h3>Description</h3>
+                            <p>Notre centre est situé 100 impasse des fabricants à Teyran, à 12km de la Comédie de Montpellier
+                                Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
+                            </p>
+                            <br/>
+                            <h3>Equipement</h3>
+                            <p>Les séances se déroulent dans une <em>piscine</em> de 6m par 3m, profonde de 1,2m, chauffée entre
+                                31°c et 33°c.</p>
+                            <p> Elle est équipée de 6 buses de massage, de <em>nage</em> à contre-courant, de matériel d’
+                                <strong>hydrothérapie</strong> spécifique.</p>
+                            <p> Les douches situées après les cabines/vestiaires individuels, sont OBLIGATOIRES avant l’entrée
+                                dans la piscine. </p>
+                            <p>Autour du bassin, vous devez juste vous munir d’un maillot de bain et d’une serviette, vos affaires
+                                personnelles pouvant rester dans des casiers individuels mis à votre disposition.
+                            </p>
+                            </p>
+                            <br/>
+                            <h3>Professionel</h3>
+                            <p>Cours assurés par Damien et Noémie. </p>
+                            <br/>
+                            <div class="col-sm-12 col-sm-offset-3">
+                                <img src="./assets/acceuil.JPG" id="imgJardin" class="img-thumbnail" alt="Acceuil" style="width:50%;height: 50%" />
+                            </div>                           
                         </div>
                     </section>
                     <!-- sidebar droite-->
@@ -173,61 +140,58 @@ if (!isset($_SESSION['user'])) {
                             echo '<div>';
                             echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
                             echo '</div>';
-                            echo '<hr/>';
-                            echo '<div>';
-                            echo '<strong>Pas encore membre ?</strong>';
-                            echo '<br/>';
-                            echo '<a href = "./src/controllers/Inscription.php">';
-                            echo 'Inscrivez-vous gratuitement';
-                            echo '</a>';
-                            echo '</div>';
                             echo '</div>';
                             echo '</form>';
                         }
                         ?>
-                        <ul class = "sidebar-nav">
-                            <li>
-                                <a href = "./src/controllers/inscription.php" rel = "nofollow">Inscription</a>
-                            </li>
-                            <li>
-                                <a href = "./src/views/planning2.php" rel = "section">Planning</a>
-                            </li>
-                            <?php
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="./src/controllers/inscription.php" rel="nofollow">Inscription</a>
+                                </li>
+                                <li>
+                                    <a href="./src/views/planning2.php" rel="section">Planning</a>
+                                </li>
+                                <?php
                             if (isset($_SESSION['user'])) {
                                 echo'<li> <a href = "./src/views/profil.php" rel = "section">Mon Profil</a></li>';
                             }
                             ?>
-                        </ul>
-                        <hr/>
-                        <div class = "row sidebar-right info-supp2">
-                            <h4>Informations complémentaires</h4>
-                            <p>Les séances d’une durée de 45 min sont dispensées en petits groupes (5 à 10 personnes maximum)</p>
+                            </ul>
+                            <hr/>
+                            <div class="row sidebar-right info-supp2">
+                                <h4>Informations complémentaires</h4>
+                                <p>Les séances d’une durée de 45 min sont dispensées en petits groupes (5 à 10 personnes maximum)
+                                </p>
 
-                            <p>5 séances valable 6 semaines, 10 séances valables 3 mois, 20 séances valables 6 mois et 30 séances
-                                valable 1 an à compter de la première séance effectuée</p>
+                                <p>5 séances valable 6 semaines, 10 séances valables 3 mois, 20 séances valables 6 mois et 30
+                                    séances valable 1 an à compter de la première séance effectuée</p>
 
-                            <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB non acceptée</p>
+                                <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB
+                                    non acceptée</p>
 
-                            <p>Suivez l’actualité et les offres du moment</p>
-                            <a target = '_blank' href = 'https://www.facebook.com/Aquagym.Natation.Teyran/'><img src = "./assets/lienFB.png" alt = 'lien facebook'></a>
-                        </div>
+                                <p>Suivez l’actualité et les offres du moment</p>
+                                <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/'><img src="./assets/lienFB.png" alt='lien facebook'></a>
+                                <div class="mapStyle">
+                                    <?php $map->printMap(); ?>
+                                </div>
+                            </div>
                     </nav>
                     <!--sidebar droite -->
                     <footer>
-                        <div class = "col-sm-6 footerContent">
-                            <a href = "#" rel = "section">Mix Aqua-training</a>
-                            <span class = "separator"></span>
-                            <a href = "#" rel = "section">Mix Aqua-training</a>
-                            <span class = "separator"></span>
-                            <a href = "#" rel = "section">Mix Aqua-training</a>
+                        <div class="col-sm-6 footerContent">
+                            <a href="#" rel="section">Mix Aqua-training</a>
+                            <span class="separator"></span>
+                            <a href="#" rel="section">Mix Aqua-training</a>
+                            <span class="separator"></span>
+                            <a href="#" rel="section">Mix Aqua-training</a>
                         </div>
                     </footer>
                 </div>
             </div>
         </div>
 
-        <script src = "./js/jquery-3.1.0.min.js"></script>
+        <script src="./js/jquery-3.1.0.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
     </body>
 
-</html>
+    </html>
