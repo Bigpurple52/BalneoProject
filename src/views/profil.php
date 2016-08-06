@@ -89,63 +89,63 @@ if (!isset($_SESSION['user'])) {
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">
                                         <label class="control-label" for="nom">Nom</label>
-                                        <input id="nom" class="form-control" type="text" placeholder="Mon nom" name="nom" autofocus value="" data-placement="right"
+                                        <input id="nom" class="form-control" type="text" placeholder="Mon nom" name="nom" autofocus value="<?php echo $_SESSION['nom'] ?>" data-placement="right"
                                                data-trigger="manual" data-content="Doit contenir entre 2 et 20 caracteres, uniquement de lettres"
                                                />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="prenom">Prénom</label>
-                                        <input id="prenom" class="form-control" type="text" placeholder="Mon prenom" name="prenom" value="" data-placement="right"
+                                        <input id="prenom" class="form-control" type="text" placeholder="Mon prenom" name="prenom" value="<?php echo $_SESSION['prenom'] ?>" data-placement="right"
                                                data-trigger="manual" data-content="Doit contenir entre 2 et 20 caracteres, uniquement de lettres"
                                                />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="pass">Mot de passe</label>
-                                        <input id="pass" class="form-control" type="password" placeholder="Mon mot de passe" name="password" data-placement="right"
+                                        <input id="pass" class="form-control" type="password" placeholder="Mon mot de passe" name="password" data-placement="right" value="<?php echo $_SESSION['password'] ?>"
                                                data-trigger="manual" data-content="Doit contenir au moins 6 caracteres, dont au moins un chiffre, une lettre majuscule et minuscule."
                                                />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="mail">Email</label>
                                         <input id="mail" class="form-control" type="text" placeholder="Mon email" name="email" data-placement="right" data-trigger="manual"
-                                               value="" data-content="Doit etre une adresse mail valide (user@gmail.com)" />
+                                               value="<?php echo $_SESSION['email'] ?>" data-content="Doit etre une adresse mail valide (user@gmail.com)" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="tel">Telephone</label>
                                         <input id="tel" class="form-control" type="text" placeholder="Mon numéro de téléphone" name="tel" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)"
+                                               data-trigger="manual" value="<?php echo $_SESSION['tel'] ?>" data-content="Doit être un numéro de téléphone valide(0611223344)"
                                                />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="datenaissance">Date de naissance</label>
                                         <input id="datenaissance" class="form-control" type="date" placeholder="Date de naissance" name="datenaissance" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Date de naissance" />
+                                               data-trigger="manual" value="<?php echo $_SESSION['datenaissance'] ?>" data-content="Date de naissance" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="lieunaissance">Lieu de naissance</label>
                                         <input id="lieunaissance" class="form-control" type="text" placeholder="Mon lieu de naissance" name="villenaissance" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)"
+                                               data-trigger="manual" value="<?php echo $_SESSION['villenaissance'] ?>" data-content="Doit être un numéro de téléphone valide(0611223344)"
                                                />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="adresse">Adresse</label>
                                         <input id="adresse" class="form-control" type="text" placeholder="Mon adresse" name="adresse" data-placement="right" data-trigger="manual"
-                                               value="" data-content="Adresse" />
+                                               value="<?php echo $_SESSION['adresse'] ?>" data-content="Adresse" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="ville">Ville</label>
                                         <input id="ville" class="form-control" type="text" placeholder="Ma ville" name="ville" data-placement="right" data-trigger="manual"
-                                               value="" data-content="ville actuelle" />
+                                               value="<?php echo $_SESSION['ville'] ?>" data-content="ville actuelle" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="codepostal">Code Postal</label>
                                         <input id="codepostal" class="form-control" type="number" placeholder="Code Postale" name="codepostal" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Code Postal" />
+                                               data-trigger="manual" value="<?php echo $_SESSION['codepostal'] ?>" data-content="Code Postal" />
                                     </div>
                                     <hr/>
                                     <?php
                                     if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
-                                        include_once('./editProfile.php');
+                                        include_once('../controllers/editProfile.php');
                                         editUser();
                                         if ($etatUpdate) {
                                             echo '<p class = "alert-success">La mise à jour de vos informations a été réalisé avec succès.</p>';

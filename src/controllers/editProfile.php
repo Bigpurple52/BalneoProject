@@ -23,17 +23,17 @@ function editUser()
         die();
     }
     $stmt = $sql->prepare('UPDATE usertable SET'
-            . '`nom` =N :nom,'
-            . '`prenom` =N :prenom,'
-            . '`password` =N :password,'
-            . '`email` =N :email,'
-            . '`adresse`=N :adresse,'
-            . '`ville`=N :ville,'
-            . '`villenaissance` =N :villenaissance,'
-            . '`datenaissance` =N :datenaissance,'
-            . '`tel` =N :tel,'
-            . '`codepostal` =N :codepostal'
-            . ' WHERE email =N  :user');
+            . '`nom` = :nom,'
+            . '`prenom` = :prenom,'
+            . '`password` = :password,'
+            . '`email` = :email,'
+            . '`adresse`= :adresse,'
+            . '`ville`= :ville,'
+            . '`villenaissance` = :villenaissance,'
+            . '`datenaissance` = :datenaissance,'
+            . '`tel` = :tel,'
+            . '`codepostal` = :codepostal'
+            . ' WHERE email =  :user');
     $stmt->bindParam(':nom', $nom);
     $nom = !empty($filteredPost['nom']) ? $filteredPost['nom'] : ' ';
     $stmt->bindParam(':prenom', $prenom);
