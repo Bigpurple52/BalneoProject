@@ -88,7 +88,7 @@ if (!isset($_SESSION['user'])) {
                     <nav class="col-sm-2">
                         <?php
                         if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '</div>';
+                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
                         } else {
                             echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
                             echo '<div class = "form-group" id = "login-form">';
