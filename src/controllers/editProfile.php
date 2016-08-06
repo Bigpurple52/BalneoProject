@@ -2,6 +2,7 @@
 
 function editUser()
 {
+    global $etatUpdate;
     $filteredPost = [];
     $postedValues = filter_input_array(INPUT_POST);
     if (is_array($postedValues)) {
@@ -56,9 +57,9 @@ function editUser()
     $stmt->bindParam(':user', $_SESSION['user']);
     try {
         if ($stmt->execute()) {
-            $etatInscription = true;
+            $etatUpdate = true;
         } else {
-            $etatInscription = false;
+            $etatUpdate = false;
         }
     } catch (PDOException $e) {
         print "Erreur!: " . $e->getMessage() . "<br/>";

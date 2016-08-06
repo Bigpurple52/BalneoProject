@@ -1,8 +1,13 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    session_unset();
-    session_destroy();
+    try {
+        session_unset();
+        session_destroy();
+    } catch (Exception $e) {
+        print "Erreur !: " . $e->getMessage() . "<br/>";
+        die();
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -157,7 +162,7 @@ if (!isset($_SESSION['user'])) {
                             echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
                             echo '<div class = "form-group" id = "login-form">';
                             echo '<div>';
-                            echo 'label class = "control-label" for = "emailId">Mon adresse email</label>';
+                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
                             echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
                             echo '</div>';
                             echo '<div>';

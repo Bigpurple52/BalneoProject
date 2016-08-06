@@ -147,17 +147,15 @@ if (!isset($_SESSION['user'])) {
                                     if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
                                         include_once('./editProfile.php');
                                         editUser();
-                                        if ($etatInscription) {
-                                            echo '<p class = "alert-success">Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.</p>';
-                                        } elseif (!$etatInscription) {
-                                            echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
+                                        if ($etatUpdate) {
+                                            echo '<p class = "alert-success">La mise à jour de vos informations a été réalisé avec succès.</p>';
+                                        } elseif (!$etatUpdate) {
+                                            echo '<p class = "alert-danger">La mise à jour de vos informations a échoué.</p>';
                                         }
-                                    } else {
-                                        echo '<p class = "alert-danger">* Tous les champs sont obligatoires.</p>';
                                     }
                                     unset($etatInscription);
                                     ?>
-                                    <input type="submit" class="btn btn-primary" name="submit" value="S'incrire" />
+                                    <input type="submit" class="btn btn-primary" name="submit" value="Enregistrer" />
                                 </div>
                             </form>
                         </div>
@@ -166,12 +164,12 @@ if (!isset($_SESSION['user'])) {
                     <nav class="col-sm-2">
                         <?php
                         if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '</div>';
+                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . ' et ' . $_SESSION['prenom'] . '</div>';
                         } else {
                             echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
                             echo '<div class = "form-group" id = "login-form">';
                             echo '<div>';
-                            echo 'label class = "control-label" for = "emailId">Mon adresse email</label>';
+                            echo '<<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
                             echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
                             echo '</div>';
                             echo '<div>';
@@ -186,7 +184,7 @@ if (!isset($_SESSION['user'])) {
                             echo '<div>';
                             echo '<strong>Pas encore membre ?</strong>';
                             echo '<br/>';
-                            echo '<a href = "./src/controllers/Inscription.php">';
+                            echo '<a href = "../controllers/inscription.php">';
                             echo 'Inscrivez-vous gratuitement';
                             echo '</a>';
                             echo '</div>';
@@ -196,10 +194,10 @@ if (!isset($_SESSION['user'])) {
                         ?>
                         <ul class = "sidebar-nav">
                             <li>
-                                <a href = "./src/controllers/inscription.php" rel = "nofollow">Inscription</a>
+                                <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
                             </li>
                             <li>
-                                <a href = "./src/views/planning2.php" rel = "section">Planning</a>
+                                <a href = "./planning2.php" rel = "section">Planning</a>
                             </li>
                             <?php
                             if (isset($_SESSION['user'])) {

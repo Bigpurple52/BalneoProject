@@ -171,7 +171,7 @@ if (!isset($_SESSION['user'])) {
                             echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
                             echo '<div class = "form-group" id = "login-form">';
                             echo '<div>';
-                            echo 'label class = "control-label" for = "emailId">Mon adresse email</label>';
+                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
                             echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
                             echo '</div>';
                             echo '<div>';
@@ -196,10 +196,10 @@ if (!isset($_SESSION['user'])) {
                         ?>
                         <ul class = "sidebar-nav">
                             <li>
-                                <a href = "./src/controllers/inscription.php" rel = "nofollow">Inscription</a>
+                                <a href = "./inscription.php" rel = "nofollow">Inscription</a>
                             </li>
                             <li>
-                                <a href = "./src/views/planning2.php" rel = "section">Planning</a>
+                                <a href = "../views/planning2.php" rel = "section">Planning</a>
                             </li>
                             <?php
                             if (isset($_SESSION['user'])) {
