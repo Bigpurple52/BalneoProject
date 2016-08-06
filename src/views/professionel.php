@@ -90,7 +90,7 @@ if (!isset($_SESSION['user'])) {
                         if (isset($_SESSION['user'])) {
                             echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '</div>';
                         } else {
-                            echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
+                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
                             echo '<div class = "form-group" id = "login-form">';
                             echo '<div>';
                             echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
@@ -125,7 +125,7 @@ if (!isset($_SESSION['user'])) {
                             </li>
                             <?php
                             if (isset($_SESSION['user'])) {
-                                echo'<li> <a href = "./src/views/profil.php" rel = "section">Mon Profil</a></li>';
+                                echo'<li> <a href = "./profil.php" rel = "section">Mon Profil</a></li>';
                             }
                             ?>
                         </ul>
