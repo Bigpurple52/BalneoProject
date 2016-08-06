@@ -399,3 +399,11 @@ em, strong{
 .user-info a:hover{
     font-weight: bold;
 }
+
+form a{
+    color : black;
+}
+form a:hover{
+    color : black;
+    font-weight: bold;
+}
