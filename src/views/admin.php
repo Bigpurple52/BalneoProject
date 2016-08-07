@@ -35,9 +35,8 @@ function displayContent($userList)
     echo '<meta charset = "utf-8" />';
     echo '<meta name = "viewport" content = "width=device-width, height=device-height, initial-scale=1, maximum-scale=1">';
     echo '<meta name = "description" content = "Page d\'administration du site : aqua-balneo.fr">';
-    echo '<meta name = "keywords" content = "Activités aquatiques;Aquagym;Aquaphobie;Aquadynamic;Aquadouce;AquaBike;Aqua training;Jardin Aquatique;Stage de natation enfant">';
+    echo '<meta name="robots" content="noindex,nofollow" />';
     echo '<title>aqua-balneo.fr : Activités aquatiques pour petits et grands</title>';
-    echo '<link rel = "icon" href = "favicon.ico" />';
     echo '<link rel = "stylesheet" href = "../../css/bootstrap-theme.min.css">';
     echo '<link rel = "stylesheet" href = "../../css/bootstrap.min.css">';
     echo '<link rel = "stylesheet" href = "../../css/balneo.css">';
@@ -121,7 +120,7 @@ function displayContent($userList)
     echo '</select>';
     echo '</div>';
     echo '<div class = "form-group">';
-    echo '<label for = "jeton">Select list (select one):</label>';
+    echo '<label for = "jeton">Activité:</label>';
     echo '<select name="activite" class = "form-control" id = "jeton">';
     echo '<option>aquadouce</option>';
     echo '<option>aquadynamic</option>';
