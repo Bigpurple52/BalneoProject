@@ -244,12 +244,25 @@ form a:hover{
         font-size: 10px;
     }
 
-    .sidebar-nav li:not(.sidebar-brand) {
+    h2{
+        font-size: 25px;
+    }
+
+    h3{
+        font-size: 21px;
+    }
+
+    h4{
         font-size: 15px;
     }
 
+    .sidebar-nav li:not(.sidebar-brand) {
+        padding: 11px 32px 11px 0;
+        font-size: 16px;
+    }
+
     .sidebar-nav li:not(.sidebar-brand) a:hover {
-        font-size: 14px;
+        font-size: 15px;
     }
 
    .imgLogo{
