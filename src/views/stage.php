@@ -157,11 +157,11 @@ if (!isset($_SESSION['user'])) {
                     <!--sidebar droite -->
                     <footer>
                         <div class="col-sm-6 footerContent">
-                            <a href="#" rel="section">Mix Aqua-training</a>
+                            <a href="#" rel="nofollow">Mix Aqua-training</a>
                             <span class="separator"></span>
-                            <a href="#" rel="section">Mix Aqua-training</a>
+                            <a href="#" rel="nofollow">Mix Aqua-training</a>
                             <span class="separator"></span>
-                            <a href="#" rel="section">Mix Aqua-training</a>
+                            <a href="#" rel="nofollow">Mix Aqua-training</a>
                         </div>
                     </footer>
                 </div>
