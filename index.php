@@ -43,10 +43,33 @@ $map->setZoomLevel (6);
                 <header>
                     <nav class="collapse navbar-collapse">
                         <br/>
-                        <div>
-                            <img src="./assets/logoK-HYLE.png" />
+                        <div class="col-sm-2">
+                            <img src="./assets/logoK-HYLE.png" class="imgLogo"/>
                         </div>
-                        <br/>
+                        <div class="col-sm-2 col-sm-offset-8" class="blockConnection">
+                        <?php
+                        if (isset($_SESSION['user'])) {
+                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                        } else {
+                            echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
+                            echo '<div class = "form-group" id = "login-form">';
+                            echo '<div>';
+                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                            echo '</div>';
+                            echo '<div>';
+                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                            echo '</div>';
+                            echo '<br>';
+                            echo '<div>';
+                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</form>';
+                        }
+                        ?>
+                        </div>
                     </nav>
                 </header>
                 <!-- /top nav -->
@@ -122,28 +145,6 @@ $map->setZoomLevel (6);
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2" role="navigation">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
                             <ul class="sidebar-nav">
                                 <li>
                                     <a href="./src/controllers/inscription.php" rel="nofollow">Inscription</a>
@@ -171,6 +172,15 @@ $map->setZoomLevel (6);
 
                                 <p>Suivez l’actualité et les offres du moment</p>
                                 <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/'><img src="./assets/lienFB.png" alt='lien facebook'></a>
+                                <address>
+                                    <h4>Contact</h4>
+                                    <p>+33 783 552 013 et +33 624 338 137 </p>
+                                    <a href="mailto:Balneo.K-Hyle@hotmail.com">Balneo.K-Hyle@hotmail.com</a>
+                                    </p>
+                                    <h4>Où sommes-nous ?</h4>
+                                    <p>100 impasse des fabricants à Teyran
+                                    </p>
+                                </address>
                                 <div class="mapStyle">
                                     <?php $map->printMap(); ?>
                                 </div>

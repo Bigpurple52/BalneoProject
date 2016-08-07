@@ -40,7 +40,6 @@ hr {
 header{
     background-image: url("../assets/banniere.jpg");
     background-repeat: no-repeat;
-    /*background-size: 100%;*/
     background-position: center;
     text-align: left;
 }
@@ -232,4 +231,12 @@ form a:hover{
 .mapStyle{
     background-color: red;
     margin-top: 10px;
+}
+
+.imgLogo{
+    float: right;
+}
+
+.blockConnection{
+    text-align: center;
 }
