@@ -58,8 +58,8 @@ function displayContent()
     echo '<nav class = "col-sm-2" role = "navigation">';
     echo '<ul class = "sidebar-nav">';
     echo '<li class = "sidebar-brand">';
-    echo '<a href = "#" rel = "contents">';
-    echo '<h2>Page d\'administration</h2>';
+    echo '<a href = "../../index.php" rel = "contents">';
+    echo '<h2>Accueil</h2>';
     echo '<hr/>';
     echo '</a>';
     echo '</li>';
