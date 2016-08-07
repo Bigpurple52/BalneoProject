@@ -12,10 +12,18 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua.balneo.fr') 
         die();
     }
 } elseif (isset($_SESSION['user']) && $_SESSION['user'] === 'k-hyle@aqua.balneo.fr') {
-    displayContent();
+    try {
+        $sql = new PDO('mysql:host=localhost;port=3306;dbname=balneodb', 'root', 'MySQL');
+        $coOk = true;
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage() . "<br/>";
+        die();
+    }
+    $userList = getUserList($sql);
+    displayContent($userList);
 }
 
-function displayContent()
+function displayContent($userList)
 {
     echo '<!DOCTYPE html>';
     echo '<html lang = "fr-FR">';
@@ -100,7 +108,14 @@ function displayContent()
     echo '<form role="form" class="well" id="jetonform" name="jetons" method="POST" action="' . filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING) . '">';
     echo '<div class = "form-group">';
     echo '<label for = "user">Identifiant utilisateur (adresse mail):</label>';
-    echo '<input type = "text" name ="user" class = "form-control" id = "user">';
+    echo '<select name ="user" class = "form-control" id = "user">';
+    foreach ($userList as $uL) {
+//        foreach ($uL as $u) {
+        echo '<option>' . $uL['email'] . '</option>';
+//        }
+    }
+
+    echo '</select>';
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "jeton">Select list (select one):</label>';
@@ -167,13 +182,6 @@ if (is_array($postedValues)) {
 if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
 //Add token
     if (!empty($filteredPost['activite']) && !empty($filteredPost['nombrejeton'] && !empty($filteredPost['user']))) {
-        try {
-            $sql = new PDO('mysql:host=localhost;port=3306;dbname=balneodb', 'root', 'MySQL');
-            $coOk = true;
-        } catch (PDOException $e) {
-            print "Erreur !: " . $e->getMessage() . "<br/>";
-            die();
-        }
 
         if ($coOk) {
             $stmt = $sql->prepare("SELECT * FROM usertable WHERE email = :user");
@@ -193,3 +201,13 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'PO
     }
 }
 
+function getUserList($sql)
+{
+    $myQuery = 'SELECT email FROM usertable';
+    $tempDB = $sql->query($myQuery);
+    $userList = [];
+    while ($result = $tempDB->fetch())
+        $userList[] = $result;
+
+    return $userList;
+}
