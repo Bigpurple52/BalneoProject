@@ -153,7 +153,7 @@ $map->setZoomLevel (6);
                                     <a href="./src/controllers/inscription.php" rel="nofollow">Inscription</a>
                                 </li>
                                 <li>
-                                    <a href="./src/views/planning2.php" rel="section">Planning</a>
+                                    <a href="./js/remplirPlanning.php" rel="section">Planning</a>
                                 </li>
                                 <?php
                             if (isset($_SESSION['user'])) {
