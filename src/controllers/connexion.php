@@ -30,12 +30,11 @@ try {
             header('Location: ../../index.php');
             die();
         }
-    } else {
-        header('Content-Type: text/html; charset=utf-8');
-        header('Location: ../../index.php');
-        die();
     }
 } catch (Exception $e) {
     print "La connexion a échoué!<br/>";
     die();
 }
+header('Content-Type: text/html; charset=utf-8');
+header('Location: ../../index.php');
+die();
