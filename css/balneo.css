@@ -37,13 +37,6 @@ hr {
     margin-top:32px;
 }
 
-header{
-    background-image: url("../assets/banniere.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: left;
-}
-
 .contentTitle{
     text-align: center;
     margin-bottom: 20px;
@@ -234,9 +227,38 @@ form a:hover{
 }
 
 .imgLogo{
-    float: right;
+    margin-left: -25px;
+}
+
+.imgBanniere{
+    margin-left: -25px;
 }
 
 .blockConnection{
     text-align: center;
+}
+
+/* For ff */
+@-moz-document url-prefix() {
+    body{
+        font-size: 10px;
+    }
+
+    .sidebar-nav li:not(.sidebar-brand) {
+        font-size: 15px;
+    }
+
+    .sidebar-nav li:not(.sidebar-brand) a:hover {
+        font-size: 14px;
+    }
+
+   .imgLogo{
+        width: 115%;
+        margin-left: -35px;
+    }
+
+    .imgBanniere{
+       width: 993px;
+       height: 229px;
+    }
 }

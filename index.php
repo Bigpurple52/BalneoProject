@@ -46,7 +46,10 @@ $map->setZoomLevel (6);
                         <div class="col-sm-2">
                             <img src="./assets/logoK-HYLE.png" class="imgLogo"/>
                         </div>
-                        <div class="col-sm-2 col-sm-offset-8" class="blockConnection">
+                        <div class="col-sm-8">
+                            <img src="./assets/banniere.jpg" class="imgBanniere"/>
+                        </div>
+                        <div class="col-sm-2" class="blockConnection">
                         <?php
                         if (isset($_SESSION['user'])) {
                             echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
