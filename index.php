@@ -44,12 +44,12 @@ $map->setZoomLevel (6);
                     <nav class="collapse navbar-collapse">
                         <br/>
                         <div class="col-sm-2">
-                            <img src="./assets/logoK-HYLE.png" class="imgLogo"/>
+                            <img src="./assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8">
-                            <img src="./assets/banniere.jpg" class="imgBanniere"/>
+                            <img src="./assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
                         </div>
-                        <div class="col-sm-2" class="blockConnection">
+                        <div class="col-sm-2 blockConnection">
                         <?php
                         if (isset($_SESSION['user'])) {
                             echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
@@ -180,7 +180,7 @@ $map->setZoomLevel (6);
                                     <p>+33 783 552 013 et +33 624 338 137 </p>
                                     <a href="mailto:Balneo.K-Hyle@hotmail.com">Balneo.K-Hyle@hotmail.com</a>
                                     </p>
-                                    <h4>Où sommes-nous ?</h4>
+                                    <h4>Où nous trouver ?</h4>
                                     <p>100 impasse des fabricants à Teyran
                                     </p>
                                 </address>

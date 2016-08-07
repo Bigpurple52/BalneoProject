@@ -27,11 +27,36 @@ if (!isset($_SESSION['user'])) {
                 <header>
                     <nav class="collapse navbar-collapse">
                         <br/>
-                        <div>
-                            <img src="../../assets/logoK-HYLE.png" alt="logo site">
-                            <h1 class="logoTitle">Centre Balnéo K-Hylé à Teyran</h1>
+                        <div class="col-sm-2">
+                            <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
-                        <br/>
+                        <div class="col-sm-8">
+                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                        </div>
+                        <div class="col-sm-2 blockConnection">
+                        <?php
+                        if (isset($_SESSION['user'])) {
+                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                        } else {
+                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                            echo '<div class = "form-group" id = "login-form">';
+                            echo '<div>';
+                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                            echo '</div>';
+                            echo '<div>';
+                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                            echo '</div>';
+                            echo '<br>';
+                            echo '<div>';
+                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</form>';
+                        }
+                        ?>
+                        </div>
                     </nav>
                 </header>
                 <!-- /top nav -->
@@ -39,7 +64,7 @@ if (!isset($_SESSION['user'])) {
             <div class="wrapper">
                 <div class="row">
                     <!-- sidebar gauche-->
-                    <nav class="col-sm-2" role="navigation">
+                    <nav class="col-sm-2">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
                                 <a href="../../index.php" rel="contents">
@@ -121,37 +146,7 @@ if (!isset($_SESSION['user'])) {
                         </div>
                     </section>
                     <!-- sidebar droite-->
-                    <nav class="col-sm-2">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '<hr/>';
-                            echo '<div>';
-                            echo '<strong>Pas encore membre ?</strong>';
-                            echo '<br/>';
-                            echo '<a href = "../controllers/inscription.php">';
-                            echo 'Inscrivez-vous gratuitement';
-                            echo '</a>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                    <nav class="col-sm-2">                        
                         <ul class = "sidebar-nav">
                             <li>
                                 <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
