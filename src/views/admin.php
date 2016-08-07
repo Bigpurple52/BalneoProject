@@ -21,6 +21,9 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua.balneo.fr') 
     }
     $userList = getUserList($sql);
     displayContent($userList);
+} else {
+    header('Content-Type: text/html; charset=utf-8');
+    header('Location: ../../index.php');
 }
 
 function displayContent($userList)
