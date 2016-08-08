@@ -157,7 +157,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 205€ le forfait de 10 séances</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 3 ou 5 personnes.</p>
+                                <p>L'activité est organisée par groupe de 5 personnes maximum.</p>
                             </div>
                         </div>
                         <hr/>

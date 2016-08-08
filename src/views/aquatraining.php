@@ -183,7 +183,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 375€ les 30 séances</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 5 ou 8 personnes.</p>
+                                <p>L'activité est organisée par groupe de 8 personnes maximum.</p>
                             </div>
                         </div>
                         <hr/>

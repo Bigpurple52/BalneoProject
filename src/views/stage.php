@@ -149,7 +149,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 105€ la séance </li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 3 ou 6 enfants.</p>
+                                <p>L'activité est organisée par groupe de 6 enfants maximum.</p>
                             </div>
                         </div>
                         <hr/>

@@ -170,7 +170,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 210€ les 6 mois</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 5 ou 6 enfants.</p>
+                                <p>L'activité est organisée par groupe de 6 enfants maximum.</p>
                             </div>
                         </div>
                         <hr/>
