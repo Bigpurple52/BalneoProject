@@ -5,15 +5,15 @@ if (!isset($_SESSION['user'])) {
     session_destroy();
 }
 ?>
-<!DOCTYPE html>
-<html lang="fr-FR">
+    <!DOCTYPE html>
+    <html lang="fr-FR">
 
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="activité aquatique à Montpellier : Stage de natation enfant">
-        <meta name="keywords" content="Activités aquatiques;Stage de natation enfant">
-        <title>aqua-balneo.fr : Stage de natation enfant</title>
+        <meta name="description" content="activité aquatique à Montpellier : Aquababy'">
+        <meta name="keywords" content="Activités aquatiques;AquaBaby">
+        <title>aqua-balneo.fr : Aquababy</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -28,13 +28,13 @@ if (!isset($_SESSION['user'])) {
                     <nav class="collapse navbar-collapse noPadding">
                         <br/>
                         <div class="col-sm-2">
-                            <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
+                            <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle" />
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere" />
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
+                            <?php
                         if (isset($_SESSION['user'])) {
                             echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
                         } else {
@@ -59,6 +59,9 @@ if (!isset($_SESSION['user'])) {
                         </div>
                     </nav>
                 </header>
+                <!-- /top nav -->
+            </div>
+            <div class="wrapper">
                 <div class="row">
                     <!-- sidebar gauche-->
                     <nav class="col-sm-2">
@@ -88,10 +91,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
                             </li>
                             <li>
-                                <a href="./aquababy.php" rel="section">AquaBaby</a>
+                                <a href="#" rel="section">AquaBaby</a>
                             </li>
                             <li>
-                                <a href="#" rel="section">Stage de natation enfant</a>
+                                <a href="./stage.php" rel="section">Stage de natation enfant</a>
                             </li>
                             <li>
                                 <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
@@ -102,35 +105,36 @@ if (!isset($_SESSION['user'])) {
                         </ul>
                     </nav>
                     <!-- /sidebar -->
-
                     <!-- content -->
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
-                            <h1 class="contentTitle">Stage de natation enfant</h1>
-                            <!--Left part-->
+                            <h1 class="contentTitle">AquaBaby</h1>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h4>Description</h4>
+                                    <h3>Description</h3>
+                                    <p>Séance de 40 min ou l'enfant (entre 4 mois et 3 ans) évolue en toute confiance dans un
+                                        bassin ou l'eau est chauffé à 32 °, accompagné d'un parent.</p>
+                                    <p>Des <em>jeux aquatiques</em> sont à disposition.</p>
+                                    <p>C'est une activité réalisé dans une ambiance affective et sécurisante.</p>
+                                    <p>Elle favorise <em>l'éveil sensorielle et moteur</em> d'un point de vue corporelle et
+                                        émotionnel ainsi que l'<em>épanouissement psychologique</em> dans le cercle familiale
+                                        d'abord puis sociale par la suite.</p>
+                                    <br/>
                                 </div>
-                                <!--Left part-->
-
-                                <!--Right part-->
                                 <div class="col-sm-12 col-sm-offset-3">
-                                    <img src="../../assets/jardin-aqua.jpg" id="imgJardin" class="img-thumbnail" alt="stage enfant" style="width:50%;height: 50%"
-                                         />
+                                    <img src="../../assets/aquababy.jpg" id="imgJardin" class="img-thumbnail" alt="aquababy" style="width:50%;height: 50%" />
                                 </div>
                             </div>
                         </div>
-                        <!--Right part-->
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
-                        <ul class = "sidebar-nav">
+                        <ul class="sidebar-nav">
                             <li>
-                                <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
+                                <a href="../controllers/inscription.php" rel="nofollow">Inscription</a>
                             </li>
                             <li>
-                                <a href = "./planning2.php" rel = "section">Planning</a>
+                                <a href="./planning2.php" rel="section">Planning</a>
                             </li>
                             <?php
                             if (isset($_SESSION['user'])) {
@@ -142,17 +146,32 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
-                                <p>Tous les soirs à 16H ou 17H, uniquement en vacances scolaire.</p>
+                                <table class="table">
+                                    <tr>
+                                        <td>Mercredi</td>
+                                        <td>15H00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Samedi</td>
+                                        <td>14H00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Samedi</td>
+                                        <td>15H00</td>
+                                    </tr>
+                                </table>
+                                <p>Hors petites vacances scolaires</p>
                             </div>
                         </div>
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Tarification</h2>
                                 <ul>
-                                    <li> 105€ la séance </li>
+                                    <li> 170€ les 10 séances</li>
+                                    <li> 265€ les 6 mois</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 6 enfants maximum.</p>
+                                <p>L'activité est organisée par couple enfant/parent de 3 couples maximum.</p>
                             </div>
                         </div>
                         <hr/>
@@ -173,4 +192,4 @@ if (!isset($_SESSION['user'])) {
 
     </body>
 
-</html>
+    </html>

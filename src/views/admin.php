@@ -91,6 +91,9 @@ function displayContent($userList)
     echo '<li>';
     echo '<a href = "./jardin.php" rel = "section">Jardin Aquatique enfant</a>';
     echo '</li>';
+     echo '<li>';
+    echo '<a href = "./aquababy.php" rel = "section">AquaBaby</a>';
+    echo '</li>';
     echo '<li>';
     echo '<a href = "./stage.php" rel = "section">Stage de natation enfant</a>';
     echo '</li>';

@@ -92,6 +92,9 @@ if (!isset($_SESSION['user'])) {
                                 <a href="../views/jardin.php" rel="section">Jardin Aquatique enfant</a>
                             </li>
                             <li>
+                                <a href="../views/aquababy.php" rel="section">AquaBaby</a>
+                            </li>
+                            <li>
                                 <a href="../views/stage.php" rel="section">Stage de natation enfant</a>
                             </li>
                             <li>

@@ -91,6 +91,9 @@ if (!isset($_SESSION['user'])) {
                                 <a href="#" rel="section">Jardin Aquatique enfant</a>
                             </li>
                             <li>
+                                <a href="./aquababy.php" rel="section">AquaBaby</a>
+                            </li>
+                            <li>
                                 <a href="./stage.php" rel="section">Stage de natation enfant</a>
                             </li>
                             <li>
@@ -110,7 +113,7 @@ if (!isset($_SESSION['user'])) {
                             <div class="row">
                                 <div class="col-sm-12">
                                     <h3>Description</h3>
-                                    <p>Enfant à partir de 3 ans, cours de familiarisation dans un contexte ludique.</p>
+                                    <p>Enfant à partir de 4 ans et jusqu'à 6 ans, cours de familiarisation dans un contexte ludique.</p>
                                     <p>L’objectif est de permettre à l’enfant d’acquérir une certaine autonomie dans un <em>milieu aquatique</em>.</p>
                                     <p>La température de l’eau d’environ 32° permettra à vos enfants de bénéficier de cette activité
                                         dans des conditions optimales.</p>
@@ -144,30 +147,22 @@ if (!isset($_SESSION['user'])) {
                                 <table class="table">
                                     <tr>
                                         <td>Mercredi</td>
-                                        <td>15H00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mercredi</td>
                                         <td>16H00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Samedi </td>
-                                        <td>15H00</td>
                                     </tr>
                                     <tr>
                                         <td>Samedi </td>
                                         <td>16H00</td>
                                     </tr>
                                 </table>
+                                <p>Hors petites vacances scolaires</p>
                             </div>
                         </div>
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Tarification</h2>
                                 <ul>
-                                    <li> 13€ à l’unité </li>
-                                    <li> 130€ les 10 séances</li>
-                                    <li> 210€ les 6 mois</li>
+                                    <li> 160€ les 10 séances</li>
+                                    <li> 230€ les 6 mois</li>
                                 </ul>
                                 <hr>
                                 <p>L'activité est organisée par groupe de 6 enfants maximum.</p>

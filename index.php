@@ -41,13 +41,11 @@ $map->setZoomLevel(6);
             <div class="row">
                 <!-- top nav -->
                 <header>
-                    <nav class="collapse navbar-collapse">
                     <nav class="collapse navbar-collapse noPadding">
                         <br/>
                         <div class="col-sm-2">
                             <img src="./assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
-                        <div class="col-sm-8">
                         <div class="col-sm-8 noPadding">
                             <img src="./assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
                         </div>
@@ -107,6 +105,9 @@ $map->setZoomLevel(6);
                             </li>
                             <li>
                                 <a href="./src/views/jardin.php" rel="section">Jardin Aquatique enfant</a>
+                            </li>
+                            <li>
+                                <a href="./src/views/aquababy.php" rel="section">AquaBaby</a>
                             </li>
                             <li>
                                 <a href="./src/views/stage.php" rel="section">Stage de natation enfant</a>
@@ -190,33 +191,15 @@ $map->setZoomLevel(6);
                                 </p>
                             </address>
                             <div class="mapStyle">
-                                <?php $map->printMap(); ?>
-                                <p>Suivez l’actualité et les offres du moment</p>
-                                <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/' rel="nofollow"><img src="./assets/lienFB.png" alt='lien facebook'></a>
-                                <address>
-                                    <h4>Contact</h4>
-                                    <p>07 83 55 20 13 et 06 24 33 81 37</p>
-                                    <a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>
-                                    </p>
-                                    <h4>Où nous trouver ?</h4>
-                                    <p>100 impasse des fabricants à Teyran
-                                    </p>
-                                </address>
-                                <div class="mapStyle">
-                                    <?php $map->printMap(); ?>
-                                </div>
+                                <?php $map->printMap(); ?>                                
                             </div>
                         </div>
                     </nav>
                     <!--sidebar droite -->
                     <footer>
                         <div class="col-sm-6 footerContent">
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
                             <a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>
                             <span class="separator"></span>
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
-                            <span class="separator"></span>
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
                             <a href="#" rel="nofollow">07 83 55 20 13 & 06 24 33 81 37</a>
                         </div>
                     </footer>
@@ -228,4 +211,4 @@ $map->setZoomLevel(6);
         <script src="./js/bootstrap.min.js"></script>
     </body>
 
-</html></html>
+</html>

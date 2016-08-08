@@ -91,6 +91,9 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
                             </li>
                             <li>
+                                <a href="./aquababy.php" rel="section">AquaBaby</a>
+                            </li>
+                            <li>
                                 <a href="./stage.php" rel="section">Stage de natation enfant</a>
                             </li>
                             <li>
@@ -145,7 +148,7 @@ if (!isset($_SESSION['user'])) {
                                 <table class="table">
                                     <tr>
                                         <td>Samedi</td>
-                                        <td> 14H00</td>
+                                        <td>17H00</td>
                                     </tr>
                                 </table>
                             </div>
