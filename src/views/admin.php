@@ -129,6 +129,7 @@ function displayContent($userList)
     echo '<option>aquatraining</option>';
     echo '<option>jardinaquatique</option>';
     echo '<option>stagenatation</option>';
+    echo '<option>aquababy</option>';
     echo '</select>';
     echo '<div class = "form-group">';
     echo '<label for = "nombrejeton">Nombre de jeton à ajouter:</label>';
