@@ -146,7 +146,7 @@ ul {
 
 .separator{
     height: 1rem;
-    border-right: 2px solid rgba(40,40,40,0.8);
+    border-right: 2px solid rgba(255,255,255,0.8);
     margin: 0 1.5rem 0 1rem;
 }
 
@@ -222,20 +222,27 @@ form a:hover{
 }
 
 .mapStyle{
-    /*    background-color: red;*/
+    /*background-color: red;*/
     margin-top: 10px;
 }
 
 .imgLogo{
-    margin-left: -25px;
+    position: relative;
+    width : 100%;
 }
 
 .imgBanniere{
-    margin-left: -25px;
+    position: relative ;
+    width : 100%;
 }
 
 .blockConnection{
     text-align: center;
+}
+
+.noPadding{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* For ff */
@@ -263,15 +270,5 @@ form a:hover{
 
     .sidebar-nav li:not(.sidebar-brand) a:hover {
         font-size: 15px;
-    }
-
-    .imgLogo{
-        width: 115%;
-        margin-left: -35px;
-    }
-
-    .imgBanniere{
-        width: 993px;
-        height: 229px;
     }
 }

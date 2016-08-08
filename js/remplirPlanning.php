@@ -27,8 +27,7 @@ try{
             }";
     $planningFin = "
         ]
-    })
-});";
+    });";
 
     fwrite($monfichier, $planningDebut);
     fwrite($monfichier, $planningEvent);

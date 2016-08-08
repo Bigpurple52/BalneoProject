@@ -25,12 +25,12 @@ if (!isset($_SESSION['user'])) {
             <div class="row">
                 <!-- top nav -->
                 <header>
-                    <nav class="collapse navbar-collapse">
+                    <nav class="collapse navbar-collapse noPadding">
                         <br/>
                         <div class="col-sm-2">
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-8 noPadding">
                             <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
@@ -165,11 +165,9 @@ if (!isset($_SESSION['user'])) {
                     <!--sidebar droite -->
                     <footer>
                         <div class="col-sm-6 footerContent">
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
+                            <a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>
                             <span class="separator"></span>
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
-                            <span class="separator"></span>
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
+                            <a href="#" rel="nofollow">07 83 55 20 13 & 06 24 33 81 37</a>
                         </div>
                     </footer>
                 </div>
