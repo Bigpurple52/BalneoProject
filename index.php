@@ -41,12 +41,12 @@ $map->setZoomLevel (6);
             <div class="row">
                 <!-- top nav -->
                 <header>
-                    <nav class="collapse navbar-collapse">
+                    <nav class="collapse navbar-collapse noPadding">
                         <br/>
                         <div class="col-sm-2">
                             <img src="./assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-8 noPadding">
                             <img src="./assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
@@ -121,6 +121,8 @@ $map->setZoomLevel (6);
                     <!--content -->
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
+                        <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
+                        <h1 class="contentTitle">SPA & FORME</h1>
                             <h3>Description</h3>
                             <p>Notre centre est situé 100 impasse des fabricants à Teyran, à 12km de la Comédie de Montpellier
                                 Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
@@ -138,7 +140,7 @@ $map->setZoomLevel (6);
                             </p>
                             </p>
                             <br/>
-                            <h3>Professionel</h3>
+                            <h3>Professionels</h3>
                             <p>Cours assurés par Damien et Noémie. </p>
                             <br/>
                             <div class="col-sm-12 col-sm-offset-3">
@@ -174,11 +176,11 @@ $map->setZoomLevel (6);
                                     non acceptée</p>
 
                                 <p>Suivez l’actualité et les offres du moment</p>
-                                <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/'><img src="./assets/lienFB.png" alt='lien facebook'></a>
+                                <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/' rel="nofollow"><img src="./assets/lienFB.png" alt='lien facebook'></a>
                                 <address>
                                     <h4>Contact</h4>
-                                    <p>+33 783 552 013 et +33 624 338 137 </p>
-                                    <a href="mailto:Balneo.K-Hyle@hotmail.com">Balneo.K-Hyle@hotmail.com</a>
+                                    <p>07 83 55 20 13 et 06 24 33 81 37</p>
+                                    <a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>
                                     </p>
                                     <h4>Où nous trouver ?</h4>
                                     <p>100 impasse des fabricants à Teyran
@@ -192,11 +194,9 @@ $map->setZoomLevel (6);
                     <!--sidebar droite -->
                     <footer>
                         <div class="col-sm-6 footerContent">
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
+                            <a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>
                             <span class="separator"></span>
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
-                            <span class="separator"></span>
-                            <a href="#" rel="nofollow">Mix Aqua-training</a>
+                            <a href="#" rel="nofollow">07 83 55 20 13 & 06 24 33 81 37</a>
                         </div>
                     </footer>
                 </div>
