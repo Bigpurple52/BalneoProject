@@ -183,7 +183,7 @@ $map->setZoomLevel(6);
                             <address>
                                 <h4>Contact</h4>
                                 <p>07 83 55 20 13 - 06 24 33 81 37 </p>
-                                <a href="mailto:Balneo.K-Hyle@hotmail.com">Balneo.K-Hyle@hotmail.com</a>
+                                <a href="mailto:k-hyle@aqua-balneo.fr">k-hyle@aqua-balneo.fr</a>
                                 </p>
                                 <h4>Où nous trouver ?</h4>
                                 <p>100 impasse des fabricants à Teyran
