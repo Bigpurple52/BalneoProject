@@ -10,14 +10,6 @@ if (!isset($_SESSION['user'])) {
     }
 }
 
-require('./src/controllers/GoogleMapAPI.class.php');
-
-$map = new GoogleMapAPI('map');
-$map->setAPIKey('AIzaSyB4Zequ5SM5gKyxCPE4jRRxhsq2ycT4LC4');
-$map->setWidth("260px");
-$map->setHeight("220px");
-$map->setCenterCoords('3.9285471 ', '43.6917806');
-$map->setZoomLevel(6);
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -32,11 +24,9 @@ $map->setZoomLevel(6);
         <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/balneo.css">
-        <?php $map->printHeaderJS(); ?>
-        <?php $map->printMapJS(); ?>
     </head>
 
-    <body>
+    <body onload="initialiser()">
         <div class="container-fluid">
             <div class="row">
                 <!-- top nav -->
@@ -189,8 +179,7 @@ $map->setZoomLevel(6);
                                 <p>100 impasse des fabricants à Teyran
                                 </p>
                             </address>
-                            <div class="mapStyle">
-                                <?php $map->printMap(); ?>                                
+                            <div id ="carte" class="mapStyle">                                                          
                             </div>
                         </div>
                     </nav>
@@ -205,8 +194,9 @@ $map->setZoomLevel(6);
                 </div>
             </div>
         </div>
-
         <script src="./js/jquery-3.1.0.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCN1yOm5bo8IDWuylC-ct5JlnHEbGBO6MY"></script>
+		<script src="./js/map.js"></script>
     </body>
 </html>
