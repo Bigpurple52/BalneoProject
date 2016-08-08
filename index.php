@@ -193,7 +193,7 @@ if (!isset($_SESSION['user'])) {
         <script src="./js/jquery-3.1.0.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         <script src="./js/map.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN1yOm5bo8IDWuylC-ct5JlnHEbGBO6MY&callback=initMap"
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrSCEwPcWzYm6Z9ZVFCN_ZmeXGcB0E--0&callback=initMap"
         async defer></script>
     </body>
 </html>
