@@ -221,11 +221,6 @@ form a:hover{
     font-weight: bold;
 }
 
-.mapStyle{
-    /*background-color: red;*/
-    margin-top: 10px;
-}
-
 .imgLogo{
     position: relative;
     width : 100%;
@@ -244,6 +239,11 @@ form a:hover{
     padding-left: 0;
     padding-right: 0;
 }
+
+#map {
+    height: 210px;
+}
+
 
 /* For ff */
 @-moz-document url-prefix() {

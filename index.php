@@ -26,7 +26,7 @@ if (!isset($_SESSION['user'])) {
         <link rel="stylesheet" href="./css/balneo.css">
     </head>
 
-    <body onload="initialiser()">
+    <body>
         <div class="container-fluid">
             <div class="row">
                 <!-- top nav -->
@@ -179,7 +179,7 @@ if (!isset($_SESSION['user'])) {
                                 <p>100 impasse des fabricants à Teyran
                                 </p>
                             </address>
-                            <div id ="carte" class="mapStyle">                                                          
+                            <div id ="map">                                                          
                             </div>
                         </div>
                     </nav>
@@ -196,7 +196,8 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script src="./js/jquery-3.1.0.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCN1yOm5bo8IDWuylC-ct5JlnHEbGBO6MY"></script>
-		<script src="./js/map.js"></script>
+        <script src="./js/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN1yOm5bo8IDWuylC-ct5JlnHEbGBO6MY&callback=initMap"
+        async defer></script>
     </body>
 </html>

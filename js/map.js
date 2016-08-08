@@ -1,9 +1,14 @@
-function initialiser() {
-    var latlng = new google.maps.LatLng(3.9285471, 43.6917806);
-    var options = {
-        center: latlng,
-        zoom: 19,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var carte = new google.maps.Map(document.getElementById("carte"), options);
+var map;
+var myLatLng = {lat: 43.6917806, lng: 3.9285471};
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 17
+    });
+
+    var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map
+  });
 }
