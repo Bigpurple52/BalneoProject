@@ -117,7 +117,7 @@ if (!isset($_SESSION['user'])) {
                         <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
                         <h1 class="contentTitle">SPA & FORME</h1>
                         <div class="col-sm-12 col-sm-offset-3">
-                                <img src="./assets/acceuil.JPG" id="imgJardin" class="img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
+                                <img src="./assets/acceuil.JPG" id="imgJardin" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
                             </div>
                             <h3>Description</h3>
                             <p>Notre centre est situé 100 impasse des fabricants à Teyran, à 12km de la Comédie de Montpellier
