@@ -162,7 +162,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="col-sm-6 footerContent">
                             <a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>
                             <span class="separator"></span>
-                            <a href="#" rel="nofollow">07 83 55 20 13 & 06 24 33 81 37</a>
+                            <a href="#" rel="nofollow">07 83 55 20 13 - 06 24 33 81 37</a>
                         </div>
                     </footer>
                 </div>

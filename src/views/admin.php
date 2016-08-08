@@ -156,7 +156,7 @@ function displayContent($userList)
     echo '<div class = "col-sm-6 footerContent">';
     echo '<a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>';
     echo '<span class = "separator"></span>';
-    echo '<a href="#" rel="nofollow">07 83 55 20 13 & 06 24 33 81 37</a>';
+    echo '<a href="#" rel="nofollow">07 83 55 20 13 - 06 24 33 81 37</a>';
     echo '</div>';
     echo '</footer>';
     /* FIN FOOTER */

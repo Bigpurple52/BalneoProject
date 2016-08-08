@@ -182,7 +182,7 @@ $map->setZoomLevel(6);
                             <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/'><img src="./assets/lienFB.png" alt='lien facebook'></a>
                             <address>
                                 <h4>Contact</h4>
-                                <p>+33 783 552 013 et +33 624 338 137 </p>
+                                <p>07 83 55 20 13 - 06 24 33 81 37 </p>
                                 <a href="mailto:Balneo.K-Hyle@hotmail.com">Balneo.K-Hyle@hotmail.com</a>
                                 </p>
                                 <h4>Où nous trouver ?</h4>
@@ -199,7 +199,7 @@ $map->setZoomLevel(6);
                         <div class="col-sm-6 footerContent">
                             <a href="mailto:k-hyle@aqua-balneo.fr" rel="nofollow">k-hyle@aqua-balneo.fr</a>
                             <span class="separator"></span>
-                            <a href="#" rel="nofollow">07 83 55 20 13 & 06 24 33 81 37</a>
+                            <a href="#" rel="nofollow">07 83 55 20 13 - 06 24 33 81 37</a>
                         </div>
                     </footer>
                 </div>
