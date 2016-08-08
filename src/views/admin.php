@@ -13,8 +13,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua.balneo.fr') 
     }
 } elseif (isset($_SESSION['user']) && $_SESSION['user'] === 'k-hyle@aqua-balneo.fr') {
     try {
-        $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=balneodb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
-        $coOk = true;
+        $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
         die();
