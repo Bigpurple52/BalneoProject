@@ -222,7 +222,7 @@ form a:hover{
 }
 
 .mapStyle{
-    background-color: red;
+    /*    background-color: red;*/
     margin-top: 10px;
 }
 
@@ -265,13 +265,13 @@ form a:hover{
         font-size: 15px;
     }
 
-   .imgLogo{
+    .imgLogo{
         width: 115%;
         margin-left: -35px;
     }
 
     .imgBanniere{
-       width: 993px;
-       height: 229px;
+        width: 993px;
+        height: 229px;
     }
 }
