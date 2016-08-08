@@ -116,6 +116,9 @@ if (!isset($_SESSION['user'])) {
                         <div class="accueilContent">
                         <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
                         <h1 class="contentTitle">SPA & FORME</h1>
+                        <div class="col-sm-12 col-sm-offset-3">
+                                <img src="./assets/acceuil.JPG" id="imgJardin" class="img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
+                            </div>
                             <h3>Description</h3>
                             <p>Notre centre est situé 100 impasse des fabricants à Teyran, à 12km de la Comédie de Montpellier
                                 Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
@@ -131,14 +134,7 @@ if (!isset($_SESSION['user'])) {
                             <p>Autour du bassin, vous devez juste vous munir d’un maillot de bain et d’une serviette, vos affaires
                                 personnelles pouvant rester dans des casiers individuels mis à votre disposition.
                             </p>
-                            </p>
-                            <br/>
-                            <h3>Professionels</h3>
-                            <p>Cours assurés par Damien et Noémie. </p>
-                            <br/>
-                            <div class="col-sm-12 col-sm-offset-3">
-                                <img src="./assets/acceuil.JPG" id="imgJardin" class="img-thumbnail" alt="Acceuil" style="width:50%;height: 50%" />
-                            </div>
+                            </p>                 
                         </div>
                     </section>
                     <!-- sidebar droite-->

@@ -147,11 +147,11 @@ if (!isset($_SESSION['user'])) {
                                 <table class="table">
                                     <tr>
                                         <td>Mercredi</td>
-                                        <td>16H00</td>
+                                        <td>15H00</td>
                                     </tr>
                                     <tr>
                                         <td>Samedi </td>
-                                        <td>16H00</td>
+                                        <td>14H00</td>
                                     </tr>
                                 </table>
                                 <p>Hors petites vacances scolaires</p>

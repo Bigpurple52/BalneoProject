@@ -149,15 +149,11 @@ if (!isset($_SESSION['user'])) {
                                 <table class="table">
                                     <tr>
                                         <td>Mercredi</td>
-                                        <td>15H00</td>
+                                        <td>16H00</td>
                                     </tr>
                                     <tr>
                                         <td>Samedi</td>
-                                        <td>14H00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Samedi</td>
-                                        <td>15H00</td>
+                                        <td>15H00 ou 16H00</td>
                                     </tr>
                                 </table>
                                 <p>Hors petites vacances scolaires</p>
@@ -171,7 +167,8 @@ if (!isset($_SESSION['user'])) {
                                     <li> 265€ les 6 mois</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par couple enfant/parent de 3 couples maximum.</p>
+                                <p>L'activité est organisée par couple enfant/parent de 6 couples maximum.</p>
+                                <p>Attention: Un seul des deux parents est admis.</p>
                             </div>
                         </div>
                         <hr/>

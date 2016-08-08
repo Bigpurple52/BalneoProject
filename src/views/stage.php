@@ -142,14 +142,15 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
-                                <p>Tous les soirs à 16H ou 17H, uniquement en vacances scolaire.</p>
+                                <p>Tous les soirs du lundi au vendredi à 16H ou 17H.</p>
+                                <p>Uniquement en vacances scolaire.</p>
                             </div>
                         </div>
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Tarification</h2>
                                 <ul>
-                                    <li> 105€ la séance </li>
+                                    <li> 105€ la semaine </li>
                                 </ul>
                                 <hr>
                                 <p>L'activité est organisée par groupe de 6 enfants maximum.</p>
