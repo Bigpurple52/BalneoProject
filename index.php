@@ -143,7 +143,6 @@ $map->setZoomLevel(6);
                             </p>
                             </p>
                             <br/>
-                            <h3>Professionel</h3>
                             <h3>Professionels</h3>
                             <p>Cours assurés par Damien et Noémie. </p>
                             <br/>
