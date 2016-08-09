@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
                         <?php
@@ -97,7 +97,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="./professionel.php" rel="section">Professionels santé</a>
+                                <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -108,17 +108,16 @@ if (!isset($_SESSION['user'])) {
                         <div class="accueilContent">
                             <h1 class="contentTitle">Stage de natation enfant</h1>
                             <!--Left part-->
-                            <div class="row">
+                            <div class="row marginTop50">
                                 <div class="col-sm-12">
-                                    <h4>Description</h4>
                                 </div>
                                 <!--Left part-->
 
                                 <!--Right part-->
-                                <div class="col-sm-12 col-sm-offset-3">
+                                <!--<div class="col-sm-12 col-sm-offset-3">
                                     <img src="../../assets/jardin-aqua.jpg" id="imgJardin" class="img-thumbnail" alt="stage enfant" style="width:50%;height: 50%"
                                          />
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <!--Right part-->
@@ -142,6 +141,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
+                                <p>Durée des cours 50 min.</p>
                                 <p>Tous les soirs du lundi au vendredi à 16H ou 17H.</p>
                                 <p>Uniquement en vacances scolaire.</p>
                             </div>

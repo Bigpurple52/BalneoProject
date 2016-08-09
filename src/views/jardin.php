@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
                         <?php
@@ -100,7 +100,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="./professionel.php" rel="section">Professionels santé</a>
+                                <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -110,9 +110,8 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">Jardin Aquatique enfant</h1>
-                            <div class="row">
+                            <div class="row marginTop50">
                                 <div class="col-sm-12">
-                                    <h3>Description</h3>
                                     <p>Enfant à partir de 4 ans et jusqu'à 6 ans, cours de familiarisation dans un contexte ludique.</p>
                                     <p>L’objectif est de permettre à l’enfant d’acquérir une certaine autonomie dans un <em>milieu aquatique</em>.</p>
                                     <p>La température de l’eau d’environ 32° permettra à vos enfants de bénéficier de cette activité
@@ -144,6 +143,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
+                                <p>Durée des cours 40 min.</p>
                                 <table class="table">
                                     <tr>
                                         <td>Mercredi</td>

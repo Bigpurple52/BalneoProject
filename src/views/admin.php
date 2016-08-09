@@ -100,7 +100,7 @@ function displayContent($userList)
     echo '<a href = "./balneotherapie.php" rel = "section">Balnéothérapie</a>';
     echo '</li>';
     echo '<li>';
-    echo '<a href = "./professionel.php" rel = "section">Professionels santé</a>';
+    echo '<a href = "./professionel.php" rel = "section">Intervenants</a>';
     echo '</li>';
     echo '</ul>';
     echo '</nav>';

@@ -37,7 +37,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="./assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="./assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="./assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
                             <?php
@@ -106,7 +106,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./src/views/balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="./src/views/professionel.php" rel="section">Professionels santé</a>
+                                <a href="./src/views/professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -119,8 +119,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="col-sm-12 col-sm-offset-3">
                                 <img src="./assets/acceuil.JPG" id="imgJardin" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
                             </div>
-                            <h3>Description</h3>
-                            <p>Notre centre est situé 100 impasse des fabricants à Teyran, à 12km de la Comédie de Montpellier
+                            <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à Teyran, à 12km de la Comédie de Montpellier
                                 Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
                             </p>
                             <br/>
@@ -153,17 +152,7 @@ if (!isset($_SESSION['user'])) {
                             ?>
                         </ul>
                         <hr/>
-                        <div class="row sidebar-right info-supp2">
-                            <h4>Informations complémentaires</h4>
-                            <p>Les séances d’une durée de 45 min sont dispensées en petits groupes (5 à 10 personnes maximum)
-                            </p>
-
-                            <p>5 séances valable 6 semaines, 10 séances valables 3 mois, 20 séances valables 6 mois et 30
-                                séances valable 1 an à compter de la première séance effectuée</p>
-
-                            <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB
-                                non acceptée</p>
-
+                        <div class="row sidebar-right info-supp2">                          
                             <p>Suivez l’actualité et les offres du moment</p>
                             <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/'><img src="./assets/lienFB.png" alt='lien facebook'></a>
                             <address>
@@ -177,6 +166,14 @@ if (!isset($_SESSION['user'])) {
                             </address>
                             <div id ="map">                                                          
                             </div>
+                            <h4>Informations complémentaires</h4>
+                            <p>Les séances sont dispensées en petits groupes (5 à 10 personnes maximum)</p>
+
+                            <p>5 séances valable 6 semaines, 10 séances valables 3 mois, 20 séances valables 6 mois et 30
+                                séances valable 1 an à compter de la première séance effectuée</p>
+
+                            <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB
+                                non acceptée</p>
                         </div>
                     </nav>
                     <!--sidebar droite -->

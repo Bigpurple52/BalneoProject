@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
                         <?php
@@ -100,7 +100,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="./professionel.php" rel="section">Professionels santé</a>
+                                <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -109,9 +109,8 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">AquaDouce</h1>
-                            <div class="row">
+                            <div class="row marginTop50">
                                 <div class="col-sm-12">
-                                    <h3>Description</h3>
                                     <p>Cours d’<strong>aquagym</strong> modéré, le principe repose sur un renforcement musculaire généralisé.</p>
                                     <br/>
                                 </div>                            
@@ -141,6 +140,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
+                                <p>Durée des cours 45 min.</p>
                                 <table class="table">
                                     <tr>
                                         <td>Lundi</td>
@@ -152,7 +152,7 @@ if (!isset($_SESSION['user'])) {
                                     </tr>
                                     <tr>
                                         <td>Mardi</td>
-                                        <td> 11H00</td>
+                                        <td> 11H00*</td>
                                     </tr>
                                     <tr>
                                         <td>Mardi</td>
@@ -160,11 +160,15 @@ if (!isset($_SESSION['user'])) {
                                     </tr>
                                     <tr>
                                         <td>Mercredi</td>
-                                        <td> 11H00</td>
+                                        <td> 11H00*</td>
                                     </tr>
                                     <tr>
                                         <td>Jeudi</td>
-                                        <td> 11H00</td>
+                                        <td> 11H00*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jeudi</td>
+                                        <td> 16H30*</td>
                                     </tr>
                                     <tr>
                                         <td>Vendredi</td>
@@ -172,13 +176,14 @@ if (!isset($_SESSION['user'])) {
                                     </tr>
                                     <tr>
                                         <td>Vendredi</td>
-                                        <td> 16H30</td>
+                                        <td> 16H30*</td>
                                     </tr>
                                     <tr>
                                         <td>Samedi</td>
-                                        <td> 9H15</td>
+                                        <td> 9H15*</td>
                                     </tr>
                                 </table>
+                                <p>* Activités non disponible actuellement</p>
                             </div>
                         </div>
                         <div class="row sidebar-right">

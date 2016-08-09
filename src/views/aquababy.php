@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle" />
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere" />
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere" />
                         </div>
                         <div class="col-sm-2 blockConnection">
                             <?php
@@ -100,7 +100,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="./professionel.php" rel="section">Professionels santé</a>
+                                <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -109,9 +109,8 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">AquaBaby</h1>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h3>Description</h3>
+                            <div class="row marginTop50">
+                                <div class="col-sm-12">                                   
                                     <p>Séance de 40 min ou l'enfant (entre 4 mois et 3 ans) évolue en toute confiance dans un
                                         bassin ou l'eau est chauffé à 32 °, accompagné d'un parent.</p>
                                     <p>Des <em>jeux aquatiques</em> sont à disposition.</p>
@@ -146,6 +145,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
+                                <p>Durée des cours 40 min.</p>
                                 <table class="table">
                                     <tr>
                                         <td>Mercredi</td>
@@ -153,7 +153,11 @@ if (!isset($_SESSION['user'])) {
                                     </tr>
                                     <tr>
                                         <td>Samedi</td>
-                                        <td>15H00 ou 16H00</td>
+                                        <td>15H00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Samedi</td>
+                                        <td>16H00</td>
                                     </tr>
                                 </table>
                                 <p>Hors petites vacances scolaires</p>

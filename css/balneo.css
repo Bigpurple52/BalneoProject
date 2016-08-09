@@ -248,6 +248,21 @@ form a:hover{
     height: 210px;
 }
 
+.marginTop50{
+    margin-top:50px;
+}
+
+.contentLink{
+    color: #337ab7;
+}
+
+.centered{
+    text-align:center;
+}
+
+.noeSeparateur{
+    border-right: 1px solid grey;
+}
 
 /* For ff */
 @-moz-document url-prefix() {

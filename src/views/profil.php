@@ -32,7 +32,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
                         <?php
@@ -98,7 +98,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="../views/balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="../views/professionel.php" rel="section">Professionels santé</a>
+                                <a href="../views/professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>

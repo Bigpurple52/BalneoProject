@@ -5,15 +5,15 @@ if (!isset($_SESSION['user'])) {
     session_destroy();
 }
 ?>
-<!DOCTYPE html>
-<html lang="fr-FR">
+    <!DOCTYPE html>
+    <html lang="fr-FR">
 
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="activité aquatique à Montpellier : Professionels de santé">
-        <meta name="keywords" content="Activités aquatiques;Professionels de santé">
-        <title>aqua-balneo.fr : Professionels de santé</title>
+        <meta name="description" content="activité aquatique à Montpellier : Intervenants">
+        <meta name="keywords" content="Activités aquatiques;Intervenants">
+        <title>aqua-balneo.fr : Intervenants</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -28,13 +28,13 @@ if (!isset($_SESSION['user'])) {
                     <nav class="collapse navbar-collapse noPadding">
                         <br/>
                         <div class="col-sm-2">
-                            <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
+                            <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle" />
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere" />
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
+                            <?php
                         if (isset($_SESSION['user'])) {
                             echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
                         } else {
@@ -100,7 +100,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="#" rel="section">Professionels santé</a>
+                                <a href="#" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -109,21 +109,37 @@ if (!isset($_SESSION['user'])) {
                     <!-- content -->
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
-                            <h1 class="contentTitle">Professionels de santé</h1>
-                            <p>Les activités aquatiques sont assurés par des maîtres nageurs qualifiés et expérimentés.</p>
-                            <h2>Noémie :</h2>
-                            <hr/>
-                            <h2>Damien :</h2>
+                            <h1 class="contentTitle">Intervenants</h1>
+                            <p class="marginTop50">Les activités aquatiques sont assurés par des maîtres nageurs qualifiés et expérimentés.</p>
+                            <div class="col-sm-6 centered marginTop50 noeSeparateur">
+                                <img src="../../assets/noe.png" alt="Noémie" />
+                                <h2>Noémie JOULIE</h2>
+                                <p>Educatrice sportive titulaire du <a href="http://www.natationpourtous.com/espace-pro/enseignement/beesan.php" class="contentLink">BEESAN</a> (Brevet d'Etat d'Educateur Sportif des Activités
+                                    de la Natation) et issue de formation <a href="https://fr.wikipedia.org/wiki/Sciences_et_techniques_des_activit%C3%A9s_physiques_et_sportives" class="contentLink">STAPS</a> à l'UFRAPS de Grenoble (38)</p>
+                            </div>
+                            <div class="col-sm-6 centered marginTop50">
+                                <img src="../../assets/damien.png" alt="Damien" style="width:176px;height:167px;" />
+                                <h2>Damien FILHOL</h2>
+                                <p>Éducateur territorial des Activités physiques et sportives et titulaire du BEESAN, Damien
+                                    est également licencié STAPS et formé au CREPS de Montpellier (34).</p>
+                            </div>
+                            <div class="col-sm-12 marginTop50">
+                                <p>Noémie et Damien exerce le métier de maître nageur depuis plus d'une dizaine d'années, en
+                                    tant qu'entraîneur, surveillant de baignade, animateur, enseignant et secouriste.</p>
+
+                                <p>Ils ont également une expérience reconnu dans l'accompagnement individualisé en aquagym,
+                                    aquabike, aquafitness (...) ainsi qu'en apprentissage de la natation enfant.</p>
+                            </div>
                         </div>
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
-                        <ul class = "sidebar-nav">
+                        <ul class="sidebar-nav">
                             <li>
-                                <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
+                                <a href="../controllers/inscription.php" rel="nofollow">Inscription</a>
                             </li>
                             <li>
-                                <a href = "./planning2.php" rel = "section">Planning</a>
+                                <a href="./planning2.php" rel="section">Planning</a>
                             </li>
                             <?php
                             if (isset($_SESSION['user'])) {
@@ -149,4 +165,4 @@ if (!isset($_SESSION['user'])) {
 
     </body>
 
-</html>
+    </html>

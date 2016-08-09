@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
                         <?php
@@ -100,7 +100,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./balneotherapie.php" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="./professionel.php" rel="section">Professionels santé</a>
+                                <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -110,9 +110,8 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">AquaPhobie</h1>
-                            <div class="row">
+                            <div class="row marginTop50">
                                 <div class="col-sm-12">
-                                    <h3>Description</h3>
                                     <p>Cours adulte permettant de vaincre la peur de l’eau.</p>
                                     <p>L’objectif de ce cours est de vous permettre d’apprécier la baignade sans crainte et en toute
                                         sécurité !
@@ -145,6 +144,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
+                                <p>Durée des cours 45 min.</p>
                                 <table class="table">
                                     <tr>
                                         <td>Samedi</td>

@@ -31,7 +31,7 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/logoK-HYLE.png" class="imgLogo" alt="Logo K-Hyle"/>
                         </div>
                         <div class="col-sm-8 noPadding">
-                            <img src="../../assets/banniere.jpg" class="imgBanniere" alt="Banniere"/>
+                            <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
                         <?php
@@ -97,7 +97,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="#" rel="section">Balnéothérapie</a>
                             </li>
                             <li>
-                                <a href="./professionel.php" rel="section">Professionels santé</a>
+                                <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
                         </ul>
                     </nav>
@@ -109,26 +109,26 @@ if (!isset($_SESSION['user'])) {
                             <h1 class="contentTitle">Balnéothérapie</h1>
                             <p>La <strong>balnéothérapie</strong> permet de compléter les soins plus de masso-kinésithérapie classiques (salle de soins et gymnase) que nous exerçons au Crès au 1 avenue des chasseurs.</p>
                             <article>
-                                <h4>Prise en charge</h4>
+                                <h3>Prise en charge</h3>
                                 <p>Les soins de <strong>balnéothérapie</strong> en piscine sont conventionnés et donc pris en charge par l’assurance maladie et les mutuelles.</p>
                                 <p>La mention « <strong>balnéothérapie</strong> » ou « en piscine » doit apparaître sur la prescription médicale.</p>
                             </article>
                             <article>
-                                <h4>Encadrement</h4>
+                                <h3>Encadrement</h3>
                                 <p>Les séances de balnéothérapie sont encadrées par un kinésithérapeute diplômé et ont lieu tous les jours de la semaine, en matinée ou en après-midi.</p>
                             </article>
                             <article>
-                                <h4>Equipement</h4>
+                                <h3>Equipement</h3>
                                 <p>Les séances se déroulent dans une piscine de 6m par 3m, profonde de 1,2m, chauffée entre 31°c et 33°c, selon les pathologies. Elle est équipée  de 6 buses de massage, de nage à contre-courant, de matériel d’hydrothérapie spécifique afin de s’adapter au mieux aux spécifités de certaines pathologies. Le matériel classique d’aquagym (frites, haltères, lests, ballons, aquabike) est disponible pour les soins de balnéothérapie.</p>
                             </article>
                             <article>
-                                <h4>Les bienfaits de l’eau</h4>
+                                <h3>Les bienfaits de l’eau</h3>
                                 <p>La <strong>balnéothérapie</strong> est la rééducation en milieu aquatique.</p>
                                 <p>Elle permet par l’utilisation du principe de la poussée d’archimède de porter plus facilement le corps et par la résistance de l’eau de tonifier les muscles du corps soumit à la pression hydrostatique.</p>
                                 <p>La pratique d’exercices dans l’eau permet un relâchement ou une tonification musculaire, une diminution des contraintes mécaniques sur les articulations, une action drainante.</p>
                             </article>
                             <article>
-                                <h4>Les pathologies intéressées</h4>
+                                <h3>Les pathologies intéressées</h3>
                                 <p>Cette <em>rééducation</em> permet une récupération indolore des déficits neuro musculo articulaire. Nous pouvons donc aborder de nombreuses parties du corps.</p>
                                 <p>Il est par exemple possible d’effectuer un reprise d’appui progressive, indolore, d’un membre inférieur (suite à un prothèse, un ligamentoplastie, une fracture), un mobilisation douce d’un membre supérieur (suite à une prothèse d’épaule, une intervention sur la coiffe des rotateurs, une capsulite rétractile, une épaule gelée)</p>
                                 <p>Par ailleurs, il est plus aisé de tonifier la sangle abdomino-lombaire pour lutter contre les douleurs de dos chroniques, d’améliorer les insuffisances veineuses des membres inférieurs qu’elles soient sanguines ou lymphatiques.</p>
@@ -137,7 +137,7 @@ if (!isset($_SESSION['user'])) {
                                 <p>Bien d’autres pathologies peuvent tirer un bénéfice de la rééducation dans l’eau  (la fibromyalgie, l’algoneurodystrophie, certaines insuffisances respiratoires comme la BPCO,…), parlez en avec votre médecin.</p>
                             </article>
                             <article>
-                                <h4>Le déroulement de la séance</h4>
+                                <h3>Le déroulement de la séance</h3>
                                 <p>Le temps d’accès à la <strong>balnéothérapie</strong> est de trois quarts d’heure. Lors de la première séance, le kinésithérapeute en fonction de son bilan sur votre pathologie, adapte un programme spécifique qui évoluera suivant vos progrès.</p>
                             </article>
                             <br>
