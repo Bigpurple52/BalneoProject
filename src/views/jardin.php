@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Jardin Aquatique enfant">
-        <meta name="keywords" content="Activités aquatiques;Jardin Aquatique enfant;">
+        <meta name="keywords" content="Activités aquatiques;Jardin Aquatique enfant;Montpellier">
         <title>aqua-balneo.fr : Jardin Aquatique enfant</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -34,28 +34,28 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -82,10 +82,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="#" rel="section">Jardin Aquatique enfant</a>
@@ -112,10 +112,13 @@ if (!isset($_SESSION['user'])) {
                             <h1 class="contentTitle">Jardin Aquatique enfant</h1>
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
-                                    <p>Enfant à partir de 4 ans et jusqu'à 6 ans, cours de familiarisation dans un contexte ludique.</p>
-                                    <p>L’objectif est de permettre à l’enfant d’acquérir une certaine autonomie dans un <em>milieu aquatique</em>.</p>
-                                    <p>La température de l’eau d’environ 32° permettra à vos enfants de bénéficier de cette activité
-                                        dans des conditions optimales.</p>
+                                    <article>
+                                        <p>Enfant à partir de 4 ans et jusqu'à 6 ans, cours de familiarisation dans un contexte ludique.</p>
+                                        <p>L’objectif est de permettre à l’enfant d’acquérir une certaine autonomie dans un <em>milieu aquatique</em>.</p>
+                                        <p>La température de l’eau d’environ 32° permettra à vos enfants de bénéficier de cette activité
+                                            dans des conditions optimales.</p>
+                                        <p>Le parent n’est pas présent pendant les séances, le maître-nageur encadre le groupe en effectif réduit pour un meilleur apprentissage.</p>
+                                    </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">
                                     <img src="../../assets/jardin-aqua.jpg" id="imgJardin" class="img-thumbnail" alt="jardin aquatique enfant" style="width:50%;height: 50%"
@@ -125,7 +128,7 @@ if (!isset($_SESSION['user'])) {
                         </div>
                     </section>
                     <!-- sidebar droite-->
-                    <nav class="col-sm-2">                        
+                    <nav class="col-sm-2">
                         <ul class = "sidebar-nav">
                             <li>
                                 <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
@@ -143,15 +146,15 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
-                                <p>Durée des cours 40 min.</p>
+                                <p>Durée des cours 40 min</p>
                                 <table class="table">
                                     <tr>
-                                        <td>Mercredi</td>
-                                        <td>15H00</td>
+                                        <td class="dispo">Mercredi</td>
+                                        <td class="dispo">15H00</td>
                                     </tr>
                                     <tr>
-                                        <td>Samedi </td>
-                                        <td>14H00</td>
+                                        <td class="dispo">Samedi </td>
+                                        <td class="dispo">14H00</td>
                                     </tr>
                                 </table>
                                 <p>Hors petites vacances scolaires</p>
@@ -165,7 +168,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 230€ les 6 mois</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 6 enfants maximum.</p>
+                                <p>L'activité est organisée par groupe de 6 enfants maximum</p>
                             </div>
                         </div>
                         <hr/>

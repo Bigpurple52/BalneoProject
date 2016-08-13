@@ -5,14 +5,14 @@ if (!isset($_SESSION['user'])) {
     session_destroy();
 }
 ?>
-    <!DOCTYPE html>
-    <html lang="fr-FR">
+<!DOCTYPE html>
+<html lang="fr-FR">
 
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Intervenants">
-        <meta name="keywords" content="Activités aquatiques;Intervenants">
+        <meta name="keywords" content="Activités aquatiques;Intervenants;Montpellier">
         <title>aqua-balneo.fr : Intervenants</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -35,27 +35,27 @@ if (!isset($_SESSION['user'])) {
                         </div>
                         <div class="col-sm-2 blockConnection">
                             <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -82,10 +82,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -110,25 +110,26 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">Intervenants</h1>
-                            <p class="marginTop50">Les activités aquatiques sont assurés par des maîtres nageurs qualifiés et expérimentés.</p>
-                            <div class="col-sm-6 centered marginTop50 noeSeparateur">
-                                <img src="../../assets/noe.png" alt="Noémie" />
+                            <p class="marginTop50">Les <strong>activités aquatiques</strong> sont assurés par des maîtres nageurs qualifiés et expérimentés.</p>
+                            <p>Noémie et Damien exercent le métier de maître nageur depuis plus d'une dizaine d'années, en tant qu'entraîneurs, surveillants de baignade, animateurs, enseignants et secouristes.
+                                Ils ont également une expérience reconnue dans l'accompagnement individualisé en <strong>aquagym</strong>, <strong>aquabike</strong>, <strong>aquafitness</strong> (...) ainsi qu'en apprentissage de la natation enfant.</p>
+                            <div class="col-sm-6 centered noeSeparateur">
+                                <img src="../../assets/noe.png" alt="Noémie" class="img-thumbnail"/>
                                 <h2>Noémie JOULIE</h2>
                                 <p>Educatrice sportive titulaire du <a href="http://www.natationpourtous.com/espace-pro/enseignement/beesan.php" class="contentLink">BEESAN</a> (Brevet d'Etat d'Educateur Sportif des Activités
                                     de la Natation) et issue de formation <a href="https://fr.wikipedia.org/wiki/Sciences_et_techniques_des_activit%C3%A9s_physiques_et_sportives" class="contentLink">STAPS</a> à l'UFRAPS de Grenoble (38)</p>
                             </div>
-                            <div class="col-sm-6 centered marginTop50">
-                                <img src="../../assets/damien.png" alt="Damien" style="width:176px;height:167px;" />
+                            <div class="col-sm-6 centered">
+                                <img src="../../assets/damien.png" alt="Damien" class="img-thumbnail" style="width:176px;height:167px;" />
                                 <h2>Damien FILHOL</h2>
-                                <p>Éducateur territorial des Activités physiques et sportives et titulaire du BEESAN, Damien
-                                    est également licencié STAPS et formé au CREPS de Montpellier (34).</p>
+                                <p>Éducateur territorial des Activités physiques et sportives et titulaire du <a href="http://www.natationpourtous.com/espace-pro/enseignement/beesan.php" class="contentLink">BEESAN</a>, Damien
+                                    est également licencié <a href="https://fr.wikipedia.org/wiki/Sciences_et_techniques_des_activit%C3%A9s_physiques_et_sportives" class="contentLink">STAPS</a> et formé au CREPS de <strong>Montpellier</strong> (34).</p>
                             </div>
-                            <div class="col-sm-12 marginTop50">
-                                <p>Noémie et Damien exerce le métier de maître nageur depuis plus d'une dizaine d'années, en
-                                    tant qu'entraîneur, surveillant de baignade, animateur, enseignant et secouriste.</p>
-
-                                <p>Ils ont également une expérience reconnu dans l'accompagnement individualisé en aquagym,
-                                    aquabike, aquafitness (...) ainsi qu'en apprentissage de la natation enfant.</p>
+                            <div class="col-sm-12 centered">
+                                <img src="../../assets/nicolas.png" alt="Damien" class="img-thumbnail"/>
+                                <h2>Nicolas VIDAMANT</h2>
+                                <p>Cabinet de Kinésithérapie Ostéopathie et Posturologie</p>
+                                <p>Contact: 06 24 33 81 37 - Email : <a style="color: black;" href="mailto:kineosteo35@gmail.com" rel="nofollow">kineosteo35@gmail.com</a></p>
                             </div>
                         </div>
                     </section>
@@ -165,4 +166,4 @@ if (!isset($_SESSION['user'])) {
 
     </body>
 
-    </html>
+</html>

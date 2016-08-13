@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Balneotherapie">
-        <meta name="keywords" content="Activités aquatiques;Balneotherapie">
+        <meta name="keywords" content="Activités aquatiques;Balneotherapie;Montpellier">
         <title>aqua-balneo.fr : Balneotherapie</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -34,28 +34,28 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -82,10 +82,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -111,15 +111,15 @@ if (!isset($_SESSION['user'])) {
                             <article>
                                 <h3>Prise en charge</h3>
                                 <p>Les soins de <strong>balnéothérapie</strong> en piscine sont conventionnés et donc pris en charge par l’assurance maladie et les mutuelles.</p>
-                                <p>La mention « <strong>balnéothérapie</strong> » ou « en piscine » doit apparaître sur la prescription médicale.</p>
+                                <p>La mention « <strong>balnéothérapie</strong> » ou « en <em>piscine</em> » doit apparaître sur la prescription médicale.</p>
                             </article>
                             <article>
                                 <h3>Encadrement</h3>
-                                <p>Les séances de balnéothérapie sont encadrées par un kinésithérapeute diplômé et ont lieu tous les jours de la semaine, en matinée ou en après-midi.</p>
+                                <p>Les séances de <strong>balnéothérapie</strong> sont encadrées par un kinésithérapeute diplômé et ont lieu tous les jours de la semaine, en matinée ou en après-midi.</p>
                             </article>
                             <article>
                                 <h3>Equipement</h3>
-                                <p>Les séances se déroulent dans une piscine de 6m par 3m, profonde de 1,2m, chauffée entre 31°c et 33°c, selon les pathologies. Elle est équipée  de 6 buses de massage, de nage à contre-courant, de matériel d’hydrothérapie spécifique afin de s’adapter au mieux aux spécifités de certaines pathologies. Le matériel classique d’aquagym (frites, haltères, lests, ballons, aquabike) est disponible pour les soins de balnéothérapie.</p>
+                                <p>Les séances se déroulent dans une <em>piscine</em> de 6m par 3m, profonde de 1,2m, chauffée entre 31°c et 33°c, selon les pathologies. Elle est équipée  de 6 buses de massage, de nage à contre-courant, de matériel d’<em>hydrothérapie</em> spécifique afin de s’adapter au mieux aux spécifités de certaines pathologies. Le matériel classique d’<strong>aquagym</strong> (frites, haltères, lests, ballons, aquabike) est disponible pour les soins de <strong>balnéothérapie</strong>.</p>
                             </article>
                             <article>
                                 <h3>Les bienfaits de l’eau</h3>
@@ -141,12 +141,12 @@ if (!isset($_SESSION['user'])) {
                                 <p>Le temps d’accès à la <strong>balnéothérapie</strong> est de trois quarts d’heure. Lors de la première séance, le kinésithérapeute en fonction de son bilan sur votre pathologie, adapte un programme spécifique qui évoluera suivant vos progrès.</p>
                             </article>
                             <br>
-                            <p>La séance de <strong>balnéothérapie</strong> n’est pas un cours d’<strong>aquagym</strong>, ce qui explique que les patients dans la piscine n’aient pas tous les mêmes exercices. Le kinésithérapeute est présent durant toute la séance afin de vous suivre et de vous corriger si besoin. Les jets d’hydromassage placés à différentes hauteurs afin de s’adapter au mieux aux différents cas de figure, peuvent être utilisés en milieu de séance ou bien à la fin afin d’améliorer la relaxation.</p>
+                            <p>La séance de <strong>balnéothérapie</strong> n’est pas un cours d’<strong>aquagym</strong>, ce qui explique que les patients dans la <em>piscine</em> n’aient pas tous les mêmes exercices. Le kinésithérapeute est présent durant toute la séance afin de vous suivre et de vous corriger si besoin. Les jets d’hydromassage placés à différentes hauteurs afin de s’adapter au mieux aux différents cas de figure, peuvent être utilisés en milieu de séance ou bien à la fin afin d’améliorer la relaxation.</p>
                             <p>Pour tous renseignements, vous pouvez nous contacter au 06 24 33 81 37.</p>
                         </div>
                     </section>
                     <!-- sidebar droite-->
-                    <nav class="col-sm-2">                        
+                    <nav class="col-sm-2">
                         <ul class = "sidebar-nav">
                             <li>
                                 <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>

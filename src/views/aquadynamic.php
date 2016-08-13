@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Aquadynamic">
-        <meta name="keywords" content="Activités aquatiques;AquaGym;Aquadynamic;">
+        <meta name="keywords" content="Activités aquatiques;AquaGym;Aquadynamic;Montpellier">
         <title>aqua-balneo.fr : Aquadynamic</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -34,28 +34,28 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -82,10 +82,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -112,9 +112,24 @@ if (!isset($_SESSION['user'])) {
                             <h1 class="contentTitle">AquaDynamic</h1>
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
-                                    <p>Cours d’<strong>aquagym</strong> tonique avec et sans matériel, permettant de modeler son corps et
-                                        d’améliorer sa condition physique.</p>
-                                    <br/>
+                                    <article>
+                                        <p>Cours d’<strong>aquagym</strong> tonique avec et sans matériel, permettant de modeler son corps et d’améliorer sa condition physique.</p>
+
+                                        <p>Pas de risque pour les articulations, l’<strong>aquatonic</strong> permet un effort prolongé et une dépense énergétique intense sans ressentir la fatigue ni les courbatures du lendemain…</p>
+
+                                        <p>Les <span class="bold">bienfaits</span> des séances d’aquadynamic peuvent être nombreux</p>
+                                       	<ul>
+                                            <li>Galber sa silhouette en affinant et sculptant son corps</li>
+                                            <li>Tonifier et renforcer ses muscles</li>
+                                            <li>Stimuler la circulation sanguine</li>
+                                            <li>Améliorer son endurance</li>
+                                            <li>Lutter contre la cellulite</li>
+                                        </ul>
+                                        <p>La séance se déroule en musique, avec du matériel <em>aquatique</em> pour un travail en profondeur, comme les haltères, frites, ballons (…)</p>
+
+                                        <p class="centered underbar">Il n’est pas nécessaire de savoir <em>nager</em> pour pratiquer cette activité</p>
+
+                                    </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">
                                     <img src="../../assets/aquadynamic.jpg" id="imgJardin" class="img-thumbnail" alt="aquaDynamic" style="width:50%;height: 50%"
@@ -142,11 +157,11 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
-                                <p>Durée des cours 45 min.</p>
+                                <p>Durée des cours 45 min</p>
                                 <table class="table">
                                     <tr>
-                                        <td>Lundi</td>
-                                        <td> 18H30</td>
+                                        <td class="dispo">Lundi</td>
+                                        <td class="dispo"> 18H30</td>
                                     </tr>
                                     <tr>
                                         <td>Mardi</td>
@@ -161,8 +176,8 @@ if (!isset($_SESSION['user'])) {
                                         <td> 17H30*</td>
                                     </tr>
                                     <tr>
-                                        <td>Vendredi</td>
-                                        <td> 11H30</td>
+                                        <td class="dispo">Vendredi</td>
+                                        <td class="dispo"> 11H30</td>
                                     </tr>
                                     <tr>
                                         <td>Vendredi</td>
@@ -185,7 +200,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 360€ les 30 séances</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 10 personnes maximum.</p>
+                                <p>L'activité est organisée par groupe de 10 personnes maximum</p>
                             </div>
                         </div>
                         <hr/>

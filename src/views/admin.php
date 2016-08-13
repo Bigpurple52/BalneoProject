@@ -82,15 +82,15 @@ function displayContent($userList)
     echo '<a href = "./aquabike.php" rel = "section">AquaBike</a>';
     echo '</li>';
     echo '<li>';
-    echo '<a href = "./aquaphobie.php" rel = "section">AquaPhobie</a>';
+    echo '<a href = "./aquatraining.php" rel = "section">Mix Aquatraining</a>';
     echo '</li>';
     echo '<li>';
-    echo '<a href = "./aquatraining.php" rel = "section">Mix Aqua-training</a>';
+    echo '<a href = "./aquaphobie.php" rel = "section">AquaPhobie</a>';
     echo '</li>';
     echo '<li>';
     echo '<a href = "./jardin.php" rel = "section">Jardin Aquatique enfant</a>';
     echo '</li>';
-     echo '<li>';
+    echo '<li>';
     echo '<a href = "./aquababy.php" rel = "section">AquaBaby</a>';
     echo '</li>';
     echo '<li>';

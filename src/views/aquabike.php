@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Aquabike'">
-        <meta name="keywords" content="Activités aquatiques;AquaBike">
+        <meta name="keywords" content="Activités aquatiques;AquaBike;Montpellier">
         <title>aqua-balneo.fr : Aquabike</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -34,28 +34,28 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -82,10 +82,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="#" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -110,11 +110,17 @@ if (!isset($_SESSION['user'])) {
                         <div class="accueilContent">
                             <h1 class="contentTitle">AquaBike</h1>
                             <div class="row marginTop50">
-                                <div class="col-sm-12">                                    
-                                    <p>Faire du vélo dans l’eau permet d’allie les vertus des sports d’endurance et la douceur des
-                                        <em>sports aquatiques</em>.</p>
-                                    <p> Articulations, circulation, vitalité, silhouette (réduction de la cellulite ...) un succès !</p>
-                                    <br/>
+                                <div class="col-sm-12">
+                                    <article>
+                                        <p>L'<strong>aquabike</strong> c'est faire du <em>vélo dans l’eau</em>, cela permet d’allier les vertus des sports d’endurance et la douceur des <em>sports aquatiques</em>.</p>
+                                        <p>Renforcement musculaire, articulations, circulation, vitalité, silhouette (réduction de la cellulite, perte de poids ...) un succès !</p>
+
+                                        <p>Pédaler en avant, en arrière, assis sur la selle ou en danseuse, ajouter à cela des exercices ciblant un travail  des bras et d’abdominaux : cela permet de dépenser plus de 600 calories par séance !</p>
+                                        <p>L’eau propose une résistance 12 fois supérieure à celle de l’air, cela engendre des mouvements plus lents et difficiles mais également un massage drainant, permettant ni douleur ni courbatures à la sortie de la séance !</p>
+
+                                        <p>La dynamique de groupe crée une motivation qui amène chacun à se dépasser encore plus !</p>
+                                        <p>8 vélos dans l’<em>eau</em> maximum disponible par cours, cours se déroulant en musique.</p>
+                                    </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">
                                     <img src="../../assets/cours-MIX.JPG" id="imgJardin" class="img-thumbnail" alt="aquabike" style="width:50%;height: 50%"
@@ -124,7 +130,7 @@ if (!isset($_SESSION['user'])) {
                         </div>
                     </section>
                     <!-- sidebar droite-->
-                    <nav class="col-sm-2">        
+                    <nav class="col-sm-2">
                         <ul class = "sidebar-nav">
                             <li>
                                 <a href="../controllers/inscription.php" rel="nofollow">Inscription</a>
@@ -145,20 +151,20 @@ if (!isset($_SESSION['user'])) {
                                 <p>Durée des cours 45 min.</p>
                                 <table class="table">
                                     <tr>
-                                        <td>Lundi</td>
-                                        <td>12H30</td>
+                                        <td class="dispo">Lundi</td>
+                                        <td class="dispo">12H30</td>
                                     </tr>
                                     <tr>
-                                        <td>Lundi</td>
-                                        <td>17H30</td>
+                                        <td class="dispo">Lundi</td>
+                                        <td class="dispo">17H30</td>
                                     </tr>
                                     <tr>
                                         <td>Mardi</td>
                                         <td>13H00*</td>
                                     </tr>
                                     <tr>
-                                        <td>Mardi</td>
-                                        <td>17H30</td>
+                                        <td class="dispo">Mardi</td>
+                                        <td class="dispo">17H30</td>
                                     </tr>
                                     <tr>
                                         <td>Mercredi</td>
@@ -173,8 +179,8 @@ if (!isset($_SESSION['user'])) {
                                         <td>18H30*</td>
                                     </tr>
                                     <tr>
-                                        <td>Vendredi</td>
-                                        <td>12H30</td>
+                                        <td class="dispo">Vendredi</td>
+                                        <td class="dispo">12H30</td>
                                     </tr>
                                     <tr>
                                         <td>Vendredi</td>
@@ -197,7 +203,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 390€ les 30 séances</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 8 personnes maximum.</p>
+                                <p>L'activité est organisée par groupe de 8 personnes maximum</p>
                             </div>
                         </div>
                         <hr/>

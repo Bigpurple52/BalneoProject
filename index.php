@@ -9,7 +9,6 @@ if (!isset($_SESSION['user'])) {
         die();
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -17,7 +16,7 @@ if (!isset($_SESSION['user'])) {
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Page d'accueil du site : aqua-balneo.fr">
+        <meta name="description" content="Page d'accueil du site : aqua-balneo.fr, activités aquatiques à Montpellier">
         <meta name="keywords" content="Activités aquatiques;Aquagym;Aquaphobie;Aquadynamic;Aquadouce;AquaBike;Aqua training;Jardin Aquatique;Stage de natation enfant;Aquababy">
         <title>aqua-balneo.fr : Activités aquatiques pour petits et grands</title>
         <link rel="icon" href="favicon.ico" />
@@ -88,10 +87,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./src/views/aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./src/views/aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="./src/views/aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./src/views/aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="./src/views/aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="./src/views/jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -114,12 +113,12 @@ if (!isset($_SESSION['user'])) {
                     <!--content -->
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
-                        <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
-                        <h1 class="contentTitle">SPA & FORME</h1>
-                        <div class="col-sm-12 col-sm-offset-3">
+                            <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
+                            <h1 class="contentTitle">SPA & FORME</h1>
+                            <div class="col-sm-12 col-sm-offset-3">
                                 <img src="./assets/acceuil.JPG" id="imgJardin" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
                             </div>
-                            <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à Teyran, à 12km de la Comédie de Montpellier
+                            <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à <strong>Teyran</strong>, à 12km de la Comédie de <strong>Montpellier</strong>
                                 Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
                             </p>
                             <br/>
@@ -133,7 +132,7 @@ if (!isset($_SESSION['user'])) {
                             <p>Autour du bassin, vous devez juste vous munir d’un maillot de bain et d’une serviette, vos affaires
                                 personnelles pouvant rester dans des casiers individuels mis à votre disposition.
                             </p>
-                            </p>                 
+                            </p>
                         </div>
                     </section>
                     <!-- sidebar droite-->
@@ -152,7 +151,7 @@ if (!isset($_SESSION['user'])) {
                             ?>
                         </ul>
                         <hr/>
-                        <div class="row sidebar-right info-supp2">                          
+                        <div class="row sidebar-right info-supp2">
                             <p>Suivez l’actualité et les offres du moment</p>
                             <a target='_blank' href='https://www.facebook.com/Aquagym.Natation.Teyran/'><img src="./assets/lienFB.png" alt='lien facebook'></a>
                             <address>
@@ -164,16 +163,32 @@ if (!isset($_SESSION['user'])) {
                                 <p>100 impasse des fabricants à Teyran
                                 </p>
                             </address>
-                            <div id ="map">                                                          
+                            <div id ="map">
                             </div>
+                            <hr>
                             <h4>Informations complémentaires</h4>
-                            <p>Les séances sont dispensées en petits groupes (5 à 10 personnes maximum)</p>
+                            <p>Les séances sont dispensées en petits groupes (10 personnes maximum)</p>
 
-                            <p>5 séances valable 6 semaines, 10 séances valables 3 mois, 20 séances valables 6 mois et 30
-                                séances valable 1 an à compter de la première séance effectuée</p>
+                            <p>Suite à votre inscription en ligne, vous recevrez un mail de confirmation</p>
 
                             <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB
                                 non acceptée</p>
+                            <p>Vacances scolaires :<p>
+                            <ul>
+                                <li>- Les créneaux du midi sont maintenus et restent inchangés</li>
+                                <li>- AquaDouce à 18H (du lundi au vendredi)</li>
+                                <li>- MIX (AquaDynamic + Aquabike) à 19H (du lundi au vendredi)</li>
+                                <li>- PAS DE JARDIN AQUATIQUE ET DE COURS AQUABABY PENDANT LES PETITES VACANCES SCOLAIRE</li>
+                            </ul>
+                            <p>Pour tous les cours :</p>
+                            <ul>
+                                <li>- 5 séances valable 6 semaines</li>
+                                <li>- 10 séances valables 3 mois</li>
+                                <li>- 20 séances valables 6 mois</li>
+                                <li>- 30 séances valable 1 an à compter de la première séance effectuée</li>
+
+                            </ul>
+
                         </div>
                     </nav>
                     <!--sidebar droite -->

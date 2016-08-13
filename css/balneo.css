@@ -10,7 +10,7 @@ html, body {
     font-size:13px;
 }
 
-a {
+a{
     color:#fff;
 }
 
@@ -293,5 +293,22 @@ form a:hover{
 
     .sidebar-nav li:not(.sidebar-brand) a:hover {
         font-size: 15px;
+    }
+
+    td.dispo{
+        color: rgb(255,50,50);
+    }
+
+    label{
+        font-size: 1em;
+    }
+    .bold{
+        font-weight: bold;
+    }
+
+    .underbar{
+        text-decoration: underline;
+        font-weight: bold;
+        color: rgb(255,50,50);;
     }
 }

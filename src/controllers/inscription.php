@@ -35,28 +35,28 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/bandeau.png" class="imgBanniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="./connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="./connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -83,10 +83,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="../views/aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="../views/aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="../views/aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="../views/aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="../views/aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="../views/jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -118,57 +118,57 @@ if (!isset($_SESSION['user'])) {
                                     <div class="form-group">
                                         <label class="control-label" for="nom">Nom</label>
                                         <input id="nom" class="form-control" type="text" placeholder="Mon nom" name="nom" autofocus value="" data-placement="right"
-                                               data-trigger="manual" data-content="Doit contenir entre 2 et 20 caracteres, uniquement de lettres"
+                                               data-trigger="manual" data-content="Doit contenir entre 2 et 20 caracteres, uniquement de lettres" required="required"
                                                />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="prenom">Prénom</label>
+                                        <label class="control-label" for="prenom">Prénom *</label>
                                         <input id="prenom" class="form-control" type="text" placeholder="Mon prenom" name="prenom" value="" data-placement="right"
-                                               data-trigger="manual" data-content="Doit contenir entre 2 et 20 caracteres, uniquement de lettres"
+                                               data-trigger="manual" data-content="Doit contenir entre 2 et 20 caracteres, uniquement de lettres" required="required"
                                                />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="pass">Mot de passe</label>
+                                        <label class="control-label" for="pass">Mot de passe *</label>
                                         <input id="pass" class="form-control" type="password" placeholder="Mon mot de passe" name="password" data-placement="right"
                                                data-trigger="manual" data-content="Doit contenir au moins 6 caracteres, dont au moins un chiffre, une lettre majuscule et minuscule."
-                                               />
+                                               required="required"/>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="mail">Email</label>
+                                        <label class="control-label" for="mail">Emai *</label>
                                         <input id="mail" class="form-control" type="text" placeholder="Mon email" name="email" data-placement="right" data-trigger="manual"
-                                               value="" data-content="Doit etre une adresse mail valide (user@gmail.com)" />
+                                               value="" data-content="Doit etre une adresse mail valide (user@gmail.com)" required="required"/>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="tel">Telephone</label>
+                                        <label class="control-label" for="tel">Telephone *</label>
                                         <input id="tel" class="form-control" type="text" placeholder="Mon numéro de téléphone" name="tel" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)"
+                                               data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)" required="required"
                                                />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="datenaissance">Date de naissance</label>
+                                        <label class="control-label" for="datenaissance">Date de naissance *</label>
                                         <input id="datenaissance" class="form-control" type="date" placeholder="Date de naissance" name="datenaissance" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Date de naissance" />
+                                               data-trigger="manual" value="" data-content="Date de naissance" required="required"/>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="lieunaissance">Lieu de naissance</label>
+                                        <label class="control-label" for="lieunaissance">Lieu de naissance *</label>
                                         <input id="lieunaissance" class="form-control" type="text" placeholder="Mon lieu de naissance" name="villenaissance" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)"
+                                               data-trigger="manual" value="" data-content="Doit être un numéro de téléphone valide(0611223344)" required="required"
                                                />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="adresse">Adresse</label>
+                                        <label class="control-label" for="adresse">Adresse *</label>
                                         <input id="adresse" class="form-control" type="text" placeholder="Mon adresse" name="adresse" data-placement="right" data-trigger="manual"
-                                               value="" data-content="Adresse" />
+                                               value="" data-content="Adresse" required="required"/>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="ville">Ville</label>
+                                        <label class="control-label" for="ville">Ville *</label>
                                         <input id="ville" class="form-control" type="text" placeholder="Ma ville" name="ville" data-placement="right" data-trigger="manual"
-                                               value="" data-content="ville actuelle" />
+                                               value="" data-content="ville actuelle" required="required"/>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="codepostal">Code Postal</label>
+                                        <label class="control-label" for="codepostal">Code Postal *</label>
                                         <input id="codepostal" class="form-control" type="number" placeholder="Code Postale" name="codepostal" data-placement="right"
-                                               data-trigger="manual" value="" data-content="Code Postal" />
+                                               data-trigger="manual" value="" data-content="Code Postal" required="required"/>
                                     </div>
                                     <hr/>
                                     <?php

@@ -5,14 +5,14 @@ if (!isset($_SESSION['user'])) {
     session_destroy();
 }
 ?>
-    <!DOCTYPE html>
-    <html lang="fr-FR">
+<!DOCTYPE html>
+<html lang="fr-FR">
 
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Aquababy'">
-        <meta name="keywords" content="Activités aquatiques;AquaBaby">
+        <meta name="keywords" content="Activités aquatiques;AquaBaby;Montpellier">
         <title>aqua-balneo.fr : Aquababy</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -35,27 +35,27 @@ if (!isset($_SESSION['user'])) {
                         </div>
                         <div class="col-sm-2 blockConnection">
                             <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -82,10 +82,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -110,15 +110,14 @@ if (!isset($_SESSION['user'])) {
                         <div class="accueilContent">
                             <h1 class="contentTitle">AquaBaby</h1>
                             <div class="row marginTop50">
-                                <div class="col-sm-12">                                   
-                                    <p>Séance de 40 min ou l'enfant (entre 4 mois et 3 ans) évolue en toute confiance dans un
-                                        bassin ou l'eau est chauffé à 32 °, accompagné d'un parent.</p>
-                                    <p>Des <em>jeux aquatiques</em> sont à disposition.</p>
-                                    <p>C'est une activité réalisé dans une ambiance affective et sécurisante.</p>
-                                    <p>Elle favorise <em>l'éveil sensorielle et moteur</em> d'un point de vue corporelle et
-                                        émotionnel ainsi que l'<em>épanouissement psychologique</em> dans le cercle familiale
-                                        d'abord puis sociale par la suite.</p>
-                                    <br/>
+                                <div class="col-sm-12">
+                                    <article>
+                                        <p>Séance de 40 min où l'<em>enfant</em> (entre 4 mois et 3 ans) évolue en toute confiance dans un bassin ou l'<em>eau</em> est chauffée à 32 °, accompagné d'un parent.</p>
+                                        <p>L’activité <strong>bébés nageurs</strong> est proposée dans un environnement aménagé à cet effet, afin de multiplier les expériences motrices, source de loisirs et de socialisation.</p>
+                                        <p>C'est une activité réalisée dans une ambiance affective et sécurisante, ou vous pourrez profiter de nombreux moments de partage et de joie en famille.</p>
+                                        <p>Elle favorise l'éveil sensoriel et moteur d’un point de vue corporel et émotionnel ainsi que l’épanouissement psychologique dans le cercle familial d’abord puis social par la suite.</p>
+                                        <p class='centered underbar'>L’accueil se fait avec papa et/ou maman, mais un seul des deux parents est autorisé à accompagner l’enfant dans l’<em>eau</em>, par soucis d’un meilleur service.</p>
+                                    </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">
                                     <img src="../../assets/aquababy.jpg" id="imgJardin" class="img-thumbnail" alt="aquababy" style="width:50%;height: 50%" />
@@ -148,16 +147,16 @@ if (!isset($_SESSION['user'])) {
                                 <p>Durée des cours 40 min.</p>
                                 <table class="table">
                                     <tr>
-                                        <td>Mercredi</td>
-                                        <td>16H00</td>
+                                        <td class="dispo">Mercredi</td>
+                                        <td class="dispo">16H00</td>
                                     </tr>
                                     <tr>
-                                        <td>Samedi</td>
-                                        <td>15H00</td>
+                                        <td class="dispo">Samedi</td>
+                                        <td class="dispo">15H00</td>
                                     </tr>
                                     <tr>
-                                        <td>Samedi</td>
-                                        <td>16H00</td>
+                                        <td class="dispo">Samedi</td>
+                                        <td class="dispo">16H00</td>
                                     </tr>
                                 </table>
                                 <p>Hors petites vacances scolaires</p>
@@ -171,8 +170,8 @@ if (!isset($_SESSION['user'])) {
                                     <li> 265€ les 6 mois</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par couple enfant/parent de 6 couples maximum.</p>
-                                <p>Attention: Un seul des deux parents est admis.</p>
+                                <p>L'activité est organisée par couple enfant/parent de 6 couples maximum</p>
+                                <p>Attention: Un seul des deux parents est admis</p>
                             </div>
                         </div>
                         <hr/>
@@ -193,4 +192,4 @@ if (!isset($_SESSION['user'])) {
 
     </body>
 
-    </html>
+</html>

@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpelliere : Aquaphobie">
-        <meta name="keywords" content="Activités aquatiques;Aquaphobie;">
+        <meta name="keywords" content="Activités aquatiques;Aquaphobie;Montpellier">
         <title>aqua-balneo.fr : Aquaphobie</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -34,28 +34,28 @@ if (!isset($_SESSION['user'])) {
                             <img src="../../assets/bandeau.png" class="imgBanniere" alt="Banniere"/>
                         </div>
                         <div class="col-sm-2 blockConnection">
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
-                        } else {
-                            echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
-                            echo '<div class = "form-group" id = "login-form">';
-                            echo '<div>';
-                            echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
-                            echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
-                            echo '</div>';
-                            echo '<div>';
-                            echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
-                            echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
-                            echo '</div>';
-                            echo '<br>';
-                            echo '<div>';
-                            echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</form>';
-                        }
-                        ?>
+                            <?php
+                            if (isset($_SESSION['user'])) {
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                            } else {
+                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<div class = "form-group" id = "login-form">';
+                                echo '<div>';
+                                echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
+                                echo '<input id = "emailId" class = "form-control" type = "text" name = "email" placeholder = "Mon email" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<label for = "passwordId" class = "control-label">Mot de passe</label>';
+                                echo '<input id = "passwordId" class = "form-control" type = "password" name = "password" placeholder = "Mon mot de passe" />';
+                                echo '</div>';
+                                echo '<br>';
+                                echo '<div>';
+                                echo '<button type = "submit" class = "btn btn-primary" data-dismiss = "modal">Se connecter</button>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</form>';
+                            }
+                            ?>
                         </div>
                     </nav>
                 </header>
@@ -82,10 +82,10 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="#" rel="section">AquaPhobie</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
-                                <a href="./aquatraining.php" rel="section">Mix Aqua-training</a>
+                                <a href="#" rel="section">AquaPhobie</a>
                             </li>
                             <li>
                                 <a href="./jardin.php" rel="section">Jardin Aquatique enfant</a>
@@ -112,11 +112,14 @@ if (!isset($_SESSION['user'])) {
                             <h1 class="contentTitle">AquaPhobie</h1>
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
-                                    <p>Cours adulte permettant de vaincre la peur de l’eau.</p>
-                                    <p>L’objectif de ce cours est de vous permettre d’apprécier la baignade sans crainte et en toute
-                                        sécurité !
-                                    </p>
-                                    <br/>
+                                    <article>
+                                        <p>Cours adulte permettant de vaincre la <em>peur de l’eau</em>.</p>
+                                        <p>L’objectif de ce cours est de vous permettre d’apprécier la baignade sans crainte et en toute sécurité !</p>
+                                        <p>En groupe restreint, vous apprendrez les techniques de respirations, immersions et flottaison tout en apprivoisant le <em>milieu aquatique</em> à votre rythme.</p>
+                                        <p>Adressé à un public n’étant pas à l’aise avec la perte d’appui plantaire, et ayant besoin d’aide à la flottaison.</p>
+                                        <p class='centered underbar'>Attention, ceci n’est pas un cours de natation adulte débutant.</p>
+
+                                    </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">
                                     <img src="../../assets/aquaphobie.jpg" id="imgJardin" class="img-thumbnail" alt="aquaphobie" style="width:50%;height: 50%"
@@ -126,7 +129,7 @@ if (!isset($_SESSION['user'])) {
                         </div>
                     </section>
                     <!-- sidebar droite-->
-                    <nav class="col-sm-2">        
+                    <nav class="col-sm-2">
                         <ul class = "sidebar-nav">
                             <li>
                                 <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
@@ -144,11 +147,11 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
-                                <p>Durée des cours 45 min.</p>
+                                <p>Durée des cours 45 min</p>
                                 <table class="table">
                                     <tr>
-                                        <td>Samedi</td>
-                                        <td>17H00</td>
+                                        <td class="dispo">Samedi</td>
+                                        <td class="dispo">17H00</td>
                                     </tr>
                                 </table>
                             </div>
@@ -160,7 +163,7 @@ if (!isset($_SESSION['user'])) {
                                     <li> 205€ le forfait de 10 séances</li>
                                 </ul>
                                 <hr>
-                                <p>L'activité est organisée par groupe de 5 personnes maximum.</p>
+                                <p>L'activité est organisée par groupe de 5 personnes maximum</p>
                             </div>
                         </div>
                         <hr/>
