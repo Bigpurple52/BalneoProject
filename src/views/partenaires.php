@@ -161,7 +161,7 @@ if (!isset($_SESSION['user'])) {
                                         </address>
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <img alt="somethy : fabricant français logo" class="thumbnail" src="../../assets/Somethy.png"/>
+                                                <img alt="somethy : fabricant français logo" class="thumbnail" src="../../assets/somethy.png"/>
                                             </div>
                                         </div>
                                     </article>
