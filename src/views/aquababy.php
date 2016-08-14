@@ -119,7 +119,7 @@ if (!isset($_SESSION['user'])) {
                                         <p>L’activité <strong>bébés nageurs</strong> est proposée dans un environnement aménagé à cet effet, afin de multiplier les expériences motrices, source de loisirs et de socialisation.</p>
                                         <p>C'est une activité réalisée dans une ambiance affective et sécurisante, où vous pourrez profiter de nombreux moments de partage et de joie en famille.</p>
                                         <p>Elle favorise l'éveil sensoriel et moteur d’un point de vue corporel et émotionnel ainsi que l’épanouissement psychologique dans le cercle familial d’abord puis social par la suite.</p>
-                                        <p class='centered underbar'>L’accueil se fait avec papa et/ou maman, mais un seul des deux parents est autorisé à accompagner l’enfant dans l’<em>eau</em>, par soucis d’un meilleur service.</p>
+                                        <p class='centered underbar'>L’accueil se fait avec papa ou maman, un seul des deux parents est autorisé à accompagner l’enfant dans l’<em>eau</em>, par soucis d’un meilleur service.</p>
                                     </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">
