@@ -189,7 +189,6 @@ if (!isset($_SESSION['user'])) {
                                 <li>- 10 séances valables 3 mois</li>
                                 <li>- 20 séances valables 6 mois</li>
                                 <li>- 30 séances valable 1 an à compter de la première séance effectuée</li>
-
                             </ul>
 
                         </div>
