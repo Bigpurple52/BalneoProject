@@ -116,6 +116,13 @@ if (!isset($_SESSION['user'])) {
                             <hr class="hrtrait" />
                             <h2 class="inscription">Vos informations personnelles</h2>
                             <hr />
+                            <form action="fileDownload.php" method="post">
+                                <button class="btn btn-primary" type="submit" type="button" name="submit">Télécharger le formulaire d'inscription</button>
+                            </form>
+                            <p style='color:white'>Veuillez retournez ce document remplit à l'adresse suivante :<p>
+                                <a href="mailto:k-hyle@aqua-balneo.fr">k-hyle@aqua-balneo.fr</a>
+                            <hr />
+                            <p class="centered underbar">Formulaire d'inscription au site - Pas nécessaire pour s'inscrire aux séances.</p>
                             <form role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">

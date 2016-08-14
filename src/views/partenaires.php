@@ -181,11 +181,17 @@ if (!isset($_SESSION['user'])) {
                                             <p>Une nouvelle activité ludique et sportive à <strong>Montpellier</strong></p>
                                             <a href="http://www.kangoofun.fr/" rel="site partenaire" style="color: #204d74;">http://www.kangoofun.fr/</a>
                                         </address>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <img alt="kangoo fun logo" class="thumbnail" src="../../assets/kangoofun.jpg"/>
+                                            </div>
+                                        </div>
                                     </article>
                                 </div>
                             </div>
                         </div>
                     </section>
+                    kangoofun.jpg
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
                         <ul class = "sidebar-nav">
