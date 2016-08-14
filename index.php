@@ -107,6 +107,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="./src/views/professionel.php" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./src/views/partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!--/sidebar -->
@@ -118,7 +121,7 @@ if (!isset($_SESSION['user'])) {
                             <div class="col-sm-12 col-sm-offset-3">
                                 <img src="./assets/acceuil.JPG" id="imgJardin" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
                             </div>
-                            <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à <strong>Teyran</strong>, à 12km de la Comédie de <strong>Montpellier</strong>
+                            <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à <strong>Teyran</strong>, à 12km de la Comédie de <strong>Montpellier.</strong>
                                 Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
                             </p>
                             <br/>

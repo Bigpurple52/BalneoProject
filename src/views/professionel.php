@@ -102,6 +102,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="#" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
@@ -110,7 +113,7 @@ if (!isset($_SESSION['user'])) {
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
                             <h1 class="contentTitle">Intervenants</h1>
-                            <p class="marginTop50">Les <strong>activités aquatiques</strong> sont assurés par des maîtres nageurs qualifiés et expérimentés.</p>
+                            <p class="marginTop50">Les <strong>activités aquatiques</strong> sont assurées par des maîtres nageurs qualifiés et expérimentés.</p>
                             <p>Noémie et Damien exercent le métier de maître nageur depuis plus d'une dizaine d'années, en tant qu'entraîneurs, surveillants de baignade, animateurs, enseignants et secouristes.
                                 Ils ont également une expérience reconnue dans l'accompagnement individualisé en <strong>aquagym</strong>, <strong>aquabike</strong>, <strong>aquafitness</strong> (...) ainsi qu'en apprentissage de la natation enfant.</p>
                             <div class="col-sm-6 centered noeSeparateur">

@@ -102,6 +102,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
@@ -109,7 +112,7 @@ if (!isset($_SESSION['user'])) {
                     <!-- content -->
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
-                            <h1 class="contentTitle">Jardin Aquatique enfant</h1>
+                            <h1 class="contentTitle">Jardin Aquatique enfants</h1>
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
                                     <article>

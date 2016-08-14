@@ -102,6 +102,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
@@ -112,9 +115,9 @@ if (!isset($_SESSION['user'])) {
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
                                     <article>
-                                        <p>Séance de 40 min où l'<em>enfant</em> (entre 4 mois et 3 ans) évolue en toute confiance dans un bassin ou l'<em>eau</em> est chauffée à 32 °, accompagné d'un parent.</p>
+                                        <p>Séance de 40 min où l'<em>enfant</em> (entre 4 mois et 3 ans) évolue en toute confiance dans un bassin où l'<em>eau</em> est chauffée à 32 °, accompagné d'un parent.</p>
                                         <p>L’activité <strong>bébés nageurs</strong> est proposée dans un environnement aménagé à cet effet, afin de multiplier les expériences motrices, source de loisirs et de socialisation.</p>
-                                        <p>C'est une activité réalisée dans une ambiance affective et sécurisante, ou vous pourrez profiter de nombreux moments de partage et de joie en famille.</p>
+                                        <p>C'est une activité réalisée dans une ambiance affective et sécurisante, où vous pourrez profiter de nombreux moments de partage et de joie en famille.</p>
                                         <p>Elle favorise l'éveil sensoriel et moteur d’un point de vue corporel et émotionnel ainsi que l’épanouissement psychologique dans le cercle familial d’abord puis social par la suite.</p>
                                         <p class='centered underbar'>L’accueil se fait avec papa et/ou maman, mais un seul des deux parents est autorisé à accompagner l’enfant dans l’<em>eau</em>, par soucis d’un meilleur service.</p>
                                     </article>

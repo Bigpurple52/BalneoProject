@@ -100,6 +100,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="../views/professionel.php" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->

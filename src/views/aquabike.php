@@ -102,6 +102,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
@@ -119,7 +122,7 @@ if (!isset($_SESSION['user'])) {
                                         <p>L’eau propose une résistance 12 fois supérieure à celle de l’air, cela engendre des mouvements plus lents et difficiles mais également un massage drainant, permettant ni douleur ni courbatures à la sortie de la séance !</p>
 
                                         <p>La dynamique de groupe crée une motivation qui amène chacun à se dépasser encore plus !</p>
-                                        <p>8 vélos dans l’<em>eau</em> maximum disponible par cours, cours se déroulant en musique.</p>
+                                        <p>8 vélos maximum disponibles par cours, cours se déroulant en musique.</p>
                                     </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">

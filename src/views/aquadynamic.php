@@ -102,6 +102,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
@@ -113,7 +116,7 @@ if (!isset($_SESSION['user'])) {
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
                                     <article>
-                                        <p>Cours d’<strong>aquagym</strong> tonique avec et sans matériel, permettant de modeler son corps et d’améliorer sa condition physique.</p>
+                                        <p>Cours d’<strong>aquagym</strong> tonique avec ou sans matériel, permettant de modeler son corps et d’améliorer sa condition physique.</p>
 
                                         <p>Pas de risque pour les articulations, l’<strong>aquatonic</strong> permet un effort prolongé et une dépense énergétique intense sans ressentir la fatigue ni les courbatures du lendemain…</p>
 

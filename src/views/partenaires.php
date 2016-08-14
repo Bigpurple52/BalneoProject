@@ -11,9 +11,9 @@ if (!isset($_SESSION['user'])) {
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="activité aquatique à Montpellier : Mix Aquatraining">
-        <meta name="keywords" content="Activités aquatiques;Aqua training;Montpellier">
-        <title>aqua-balneo.fr : Mix Aquatraining</title>
+        <meta name="description" content="activité aquatique à Montpellier : Partenaires'">
+        <meta name="keywords" content="Activités aquatiques;Partenaires;Montpellier">
+        <title>aqua-balneo.fr : Partenaires</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -82,7 +82,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./aquabike.php" rel="section">AquaBike</a>
                             </li>
                             <li>
-                                <a href="#" rel="section">Mix Aquatraining</a>
+                                <a href="./aquatraining.php" rel="section">Mix Aquatraining</a>
                             </li>
                             <li>
                                 <a href="./aquaphobie.php" rel="section">AquaPhobie</a>
@@ -103,44 +103,96 @@ if (!isset($_SESSION['user'])) {
                                 <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
                             <li>
-                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                                <a href="#" rel="section">Partenaires</a>
                             </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
-
                     <!-- content -->
                     <section class="col-sm-8" id="main">
                         <div class="accueilContent">
-                            <h1 class="contentTitle">Mix Aquatraining</h1>
+                            <h1 class="contentTitle">Nos Partenaires</h1>
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
                                     <article>
-                                        <p>Cours explosifs MIX comprenant ateliers d’<strong>aquagym</strong> et d’<strong>aquabike</strong>, permettant d’allier tous les bénéfices des séances d’<strong>aquabike</strong> et d’<strong>aquadynamic</strong>, dans un seul et même cours!</p>
-
-                                        <p>Séances collectives en musique, basées sur un travail complet des bras, abdominaux, fessiers, cuisses (…) = tous les muscles du corps sont ici sollicités</p>
-
-                                        <p>Ces séances comprennent 4 ateliers d’<strong>aquabiking</strong> et 4 ateliers d’<strong>aquatonic</strong>, soit un maximum de 8 personnes par cours.</p>
-
-                                        <p class='centered underbar'>Il n’est pas nécessaire de savoir <em>nager</em> pour pratiquer cette activité</p>
+                                        <address>
+                                            <h2>WellnessClub</h2>
+                                            <p>1600 bis avenue de <strong>Montpellier</strong> 34820 Teyran</p>
+                                            <p>Contact: 04 67 61 90 37</p>
+                                            <a href="http://www.wellness-club.fr/" rel="site partenaire" style="color: #204d74;">http://www.wellness-club.fr/</a>
+                                        </address>
+                                        <img alt="wellness club logo" class="thumbnail" src="../../assets/wellnesslogo.jpg" />
+                                        <br>
+                                        <br>
+                                        <address>
+                                            <h2>Lydie Ricard et Sandra Redon</h2>
+                                            <p>Cabinet de sages-femmes</p>
+                                            <p>4 av monteroni d'arbitre</p>
+                                            <p>34920 Le cres</p>
+                                            <p>Contact : 04 67 40 21 19</p>
+                                        </address>
+                                        <br>
+                                        <br>
+                                        <address>
+                                            <h2>Julie Anna Leandri</h2>
+                                            <p>Cabinet de Sage-femme</p>
+                                            <p>Castries</p>
+                                            <p>Contact : 06 30 20 24 44</p>
+                                        </address>
+                                        <br>
+                                        <br>
+                                        <address>
+                                            <h2>Pharmanex : compléments nutritionnels</h2>
+                                            <p>Bien-être</p>
+                                            <p>Contact : 06 24 33 81 37</p>
+                                        </address>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <img alt="pharmanex logo" class="thumbnail" src="../../assets/pharmanex.jpg" style="width:50%; height:50%"/>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <address>
+                                            <h2>Somethy</h2>
+                                            <p>Spa, piscine et hydrothérapie</p>
+                                            <p>Contact: 04 67 22 36 62</p>
+                                            <a href="http://www.somethy.com/" rel="site partenaire" style="color: #204d74;">http://www.somethy.com/</a>
+                                        </address>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <img alt="somethy : fabricant français logo" class="thumbnail" src="../../assets/Somethy.png"/>
+                                            </div>
+                                        </div>
                                     </article>
-                                </div>
-                                <div class="col-sm-12 col-sm-offset-3">
-                                    <img src="../../assets/cours-MIX.JPG" id="imgJardin" class="img-thumbnail" alt="Aquatraining" style="width:50%;height: 50%"
-                                         />
+                                    <br>
+                                    <br>
+                                    <address>
+                                        <h2>L'eau de Noé 34</h2>
+                                        <p><strong>Activités aquatiques</strong> à <strong>Montpellier</strong></p>
+                                        <a href="http://www.leaudenoe34.aquagym-natation.com" rel="site partenaire" style="color: #204d74;">http://www.leaudenoe34.aquagym-natation.com</a>
+                                    </address>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <img alt="L'eau de Noé 34 logo" class="thumbnail" src="../../assets/eaudenoe.png"/>
+                                        </div>
+                                    </div>
+                                    </article>
+
+
+                                    http://www.leaudenoe34.aquagym-natation.com
                                 </div>
                             </div>
                         </div>
-                        <!--Right part-->
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
                         <ul class = "sidebar-nav">
                             <li>
-                                <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
+                                <a href="../controllers/inscription.php" rel="nofollow">Inscription</a>
                             </li>
                             <li>
-                                <a href = "./planning2.php" rel = "section">Planning</a>
+                                <a href="./planning2.php" rel="section">Planning</a>
                             </li>
                             <?php
                             if (isset($_SESSION['user'])) {
@@ -152,27 +204,47 @@ if (!isset($_SESSION['user'])) {
                         <div class="row sidebar-right">
                             <div class="col-sm-12">
                                 <h2>Horaires</h2>
-                                <p>Durée des cours 45 min</p>
+                                <p>Durée des cours 45 min.</p>
                                 <table class="table">
                                     <tr>
                                         <td class="dispo">Lundi</td>
-                                        <td class="dispo"> 11H30</td>
+                                        <td class="dispo">12H30</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dispo">Lundi</td>
+                                        <td class="dispo">17H30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mardi</td>
+                                        <td>13H00*</td>
                                     </tr>
                                     <tr>
                                         <td class="dispo">Mardi</td>
-                                        <td class="dispo"> 18H30</td>
+                                        <td class="dispo">17H30</td>
                                     </tr>
                                     <tr>
-                                        <td class="dispo">Mercredi</td>
-                                        <td class="dispo"> 17H00</td>
+                                        <td>Mercredi</td>
+                                        <td>13H00*</td>
                                     </tr>
                                     <tr>
                                         <td>Jeudi</td>
-                                        <td> 12H00*</td>
+                                        <td>13H00*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jeudi</td>
+                                        <td>18H30*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dispo">Vendredi</td>
+                                        <td class="dispo">12H30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vendredi</td>
+                                        <td>18H30*</td>
                                     </tr>
                                     <tr>
                                         <td>Samedi</td>
-                                        <td> 11H15*</td>
+                                        <td>10H15*</td>
                                     </tr>
                                 </table>
                                 <p>* Activités non disponible actuellement</p>
@@ -182,9 +254,9 @@ if (!isset($_SESSION['user'])) {
                             <div class="col-sm-12">
                                 <h2>Tarification</h2>
                                 <ul>
-                                    <li> 150€ les 10 séances</li>
-                                    <li> 280€ les 20 séances</li>
-                                    <li> 375€ les 30 séances</li>
+                                    <li> 165€ les 10 séances</li>
+                                    <li> 300€ les 20 séances</li>
+                                    <li> 390€ les 30 séances</li>
                                 </ul>
                                 <hr>
                                 <p>L'activité est organisée par groupe de 8 personnes maximum</p>

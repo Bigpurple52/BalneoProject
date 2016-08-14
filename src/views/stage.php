@@ -99,6 +99,9 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="./professionel.php" rel="section">Intervenants</a>
                             </li>
+                            <li>
+                                <a href="./partenaires.php" rel="section">Partenaires</a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- /sidebar -->
@@ -112,9 +115,9 @@ if (!isset($_SESSION['user'])) {
                                 <div class="col-sm-12">
                                     <article>
                                         <p><strong>Stage de natation</strong> proposé pendant les vacances scolaires et à partir de l’âge de 5 ans, aux enfants ayant déjà eu une <em>expérience aquatique</em> et n’ayant pas la crainte de l’<em>eau</em>.</p>
-                                        <p>Ces stages se déroule pendant toute la semaine, à 16 ou 17h pour une durée de 50 min par séance.</p>
+                                        <p>Ces stages se déroulent pendant toute la semaine, à 16 ou 17h pour une durée de 50 min par séance.</p>
                                         <p>L’objectif de ces <em>stages</em> est d’aborder les fondamentaux de la <em>natation</em> à savoir l’équilibre, la respiration et la propulsion.</p>
-                                        <p>La technique de <em>nage</em> sera abordée suivant le niveau de chacun, les stages étant organisé par groupe de 6 enfants maximum, pour une meilleure progression.</p>
+                                        <p>La technique de <em>nage</em> sera abordée suivant le niveau de chacun, les stages sont organisés par groupe de 6 enfants maximum, pour une meilleure progression.</p>
                                     </article>
                                 </div>
                                 <!--Left part-->
