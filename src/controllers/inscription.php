@@ -123,7 +123,7 @@ if (!isset($_SESSION['user'])) {
                             <p style='color:white'>Pour vous inscrire aux séances, veuillez retournez ce document remplit à l'adresse suivante :<p>
                                 <a href="mailto:k-hyle@aqua-balneo.fr">k-hyle@aqua-balneo.fr</a>
                             <hr />
-                            <p class="centered underbar">Formulaire d'inscription au site - Pas nécessaire pour s'inscrire aux séances.</p>
+                            <p class="centered underbar" style="color:red; text-decoration:underline; text-align: center">Formulaire d'inscription au site - Pas nécessaire pour s'inscrire aux séances.</p>
                             <form role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">
