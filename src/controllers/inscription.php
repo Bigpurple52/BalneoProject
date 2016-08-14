@@ -202,7 +202,7 @@ if (!isset($_SESSION['user'])) {
                         </div>
                     </section>
                     <!-- sidebar droite-->
-                    <nav class="col-sm-2">
+                    <nav class="col-sm-2" style="color:white">
                         <ul class = "sidebar-nav">
                             <li>
                                 <a href="./inscription.php" rel="nofollow">Inscription</a>
@@ -217,6 +217,27 @@ if (!isset($_SESSION['user'])) {
                             ?>
                         </ul>
                         <hr/>
+                        <h4>Informations complémentaires</h4>
+                        <p>Les séances sont dispensées en petits groupes (10 personnes maximum)</p>
+
+                        <p>Suite à votre inscription en ligne, vous recevrez un mail de confirmation</p>
+
+                        <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB
+                            non acceptée</p>
+                        <p>Vacances scolaires :<p>
+                        <ul>
+                            <li>- Les créneaux du midi sont maintenus et restent inchangés</li>
+                            <li>- AquaDouce à 18H (du lundi au vendredi)</li>
+                            <li>- MIX (AquaDynamic + Aquabike) à 19H (du lundi au vendredi)</li>
+                            <li>- PAS DE JARDIN AQUATIQUE ET DE COURS AQUABABY PENDANT LES PETITES VACANCES SCOLAIRE</li>
+                        </ul>
+                        <p>Pour tous les cours :</p>
+                        <ul>
+                            <li>- 5 séances valable 6 semaines</li>
+                            <li>- 10 séances valables 3 mois</li>
+                            <li>- 20 séances valables 6 mois</li>
+                            <li>- 30 séances valable 1 an à compter de la première séance effectuée</li>
+                        </ul>
                     </nav>
                     <!--sidebar droite -->
                     <footer>

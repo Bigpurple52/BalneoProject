@@ -281,6 +281,24 @@ form a:hover{
     border-right: 1px solid grey;
 }
 
+.underbar{
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgb(255,50,50);;
+}
+
+td.dispo{
+    color: rgb(255,50,50);
+}
+
+label{
+    font-size: 1em;
+}
+.bold{
+    font-weight: bold;
+}
+
+
 /* For ff */
 @-moz-document url-prefix() {
     body{
@@ -312,20 +330,4 @@ form a:hover{
         font-size: 15px;
     }
 
-    td.dispo{
-        color: rgb(255,50,50);
-    }
-
-    label{
-        font-size: 1em;
-    }
-    .bold{
-        font-weight: bold;
-    }
-
-    .underbar{
-        text-decoration: underline;
-        font-weight: bold;
-        color: rgb(255,50,50);;
-    }
 }
