@@ -119,7 +119,8 @@ if (!isset($_SESSION['user'])) {
                             <form action="fileDownload.php" method="post">
                                 <button class="btn btn-primary" type="submit" type="button" name="submit">Télécharger le formulaire d'inscription</button>
                             </form>
-                            <p style='color:white'>Veuillez retournez ce document remplit à l'adresse suivante :<p>
+                            <br>
+                            <p style='color:white'>Pour vous inscrire aux séances, veuillez retournez ce document remplit à l'adresse suivante :<p>
                                 <a href="mailto:k-hyle@aqua-balneo.fr">k-hyle@aqua-balneo.fr</a>
                             <hr />
                             <p class="centered underbar">Formulaire d'inscription au site - Pas nécessaire pour s'inscrire aux séances.</p>
