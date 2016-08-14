@@ -164,23 +164,24 @@ if (!isset($_SESSION['user'])) {
                                                 <img alt="somethy : fabricant français logo" class="thumbnail" src="../../assets/somethy.png"/>
                                             </div>
                                         </div>
-                                    </article>
-                                    <br>
-                                    <br>
-                                    <address>
-                                        <h2>L'eau de Noé 34</h2>
-                                        <p><strong>Activités aquatiques</strong> à <strong>Montpellier</strong></p>
-                                        <a href="http://www.leaudenoe34.aquagym-natation.com" rel="site partenaire" style="color: #204d74;">http://www.leaudenoe34.aquagym-natation.com</a>
-                                    </address>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <img alt="L'eau de Noé 34 logo" class="thumbnail" src="../../assets/eaudenoe.png"/>
+                                        <br>
+                                        <br>
+                                        <address>
+                                            <h2>L'eau de Noé 34</h2>
+                                            <p><strong>Activités aquatiques</strong> à <strong>Montpellier</strong></p>
+                                            <a href="http://www.leaudenoe34.aquagym-natation.com" rel="site partenaire" style="color: #204d74;">http://www.leaudenoe34.aquagym-natation.com</a>
+                                        </address>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <img alt="L'eau de Noé 34 logo" class="thumbnail" src="../../assets/eaudenoe.png"/>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <address>
+                                            <h2>KANGOO FUN</h2>
+                                            <p>Une nouvelle activité ludique et sportive à <strong>Montpellier</strong></p>
+                                            <a href="http://www.kangoofun.fr/" rel="site partenaire" style="color: #204d74;">http://www.kangoofun.fr/</a>
+                                        </address>
                                     </article>
-
-
-                                    http://www.leaudenoe34.aquagym-natation.com
                                 </div>
                             </div>
                         </div>
