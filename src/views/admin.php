@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua.balneo.fr') {
+if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua-balneo.fr') {
     try {
         session_unset();
         session_destroy();
