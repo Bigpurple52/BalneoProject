@@ -153,8 +153,8 @@ if (!isset($_SESSION['user'])) {
                                 <p>Durée des cours 45 min</p>
                                 <table class="table">
                                     <tr>
-                                        <td class="dispo">Samedi</td>
-                                        <td class="dispo">17H00</td>
+                                        <td>Samedi</td>
+                                        <td>17H00</td>
                                     </tr>
                                 </table>
                             </div>

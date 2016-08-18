@@ -155,24 +155,24 @@ if (!isset($_SESSION['user'])) {
                                 <p>Durée des cours 45 min</p>
                                 <table class="table">
                                     <tr>
-                                        <td class="dispo">Lundi</td>
-                                        <td class="dispo"> 11H30</td>
+                                        <td>Lundi</td>
+                                        <td> 11H30</td>
                                     </tr>
                                     <tr>
-                                        <td class="dispo">Mardi</td>
-                                        <td class="dispo"> 18H30</td>
+                                        <td>Mardi</td>
+                                        <td> 18H30</td>
                                     </tr>
                                     <tr>
-                                        <td class="dispo">Mercredi</td>
-                                        <td class="dispo"> 17H00</td>
+                                        <td>Mercredi</td>
+                                        <td> 17H00</td>
                                     </tr>
                                     <tr>
-                                        <td>Jeudi</td>
-                                        <td> 12H00*</td>
+                                        <td class="dispo">Jeudi</td>
+                                        <td class="dispo"> 12H00*</td>
                                     </tr>
                                     <tr>
-                                        <td>Samedi</td>
-                                        <td> 11H15*</td>
+                                        <td class="dispo">Samedi</td>
+                                        <td class="dispo"> 11H15*</td>
                                     </tr>
                                 </table>
                                 <p>* Activités non disponible actuellement</p>

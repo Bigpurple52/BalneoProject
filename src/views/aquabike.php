@@ -154,44 +154,44 @@ if (!isset($_SESSION['user'])) {
                                 <p>Durée des cours 45 min.</p>
                                 <table class="table">
                                     <tr>
-                                        <td class="dispo">Lundi</td>
-                                        <td class="dispo">12H30</td>
+                                        <td>Lundi</td>
+                                        <td>12H30</td>
                                     </tr>
                                     <tr>
-                                        <td class="dispo">Lundi</td>
-                                        <td class="dispo">17H30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mardi</td>
-                                        <td>13H00*</td>
+                                        <td>Lundi</td>
+                                        <td>17H30</td>
                                     </tr>
                                     <tr>
                                         <td class="dispo">Mardi</td>
-                                        <td class="dispo">17H30</td>
+                                        <td class="dispo">13H00*</td>
                                     </tr>
                                     <tr>
-                                        <td>Mercredi</td>
-                                        <td>13H00*</td>
+                                        <td>Mardi</td>
+                                        <td>17H30</td>
                                     </tr>
                                     <tr>
-                                        <td>Jeudi</td>
-                                        <td>13H00*</td>
+                                        <td class="dispo">Mercredi</td>
+                                        <td class="dispo">13H00*</td>
                                     </tr>
                                     <tr>
-                                        <td>Jeudi</td>
-                                        <td>18H30*</td>
+                                        <td class="dispo">Jeudi</td>
+                                        <td class="dispo">13H00*</td>
                                     </tr>
                                     <tr>
-                                        <td class="dispo">Vendredi</td>
-                                        <td class="dispo">12H30</td>
+                                        <td class="dispo">Jeudi</td>
+                                        <td class="dispo">18H30*</td>
                                     </tr>
                                     <tr>
                                         <td>Vendredi</td>
-                                        <td>18H30*</td>
+                                        <td>12H30</td>
                                     </tr>
                                     <tr>
-                                        <td>Samedi</td>
-                                        <td>10H15*</td>
+                                        <td class="dispo">Vendredi</td>
+                                        <td class="dispo">18H30*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dispo">Samedi</td>
+                                        <td class="dispo">10H15*</td>
                                     </tr>
                                 </table>
                                 <p>* Activités non disponible actuellement</p>

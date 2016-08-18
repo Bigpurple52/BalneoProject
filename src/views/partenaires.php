@@ -191,7 +191,6 @@ if (!isset($_SESSION['user'])) {
                             </div>
                         </div>
                     </section>
-                    kangoofun.jpg
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
                         <ul class = "sidebar-nav">
@@ -207,68 +206,6 @@ if (!isset($_SESSION['user'])) {
                             }
                             ?>
                         </ul>
-                        <hr/>
-                        <div class="row sidebar-right">
-                            <div class="col-sm-12">
-                                <h2>Horaires</h2>
-                                <p>Durée des cours 45 min.</p>
-                                <table class="table">
-                                    <tr>
-                                        <td class="dispo">Lundi</td>
-                                        <td class="dispo">12H30</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dispo">Lundi</td>
-                                        <td class="dispo">17H30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mardi</td>
-                                        <td>13H00*</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dispo">Mardi</td>
-                                        <td class="dispo">17H30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mercredi</td>
-                                        <td>13H00*</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jeudi</td>
-                                        <td>13H00*</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jeudi</td>
-                                        <td>18H30*</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dispo">Vendredi</td>
-                                        <td class="dispo">12H30</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vendredi</td>
-                                        <td>18H30*</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Samedi</td>
-                                        <td>10H15*</td>
-                                    </tr>
-                                </table>
-                                <p>* Activités non disponible actuellement</p>
-                            </div>
-                        </div>
-                        <div class="row sidebar-right">
-                            <div class="col-sm-12">
-                                <h2>Tarification</h2>
-                                <ul>
-                                    <li> 165€ les 10 séances</li>
-                                    <li> 300€ les 20 séances</li>
-                                    <li> 390€ les 30 séances</li>
-                                </ul>
-                                <hr>
-                                <p>L'activité est organisée par groupe de 8 personnes maximum</p>
-                            </div>
-                        </div>
                         <hr/>
                     </nav>
                     <!--sidebar droite -->
