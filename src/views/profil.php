@@ -19,6 +19,11 @@ if (!isset($_SESSION['user'])) {
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/balneo.css">
         <meta name="robots" content="noindex,nofollow" />
+        <?php
+         if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
+            echo'<meta http-equiv="refresh" content="0">';
+         }
+         ?>
     </head>
 
     <body>
