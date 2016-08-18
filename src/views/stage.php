@@ -120,6 +120,9 @@ if (!isset($_SESSION['user'])) {
                                         <p>La technique de <em>nage</em> sera abordée suivant le niveau de chacun, les stages sont organisés par groupe de 6 enfants maximum, pour une meilleure progression.</p>
                                     </article>
                                 </div>
+                                <div class="col-sm-12 col-sm-offset-3">
+                                    <img src="../../assets/natation-enfant.jpg" id="imgJardin" class="img-thumbnail" alt="aquababy" style="width:50%;height: 50%" />
+                                </div>
                                 <!--Left part-->
                             </div>
                         </div>

@@ -116,13 +116,22 @@ if (!isset($_SESSION['user'])) {
                                 <div class="col-sm-12">
                                     <article>
                                         <address>
+                                            <h2>Spa K-Hylé à Teyran</h2>
+                                            <a href="#" rel="site partenaire" style="color: #204d74;">Site web en construction</a>
+                                        </address>
+                                        <img alt="Spa K-Hyle" class="thumbnail" src="../../assets/partenaireK-HYLE.png" />
+                                        <br>
+                                        <address>
                                             <h2>WellnessClub</h2>
                                             <p>1600 bis avenue de <strong>Montpellier</strong> 34820 Teyran</p>
                                             <p>Contact: 04 67 61 90 37</p>
                                             <a href="http://www.wellness-club.fr/" rel="site partenaire" style="color: #204d74;">http://www.wellness-club.fr/</a>
                                         </address>
-                                        <img alt="wellness club logo" class="thumbnail" src="../../assets/wellnesslogo.jpg" />
-                                        <br>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <img alt="wellness club logo" class="thumbnail" src="../../assets/wellnesslogo.jpg" />
+                                            </div>
+                                        </div>
                                         <br>
                                         <address>
                                             <h2>Lydie Ricard et Sandra Redon</h2>
@@ -132,14 +141,12 @@ if (!isset($_SESSION['user'])) {
                                             <p>Contact : 04 67 40 21 19</p>
                                         </address>
                                         <br>
-                                        <br>
                                         <address>
                                             <h2>Julie Anna Leandri</h2>
                                             <p>Cabinet de Sage-femme</p>
                                             <p>Castries</p>
                                             <p>Contact : 06 30 20 24 44</p>
                                         </address>
-                                        <br>
                                         <br>
                                         <address>
                                             <h2>Pharmanex : compléments nutritionnels</h2>
@@ -151,7 +158,6 @@ if (!isset($_SESSION['user'])) {
                                                 <img alt="pharmanex logo" class="thumbnail" src="../../assets/pharmanex.jpg" style="width:50%; height:50%"/>
                                             </div>
                                         </div>
-                                        <br>
                                         <br>
                                         <address>
                                             <h2>Somethy</h2>
@@ -165,7 +171,6 @@ if (!isset($_SESSION['user'])) {
                                             </div>
                                         </div>
                                         <br>
-                                        <br>
                                         <address>
                                             <h2>L'eau de Noé 34</h2>
                                             <p><strong>Activités aquatiques</strong> à <strong>Montpellier</strong></p>
@@ -176,6 +181,7 @@ if (!isset($_SESSION['user'])) {
                                                 <img alt="L'eau de Noé 34 logo" class="thumbnail" src="../../assets/eaudenoe.png"/>
                                             </div>
                                         </div>
+                                        <br>
                                         <address>
                                             <h2>KANGOO FUN</h2>
                                             <p>Une nouvelle activité ludique et sportive à <strong>Montpellier</strong></p>
@@ -184,6 +190,21 @@ if (!isset($_SESSION['user'])) {
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <img alt="kangoo fun logo" class="thumbnail" src="../../assets/kangoofun.jpg"/>
+                                            </div>
+                                        </div>
+                                        <br>
+                                         <address>
+                                            <h2>Ecole de kite surf à Narbonne</h2>
+                                            <a href="http://www.narbonnekitepassion.com/fr/" rel="site partenaire" style="color: #204d74;">http://www.narbonnekitepassion.com/fr/</a>
+                                        </address>
+                                        <br>
+                                        <address>
+                                            <h2>Activités nautiques au lac du Salagou (34)</h2>
+                                            <a href="http://base-nautique-salagou.com" rel="site partenaire" style="color: #204d74;">http://base-nautique-salagou.com/</a>
+                                        </address>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <img alt="Activite nautique Salagou" class="thumbnail" src="../../assets/logo-jaune.jpg"/>
                                             </div>
                                         </div>
                                     </article>
