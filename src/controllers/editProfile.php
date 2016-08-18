@@ -56,6 +56,9 @@ function editUser()
     try {
         if ($stmt->execute()) {
             $etatUpdate = true;
+            foreach($filteredPost as $key => $value){
+                $_SESSION[$key] = $value;
+            }
         } else {
             $etatUpdate = false;
         }
