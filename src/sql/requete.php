@@ -36,7 +36,7 @@ try{
                 $finalValue .= $separateur . $sql->quote($value);
                 $separateur = ', ';
             }
-            $requete = 'INSERT INTO Planning ('.$finalKey.') VALUES ('.$finalValue.');';
+            $requete = 'INSERT INTO planning ('.$finalKey.') VALUES ('.$finalValue.');';
             $sql->query($requete);
             $requete .= "\n";
             fwrite($monfichier, $requete);

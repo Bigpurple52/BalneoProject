@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
+     $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();

@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua-balneo.fr') 
     }
 } elseif (isset($_SESSION['user']) && $_SESSION['user'] === 'k-hyle@aqua-balneo.fr') {
     try {
-        $sql = new PDO('mysql:host=localhost;dbname=balneo', 'root', '');
+        $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
         die();
@@ -197,7 +197,7 @@ function displayContent($userList)
 
     /* MENU DROITE */
     echo '<nav class="col-sm-2">';
-    echo '<button class="btn btn-info"><a href = "../sql/requete.php" rel = "section">Remplier planning</a> </button>';
+    echo '<button class="btn btn-info"><a href = "../sql/requete.php" rel = "section">Remplir planning</a> </button>';
     echo '<div class="user-info alert-info" style="padding: 20px;"><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
     echo '</nav>';
     /* FIN MENU DROITE */
