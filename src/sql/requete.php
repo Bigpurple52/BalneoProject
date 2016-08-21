@@ -2,7 +2,7 @@
 date_default_timezone_set("Europe/Paris"); 
 
 try {
-    $sql = new PDO('mysql:host=localhost;dbname=balneo', 'root', '');
+    $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
@@ -18,70 +18,7 @@ try{
     $nextYear = new DateTime();
     $nextYear->modify('+1 year');
     $currentYear = clone $date;
-    $tableau = [
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-22T10:30:00',
-        'end' => '2016-08-22T11:15:00',
-        'available' => 1
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-22T16:30:00',
-        'end' => '2016-08-22T17:15:00',
-        'available' => 1
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-23T11:00:00',
-        'end' => '2016-08-23T11:45:00',
-        'available' => 0
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-23T16:30:00',
-        'end' => '2016-08-23T17:15:00',
-        'available' => 1
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-24T11:00:00',
-        'end' => '2016-08-24T11:45:00',
-        'available' => 0
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-25T11:00:00',
-        'end' => '2016-08-25T11:45:00',
-        'available' => 0
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-25T16:30:00',
-        'end' => '2016-08-25T17:15:00',
-        'available' => 0
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-26T10:30:00',
-        'end' => '2016-08-26T11:15:00',
-        'available' => 1
-    ],
-    [
-        'title' => 'Aquadouce',
-        'start' => '2016-08-26T16:30:00',
-        'end' => '2016-08-26T17:15:00',
-        'available' => 0
-    ],
-    [
-        'title'=>'Aquadouce',
-        'start'=>'2016-08-27T09:15:00',
-        'end'=> '2016-08-27T10:00:00',
-        'available'=> 0
-    ]
-];
-
-
+    require_once "../models/ArrayOfData.php";
 
     $i = 0;
     while ($currentYear->format('Y') != $nextYear->format('Y')) {  
@@ -109,55 +46,6 @@ try{
         $date = $date->modify('+1 week');
         $currentYear = clone $date;
     };
-
-    /*$planningEvent ="
-            {
-                title:'Aquadouce',
-                start:'2016-08-22T10:30:00',
-                end: '2016-08-22T11:15:00'
-            },{
-                title:'Aquadouce',
-                start:'2016-08-22T16:30:00',
-                end: '2016-08-22T17:15:00'
-            },{
-                title:'Aquadouce',
-                start:'2016-08-23T11:00:00',
-                end: '2016-08-23T11:45:00'
-                available: false
-            },{
-                title:'Aquadouce',
-                start:'2016-08-23T16:30:00',
-                end: '2016-08-23T17:15:00'
-            },{
-                title:'Aquadouce',
-                start:'2016-08-24T11:00:00',
-                end: '2016-08-24T11:45:00'
-                available: false
-            },{
-                title:'Aquadouce',
-                start:'2016-08-25T11:00:00',
-                end: '2016-08-25T11:45:00'
-                available: false
-            },{
-                title:'Aquadouce',
-                start:'2016-08-25T16:30:00',
-                end: '2016-08-25T17:15:00'
-                available: false
-            },{
-                title:'Aquadouce',
-                start:'2016-08-26T10:30:00',
-                end: '2016-08-26T11:15:00'
-            },{
-                title:'Aquadouce',
-                start:'2016-08-26T16:30:00',
-                end: '2016-08-26T17:15:00'
-                available: false
-            },{
-                title:'Aquadouce',
-                start:'2016-08-27T09:15:00',
-                end: '2016-08-27T10:00:00'
-                available: false
-            }";*/
    
     fwrite($monfichier, $requete);
     fclose($monfichier);

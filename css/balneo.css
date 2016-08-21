@@ -289,6 +289,47 @@ label{
     font-weight: bold;
 }
 
+a.AquaDouce{
+    background-color: deepskyblue;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+a.AquaBike{
+    background-color: blueviolet;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+a.AquaDynamic{
+    background-color: blue;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+a.MixAquaTraining{
+    background-color: darkblue;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+a.AquaPhobie{
+    background-color: black;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+a.JardinAquatique{
+    background-color: lightseagreen;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+a.AquaBaby{
+    background-color: hotpink;
+    text-align: center;
+    font-size: 1.8rem;
+}
 
 /* For ff */
 @-moz-document url-prefix() {
@@ -321,8 +362,46 @@ label{
         font-size: 15px;
     }
 
-}
+    a.AquaDouce{
+        background-color: deepskyblue;
+        text-align: center;
+        font-size: 1.4rem;
+    }
 
-.Aquadouce{
-    background-color: red;
+    a.AquaBike{
+        background-color: blueviolet;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    a.AquaDynamic{
+        background-color: blue;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    a.MixAquaTraining{
+        background-color: darkblue;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    a.AquaPhobie{
+        background-color: black;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    a.JardinAquatique{
+        background-color: lightseagreen;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    a.AquaBaby{
+        background-color: hotpink;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
 }

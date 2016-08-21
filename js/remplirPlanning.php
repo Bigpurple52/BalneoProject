@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $sql = new PDO('mysql:host=localhost;dbname=balneo', 'root', '');
+    $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
@@ -38,18 +38,6 @@ try{
             }
             $planningEvent .= 'className : \'' . $data['title'].'\'},';
         }
-   /* $planningEvent ="
-            {
-                title:\"Aquagym\",
-                start:\"2016-08-15T11:30:00\",
-                end: \"2016-08-15T012:30:00\",
-            },
-            {
-                title:\"Aquagym\",
-                start:\"2016-08-16T11:30:00\",
-                end: \"2016-08-16T012:30:00\",
-            },";*/
-            
     $planningFin = "
         ]
     });
