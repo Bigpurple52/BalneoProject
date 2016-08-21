@@ -57,22 +57,22 @@ function insertUser()
                 $passage_ligne = "\n";
             }
             //=====Déclaration des messages au format texte et au format HTML.
-            $message_txt = "Bonjour " . $prenom . $nom . ", "
+            $message_txt = "Bonjour " . $prenom . " " . $nom . ", "
                     . $passage_ligne . "Vous venez de vous inscrire sur le site aqua-balneo.fr."
                     . $passage_ligne . "Ce mail est un récapitulatif de vos informations."
                     . $passage_ligne . $passage_ligne
                     . $passage_ligne . "Mon identifiant de connexion : " . $email
                     . $passage_ligne . "Mon mot de passe : " . $filteredPost['password']
-                    . $passage_ligne . "Vous pouvez désomrais vous inscrire en ligne aux séances!"
+                    . $passage_ligne . "Vous pouvez désormais vous inscrire en ligne aux séances!"
                     . $passage_ligne . ">A bientot dans notre centre K-Hylé!";
             $message_html = "<html><head></head><body>"
-                    . "<p>Bonjour " . $prenom . $nom . ",</p>"
+                    . "<p>Bonjour " . $prenom . " " . $nom . ",</p>"
                     . "<p>vous venez de vous inscrire sur le site <b>aqua-baleno.fr</b>.</p>"
                     . "<p>Ce mail est un récapitulatif de vos informations.</p>"
                     . "<br>"
                     . "<p>Mon identifiant de connexion : " . $email . "</p>"
                     . "<p>Mon mot de passe : " . $filteredPost['password'] . "</p>"
-                    . "<p>Vous pouvez désomrais vous inscrire en ligne aux séances!</p>"
+                    . "<p>Vous pouvez désormais vous inscrire en ligne aux séances!</p>"
                     . "<br>"
                     . "<p>A bientot dans notre centre K-Hylé!"
                     . "</body></html>";
@@ -84,21 +84,21 @@ function insertUser()
             $sujet = "Inscription au site www.aqua-balneo.fr";
             //=========
             //=====Création du header de l'e-mail.
-            $header = "From: \"WeaponsB\"<maxime.2ssez@laposte.net>" . $passage_ligne;
-            $header.= "Reply-to: \"WeaponsB\" <maxime.2ssez@laposte.net>" . $passage_ligne;
+            $header = "From: \"K-Hyle\"<k-hyle@aqua-balneo.fr>" . $passage_ligne;
+            $header.= "Reply-to: \"K-Hyle\" <k-hyle@aqua-balneo.fr>" . $passage_ligne;
             $header.= "MIME-Version: 1.0" . $passage_ligne;
             $header.= "Content-Type: multipart/alternative;" . $passage_ligne . " boundary=\"$boundary\"" . $passage_ligne;
             //==========
             //=====Création du message.
             $message = $passage_ligne . "--" . $boundary . $passage_ligne;
             //=====Ajout du message au format texte.
-            $message.= "Content-Type: text/plain; charset=\"ISO-8859-1\"" . $passage_ligne;
+            $message.= "Content-Type: text/plain; charset=\"utf-8\"" . $passage_ligne;
             $message.= "Content-Transfer-Encoding: 8bit" . $passage_ligne;
             $message.= $passage_ligne . $message_txt . $passage_ligne;
             //==========
             $message.= $passage_ligne . "--" . $boundary . $passage_ligne;
             //=====Ajout du message au format HTML
-            $message.= "Content-Type: text/html; charset=\"ISO-8859-1\"" . $passage_ligne;
+            $message.= "Content-Type: text/html; charset=\"utf-8\"" . $passage_ligne;
             $message.= "Content-Transfer-Encoding: 8bit" . $passage_ligne;
             $message.= $passage_ligne . $message_html . $passage_ligne;
             //==========
