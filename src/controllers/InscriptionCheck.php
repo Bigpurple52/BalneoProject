@@ -41,7 +41,9 @@ function insertUser()
     $stmt->bindParam(':villenaissance', $villenaissance);
     $villenaissance = !empty($filteredPost['villenaissance']) ? $filteredPost['villenaissance'] : ' ';
     $stmt->bindParam(':datenaissance', $datenaissance);
-    $datenaissance = !empty($filteredPost['datenaissance']) ? $filteredPost['datenaissance'] : ' ';
+    $tmpdatenaissance = !empty($filteredPost['datenaissance']) ? $filteredPost['datenaissance'] : ' ';
+    $tmp2datenaissance = new DateTime($tmpdatenaissance);
+    $datenaissance = $tmp2datenaissance->format('d-m-Y');
     $stmt->bindParam(':tel', $tel);
     $tel = !empty($filteredPost['tel']) ? $filteredPost['tel'] : ' ';
     $stmt->bindParam(':codepostal', $codepostal);
