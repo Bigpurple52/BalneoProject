@@ -1,4 +1,12 @@
 <?php
+
+try {
+    $sql = new PDO('mysql:host=localhost;dbname=balneo', 'root', '');
+} catch (PDOException $e) {
+    print "Erreur !: " . $e->getMessage() . "<br/>";
+    die();
+}
+
 try{
     $monfichier = fopen('planning.js', 'r+');
     
@@ -17,14 +25,19 @@ try{
         slotLabelFormat:'LT',
         slotLabelInterval: '01:00:00',
         events:[";
-        /*Faudra récupérer les données de la bd et les parser pour les écrire dans $planningEvent*/
+        $planningEvent="";
+        $query='SELECT * FROM planning;'
+        $sql->query($query);
+        while($data = $sql->fetch()){
+            $tableau[]=json_encode($data);
+        }
     $planningEvent ="
             {
-                title:'Aquagym',
+                title:"'Aquagym'",
                 start:'2016-08-02T11:30:00',
                 end: '2016-08-02T012:30:00',
                 allDay: false
-            }";
+            },";
     $planningFin = "
         ]
     });";
@@ -39,4 +52,3 @@ try{
 }catch (Exception $e){
     printf("Une erreur est survenue pendant le chargement du planning");
 }
-?>

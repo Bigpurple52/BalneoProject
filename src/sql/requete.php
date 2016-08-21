@@ -18,10 +18,9 @@ try{
     $nextYear = new DateTime();
     $nextYear->modify('+1 year');
     $currentYear = clone $date;
-    $tableau = [ [ 'title' => 'Aquadouce', 'start' => '2016-08-22T10:30:00', 'end' => '2016-08-22T11:15:00', 'available' => true ], [ 'title' => 'Aquadouce', 'start' => '2016-08-22T16:30:00', 'end' => '2016-08-22T17:15:00', 'available' => true ]]; 
-    
-    while ($currentYear->format('Y') != $nextYear->format('Y')) {
-        $i = 0;
+    $tableau = [ [ 'title' => 'Aquadouce', 'start' => '2016-08-22T10:30:00', 'end' => '2016-08-22T11:15:00', 'available' => 0 ], [ 'title' => 'Aquadouce', 'start' => '2016-08-22T16:30:00', 'end' => '2016-08-22T17:15:00', 'available' => 1 ]]; 
+    $i = 0;
+    while ($currentYear->format('Y') != $nextYear->format('Y')) {  
         foreach ($tableau as $t){
             $separateur = "";
             $finalKey = "";
@@ -31,6 +30,7 @@ try{
                     $value = new DateTime($value);
                     $value->modify('+'.$i.' week');
                     $value = $value->format('Y-m-d\TH:i:s');
+                    echo ' '.$value.'<br>';
                 }
                 $finalKey .= $separateur . '`' . $key . '`';
                 $finalValue .= $separateur . $sql->quote($value);
@@ -38,6 +38,7 @@ try{
             }
             $requete = 'INSERT INTO Planning ('.$finalKey.') VALUES ('.$finalValue.');';
             $sql->query($requete);
+            $requete .= "\n";
             fwrite($monfichier, $requete);
         }
         $i++;
@@ -102,4 +103,3 @@ try{
 }catch (Exception $e){
     printf("Une erreur est survenue pendant le chargement du planning");
 }
-?>
