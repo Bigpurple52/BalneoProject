@@ -94,7 +94,6 @@ try{
                     $value = new DateTime($value);
                     $value->modify('+'.$i.' week');
                     $value = $value->format('Y-m-d\TH:i:s');
-                    echo ' '.$value.'<br>';
                 }
                 $finalKey .= $separateur . '`' . $key . '`';
                 $finalValue .= $separateur . $sql->quote($value);
