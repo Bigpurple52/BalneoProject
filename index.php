@@ -147,9 +147,6 @@ if (!isset($_SESSION['user'])) {
                             <li>
                                 <a href="./js/remplirPlanning.php" rel="section">Planning</a>
                             </li>
-                            <li>
-                                <a href="./src/sql/requete.php" rel="section">Requete</a>
-                            </li>
                             <?php
                             if (isset($_SESSION['user'])) {
                                 echo'<li> <a href = "./src/views/profil.php" rel = "section">Mon Profil</a></li>';
