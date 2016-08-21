@@ -165,7 +165,7 @@ function displayContent($userList)
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "newStart">Nouvelle Heure Debut :</label>';
-    echo '<input type = "datetime" name ="newStart" class = "form-control" id = "newStart" required/>';
+    echo '<input type = "datetime" name ="newStart" class = "form-control" id = "newStart"/>';
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "end">Heure Fin :</label>';
@@ -173,7 +173,7 @@ function displayContent($userList)
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "newEnd">Nouvelle Heure Fin :</label>';
-    echo '<input type = "datetime" name ="newEnd" class = "form-control" id = "newEnd" required/>';
+    echo '<input type = "datetime" name ="newEnd" class = "form-control" id = "newEnd"/>';
     echo '</div>';
     echo '<div class="radio">';
     echo '<label><input type="radio" value="0" name="dispo">Pas Disponible</label>';
@@ -181,8 +181,15 @@ function displayContent($userList)
     echo '<div class = "radio">';
     echo '<label><input type = "radio" value = "1" name="dispo">Disponible</label>';
     echo '</div>';
-    echo '<p>POUR SUPPRIMER UNE SEANCE, NE PAS REMPLIR NOUVELLE HEURE DEBUT ET FIN!!';
-    echo '<button type="submit" class="btn btn-primary" name="submit">Modifier/Supprimer</button>';
+    echo '<div class = "form-group">';
+    echo '<label for = "maxUser">Nombre d\'utilisateur max :</label>';
+    echo '<input type = "number" name ="maxUser" class = "form-control" id = "maxUser"/>';
+    echo '</div>';
+    echo '<p class="underbar">POUR SUPPRIMER UNE SEANCE: REMPLIR UNIQUEMENT HEURE DEBUT, FIN ET ACTIVITE!!</p>';
+    echo '<p class="underbar">POUR MODIFIER UNE SEANCE: REMPLIR UNIQUEMENT HEURE DEBUT - FIN,  NOUVELLE HEURE DEBUT - FIN ET DISPO!!</p>';
+    echo '<p class="underbar">POUR AJOUTER UNE SEANCE: REMPLIR UNIQUEMENT HEURE DEBUT - FIN, DISPO ET MAXUSER!!</p>';
+
+    echo '<button type="submit" class="btn btn-primary" name="submit">Ajouter/Modifier/Supprimer</button>';
     echo '</div>';
     /* FIN FORMULAIRE 2/
       /* FIN CONTENT */
@@ -190,7 +197,7 @@ function displayContent($userList)
 
     /* MENU DROITE */
     echo '<nav class="col-sm-2">';
-    echo '<button class="btn btn-info"><a href = "./src/sql/requete.php" rel = "section">Remplier planning</a> </button>';
+    echo '<button class="btn btn-info"><a href = "../sql/requete.php" rel = "section">Remplier planning</a> </button>';
     echo '<div class="user-info alert-info" style="padding: 20px;"><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
     echo '</nav>';
     /* FIN MENU DROITE */
@@ -235,36 +242,54 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'PO
         if ($stmt->execute()) {
             $userInfo = $stmt->fetch();
             (int) $newToken = (int) $userInfo[$filteredPost['activite']] + (int) $filteredPost['nombrejeton'];
-            $smtm = $sql->prepare("UPDATE usertable SET "
+            $stmt = $sql->prepare("UPDATE usertable SET "
                     . "`" . $filteredPost['activite'] . "` = :token "
                     . "WHERE `email` = :email"
             );
-            $smtm->bindParam(':token', $newToken);
-            $smtm->bindParam(':email', $filteredPost['user']);
-            $smtm->execute();
+            $stmt->bindParam(':token', $newToken);
+            $stmt->bindParam(':email', $filteredPost['user']);
+            $stmt->execute();
         }
-    } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && !empty($filteredPost['newStart']) && !empty($filteredPost['newEnd']) && !empty($filteredPost['dispo'])) {
-        $stmt = $sql->prepare("UPDATE Planning SET (`start` = :newStart, `end` = :newEnd, `available` = :dispo) WHERE start = :start");
-        $tmpDate = new DateTime();
-        $startDate = $tmpDdate->format('Y-m-d H:i:s');
-        $stmt->bindParam(':start', $startDate);
-        $tmpStart = new DateTime();
-        $newStart = $tmpStart->format('Y-m-d H:i:s');
+    } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && !empty($filteredPost['newStart']) && !empty($filteredPost['newEnd']) && ($filteredPost['dispo'] === "1" || $filteredPost['dispo'] === "0")) {
+        $stmt = $sql->prepare("UPDATE Planning SET `start` = :newStart, `end` = :newEnd, `available` = :dispo WHERE start = :starter AND `title` = :title");
+        $tmpDate = new DateTime($filteredPost['start']);
+        $startDate = $tmpDate->format('Y-m-d\TH:i:s');
+        $stmt->bindParam(':starter', $startDate);
+        $tmpStart = new DateTime($filteredPost['newStart']);
+        $newStart = $tmpStart->format('Y-m-d\TH:i:s');
         $stmt->bindParam(':newStart', $newStart);
-        $tmpEnd = new DateTime();
-        $newEnd = $tmpEnd->format('Y-m-d H:i:s');
+        $tmpEnd = new DateTime($filteredPost['newEnd']);
+        $newEnd = $tmpEnd->format('Y-m-d\TH:i:s');
         $stmt->bindParam(':newEnd', $newEnd);
-        $stmt->bindParam(':dispo', $dispo);
         $dispo = $filteredPost['dispo'];
+        $stmt->bindParam(':dispo', $dispo);
+        $title = $filteredPost['activitePlanning'];
+        $stmt->bindParam(':title', $title);
 
-        $smtm->execute();
-    } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && empty($filteredPost['newStart']) && empty($filteredPost['newEnd'])) {
-        $stmt = $sql->prepare("DELETE FROM Planning WHERE start = :start");
-        $tmpDate = new DateTime();
-        $startDate = $tmpDdate->format('Y-m-d H:i:s');
-        $stmt->bindParam(':start', $startDate);
+        $stmt->execute();
+    } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && empty($filteredPost['newStart']) && empty($filteredPost['newEnd']) && empty($filteredPost['maxUser']) && ($filteredPost['dispo'] !== "1" || $filteredPost['dispo'] !== "0")) {
+        $stmt = $sql->prepare("DELETE FROM Planning WHERE `start` = :starter AND `title` = :title");
+        $tmpDate = new DateTime($filteredPost['start']);
+        $startDate = $tmpDate->format('Y-m-d\TH:i:s');
+        $stmt->bindParam(':starter', $startDate);
+        $title = $filteredPost['activitePlanning'];
+        $stmt->bindParam(':title', $title);
 
-        $smtm->execute();
+        $stmt->execute();
+    } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && empty($filteredPost['newStart']) && empty($filteredPost['newEnd']) && !empty($filteredPost['maxUser']) && ($filteredPost['dispo'] === "1" || $filteredPost['dispo'] === "0")) {
+        $stmt = $sql->prepare("INSERT INTO Planning (`title`, `start`, `end`, `available`, `maxUser`) VALUES (:title, :starter, :ender, :dispo, :maxUser)");
+        $stmt->bindParam(':title', $filteredPost['activitePlanning']);
+        $tmpStart = new DateTime($filteredPost['start']);
+        $startDate = $tmpStart->format('Y-m-d\TH:i:s');
+        $stmt->bindParam(':starter', $startDate);
+        $tmpEnd = new DateTime($filteredPost['end']);
+        $endDate = $tmpEnd->format('Y-m-d\TH:i:s');
+        $stmt->bindParam(':ender', $endDate);
+        $stmt->bindParam(':dispo', $filteredPost['dispo']);
+        $maxUser = $filteredPost['maxUser'];
+        $stmt->bindParam(':maxUser', $maxUser);
+
+        $stmt->execute();
     }
 }
 
