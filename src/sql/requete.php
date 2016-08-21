@@ -2,18 +2,21 @@
 date_default_timezone_set("Europe/Paris"); 
 
 try{
-    $monfichier = fopen('requete.txt', 'r+');
+    $monfichier = fopen('requete.txt', 'w+');
     
     fseek($monfichier, 0);
 
     $requete="";
-    $date = time();
-    $test = new DateTime();
-    $test = $test->format('Y-m-d\TH:i:s');
-    $requete += $test;
-    /*do {
+    $date = new DateTime();
+    $nextYear = new DateTime();
+    $nextYear->modify('+1 year');
+    do {
 
-    }while ($date['year'] != $date['year']+1);
+
+        $date = $date->modify('+1 week');
+        $currentYear = clone $date;
+        $requete .= $currentYear->format('Y') . "   ";
+    }while ($currentYear->format('Y') != $nextYear->format('Y'));
 
     /*$planningEvent ="
             {
