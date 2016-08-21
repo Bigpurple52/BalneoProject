@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua-balneo.fr') 
     }
 } elseif (isset($_SESSION['user']) && $_SESSION['user'] === 'k-hyle@aqua-balneo.fr') {
     try {
-        $sql = new PDO('mysql:host=localhost;dbname=balneodb', 'root', 'MySQL');
+        $sql = new PDO('mysql:host=localhost;dbname=balneo', 'root', '');
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
         die();
@@ -165,7 +165,7 @@ function displayContent($userList)
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "newStart">Nouvelle Heure Debut :</label>';
-    echo '<input type = "datetime" name ="newStart" class = "form-control" id = "newStart" required/>';
+    echo '<input type = "datetime" name ="newStart" class = "form-control" id = "newStart"/>';
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "end">Heure Fin :</label>';
@@ -173,7 +173,7 @@ function displayContent($userList)
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "newEnd">Nouvelle Heure Fin :</label>';
-    echo '<input type = "datetime" name ="newEnd" class = "form-control" id = "newEnd" required/>';
+    echo '<input type = "datetime" name ="newEnd" class = "form-control" id = "newEnd"/>';
     echo '</div>';
     echo '<div class="radio">';
     echo '<label><input type="radio" value="0" name="dispo">Pas Disponible</label>';
@@ -190,7 +190,7 @@ function displayContent($userList)
 
     /* MENU DROITE */
     echo '<nav class="col-sm-2">';
-    echo '<button class="btn btn-info"><a href = "./src/sql/requete.php" rel = "section">Remplier planning</a> </button>';
+    echo '<button class="btn btn-info"><a href = "./src/sql/requete.php" rel = "section">Remplir planning</a> </button>';
     echo '<div class="user-info alert-info" style="padding: 20px;"><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
     echo '</nav>';
     /* FIN MENU DROITE */
@@ -235,13 +235,13 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'PO
         if ($stmt->execute()) {
             $userInfo = $stmt->fetch();
             (int) $newToken = (int) $userInfo[$filteredPost['activite']] + (int) $filteredPost['nombrejeton'];
-            $smtm = $sql->prepare("UPDATE usertable SET "
+            $stmt = $sql->prepare("UPDATE usertable SET "
                     . "`" . $filteredPost['activite'] . "` = :token "
                     . "WHERE `email` = :email"
             );
-            $smtm->bindParam(':token', $newToken);
-            $smtm->bindParam(':email', $filteredPost['user']);
-            $smtm->execute();
+            $stmt->bindParam(':token', $newToken);
+            $stmt->bindParam(':email', $filteredPost['user']);
+            $stmt->execute();
         }
     } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && !empty($filteredPost['newStart']) && !empty($filteredPost['newEnd']) && !empty($filteredPost['dispo'])) {
         $stmt = $sql->prepare("UPDATE Planning SET (`start` = :newStart, `end` = :newEnd, `available` = :dispo) WHERE start = :start");
@@ -261,10 +261,10 @@ if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'PO
     } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && empty($filteredPost['newStart']) && empty($filteredPost['newEnd'])) {
         $stmt = $sql->prepare("DELETE FROM Planning WHERE start = :start");
         $tmpDate = new DateTime();
-        $startDate = $tmpDdate->format('Y-m-d H:i:s');
+        $startDate = $tmpDate->format('Y-m-d H:i:s');
         $stmt->bindParam(':start', $startDate);
 
-        $smtm->execute();
+        $stmt->execute();
     }
 }
 
