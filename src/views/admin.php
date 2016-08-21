@@ -113,7 +113,7 @@ function displayContent($userList)
     echo '<form role="form" class="well" id="jetonform" name="jetons" method="POST" action="' . filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING) . '">';
     echo '<div class = "form-group">';
     echo '<label for = "user">Identifiant utilisateur (adresse mail):</label>';
-    echo '<select name ="user" class = "form-control" id = "user">';
+    echo '<select name ="user" class = "form-control" id = "user" required>';
     foreach ($userList as $uL) {
 //        foreach ($uL as $u) {
         echo '<option>' . $uL['email'] . '</option>';
@@ -124,7 +124,7 @@ function displayContent($userList)
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "jeton">Activité:</label>';
-    echo '<select name="activite" class = "form-control" id = "jeton">';
+    echo '<select name="activite" class = "form-control" id = "jeton" required>';
     echo '<option>aquadouce</option>';
     echo '<option>aquadynamic</option>';
     echo '<option>aquabike</option>';
@@ -136,7 +136,7 @@ function displayContent($userList)
     echo '</select>';
     echo '<div class = "form-group">';
     echo '<label for = "nombrejeton">Nombre de jeton à ajouter:</label>';
-    echo '<input type = "number" name ="nombrejeton" class = "form-control" id = "nombrejeton">';
+    echo '<input type = "number" name ="nombrejeton" class = "form-control" id = "nombrejeton" required/>';
     echo '</div>';
     echo '<button type="submit" class="btn btn-primary" name="submit">Enregistrer</button>';
     echo '</div>';
@@ -149,7 +149,7 @@ function displayContent($userList)
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "activitePlanning">Activité : </label>';
-    echo '<select name="activitePlanning" class = "form-control" id = "activitePlanning">';
+    echo '<select name="activitePlanning" class = "form-control" id = "activitePlanning" required>';
     echo '<option>AquaDouce</option>';
     echo '<option>AquaDynamic</option>';
     echo '<option>AquaBike</option>';
@@ -161,14 +161,28 @@ function displayContent($userList)
     echo '</select>';
     echo '<div class = "form-group">';
     echo '<label for = "start">Heure Debut :</label>';
-    echo '<input type = "datetime" name ="start" class = "form-control" id = "start"/>';
+    echo '<input type = "datetime" name ="start" class = "form-control" id = "start" required/>';
+    echo '</div>';
+    echo '<div class = "form-group">';
+    echo '<label for = "newStart">Nouvelle Heure Debut :</label>';
+    echo '<input type = "datetime" name ="newStart" class = "form-control" id = "newStart" required/>';
     echo '</div>';
     echo '<div class = "form-group">';
     echo '<label for = "end">Heure Fin :</label>';
-    echo '<input type = "datetime" name ="end" class = "form-control" id = "end"/>';
+    echo '<input type = "datetime" name ="end" class = "form-control" id = "end" required/>';
     echo '</div>';
-    echo '<button type="submit" class="btn btn-primary" name="submit">Ajouter</button>';
-    echo '<button type="submit" class="btn btn-danger" name="submit">Supprimer</button>';
+    echo '<div class = "form-group">';
+    echo '<label for = "newEnd">Nouvelle Heure Fin :</label>';
+    echo '<input type = "datetime" name ="newEnd" class = "form-control" id = "newEnd" required/>';
+    echo '</div>';
+    echo '<div class="radio">';
+    echo '<label><input type="radio" value="0" name="dispo">Pas Disponible</label>';
+    echo '</div>';
+    echo '<div class = "radio">';
+    echo '<label><input type = "radio" value = "1" name="dispo">Disponible</label>';
+    echo '</div>';
+    echo '<p>POUR SUPPRIMER UNE SEANCE, NE PAS REMPLIR NOUVELLE HEURE DEBUT ET FIN!!';
+    echo '<button type="submit" class="btn btn-primary" name="submit">Modifier/Supprimer</button>';
     echo '</div>';
     /* FIN FORMULAIRE 2/
       /* FIN CONTENT */
@@ -216,22 +230,41 @@ if (is_array($postedValues)) {
 if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
 //Add token
     if (!empty($filteredPost['activite']) && !empty($filteredPost['nombrejeton'] && !empty($filteredPost['user']))) {
-
-        if ($coOk) {
-            $stmt = $sql->prepare("SELECT * FROM usertable WHERE email = :user");
-            $stmt->bindParam(':user', $filteredPost['user']);
-            if ($stmt->execute()) {
-                $userInfo = $stmt->fetch();
-                (int) $newToken = (int) $userInfo[$filteredPost['activite']] + (int) $filteredPost['nombrejeton'];
-                $smtm = $sql->prepare("UPDATE usertable SET "
-                        . "`" . $filteredPost['activite'] . "` = :token "
-                        . "WHERE `email` = :email"
-                );
-                $smtm->bindParam(':token', $newToken);
-                $smtm->bindParam(':email', $filteredPost['user']);
-                $smtm->execute();
-            }
+        $stmt = $sql->prepare("SELECT * FROM usertable WHERE email = :user");
+        $stmt->bindParam(':user', $filteredPost['user']);
+        if ($stmt->execute()) {
+            $userInfo = $stmt->fetch();
+            (int) $newToken = (int) $userInfo[$filteredPost['activite']] + (int) $filteredPost['nombrejeton'];
+            $smtm = $sql->prepare("UPDATE usertable SET "
+                    . "`" . $filteredPost['activite'] . "` = :token "
+                    . "WHERE `email` = :email"
+            );
+            $smtm->bindParam(':token', $newToken);
+            $smtm->bindParam(':email', $filteredPost['user']);
+            $smtm->execute();
         }
+    } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && !empty($filteredPost['newStart']) && !empty($filteredPost['newEnd']) && !empty($filteredPost['dispo'])) {
+        $stmt = $sql->prepare("UPDATE Planning SET (`start` = :newStart, `end` = :newEnd, `available` = :dispo) WHERE start = :start");
+        $tmpDate = new DateTime();
+        $startDate = $tmpDdate->format('Y-m-d H:i:s');
+        $stmt->bindParam(':start', $startDate);
+        $tmpStart = new DateTime();
+        $newStart = $tmpStart->format('Y-m-d H:i:s');
+        $stmt->bindParam(':newStart', $newStart);
+        $tmpEnd = new DateTime();
+        $newEnd = $tmpEnd->format('Y-m-d H:i:s');
+        $stmt->bindParam(':newEnd', $newEnd);
+        $stmt->bindParam(':dispo', $dispo);
+        $dispo = $filteredPost['dispo'];
+
+        $smtm->execute();
+    } elseif (!empty($filteredPost['activitePlanning']) && !empty($filteredPost['start']) && !empty($filteredPost['end']) && empty($filteredPost['newStart']) && empty($filteredPost['newEnd'])) {
+        $stmt = $sql->prepare("DELETE FROM Planning WHERE start = :start");
+        $tmpDate = new DateTime();
+        $startDate = $tmpDdate->format('Y-m-d H:i:s');
+        $stmt->bindParam(':start', $startDate);
+
+        $smtm->execute();
     }
 }
 
@@ -240,8 +273,9 @@ function getUserList($sql)
     $myQuery = 'SELECT email FROM usertable';
     $tempDB = $sql->query($myQuery);
     $userList = [];
-    while ($result = $tempDB->fetch())
+    while ($result = $tempDB->fetch()) {
         $userList[] = $result;
+    }
 
     return $userList;
 }
