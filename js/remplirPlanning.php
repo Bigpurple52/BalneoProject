@@ -8,7 +8,7 @@ try {
 }
 
 try{
-    $monfichier = fopen('planning.js', 'r+');
+    $monfichier = fopen('planning.js', 'w+');
     
     fseek($monfichier, 0);
 
@@ -26,21 +26,34 @@ try{
         slotLabelInterval: '01:00:00',
         events:[";
         $planningEvent="";
-        $query='SELECT * FROM planning;'
-        $sql->query($query);
-        while($data = $sql->fetch()){
-            $tableau[]=json_encode($data);
+        $query= $sql->prepare('SELECT * FROM planning;');
+        $query->execute();
+        while($data = $query->fetch(PDO::FETCH_ASSOC)){
+            $startSep = "{";
+            foreach ($data as $key => $value) {
+                if($key == 'title' || $key == 'start' || $key == 'end'){
+                    $planningEvent .= $startSep . $key . ': "' . $value . '"' . ',';
+                    $startSep = "";
+                }
+            }
+            $planningEvent .= 'className : \'' . $data['title'].'\'},';
         }
-    $planningEvent ="
+   /* $planningEvent ="
             {
-                title:"'Aquagym'",
-                start:'2016-08-02T11:30:00',
-                end: '2016-08-02T012:30:00',
-                allDay: false
-            },";
+                title:\"Aquagym\",
+                start:\"2016-08-15T11:30:00\",
+                end: \"2016-08-15T012:30:00\",
+            },
+            {
+                title:\"Aquagym\",
+                start:\"2016-08-16T11:30:00\",
+                end: \"2016-08-16T012:30:00\",
+            },";*/
+            
     $planningFin = "
         ]
-    });";
+    });
+});";
 
     fwrite($monfichier, $planningDebut);
     fwrite($monfichier, $planningEvent);
