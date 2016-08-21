@@ -124,7 +124,7 @@ if (!isset($_SESSION['user'])) {
                                 <a href = "../controllers/inscription.php" rel = "nofollow">Inscription</a>
                             </li>
                             <li>
-                                <a href = "./planning2.php" rel = "section">Planning</a>
+                                <a href="#" rel="section">Planning</a>
                             </li>
                             <?php
                             if (isset($_SESSION['user'])) {
