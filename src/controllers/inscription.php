@@ -120,10 +120,11 @@ if (!isset($_SESSION['user'])) {
                                 <button class="btn btn-primary" type="submit" type="button" name="submit">Télécharger le formulaire d'inscription</button>
                             </form>
                             <br>
-                            <p style='color:white'>Pour vous inscrire aux séances, veuillez retournez ce document remplit à l'adresse suivante :<p>
+                            <p style='color:white'>Pour vous inscrire à une activité, veuillez retourner le formulaire dûment rempli à l'adresse suivante :<p>
                                 <a href="mailto:k-hyle@aqua-balneo.fr">k-hyle@aqua-balneo.fr</a>
+                            <p style='color:white'>Lorsque votre fiche d'inscription aura été validé, vous pourrez réserver vos créneaux en ligne.<p>
                             <hr />
-                            <p class="centered underbar" style="color:red; text-decoration:underline; text-align: center">Formulaire d'inscription au site - Pas nécessaire pour s'inscrire aux séances.</p>
+                            <p class="centered underbar" style="color:red; text-decoration:underline; text-align: center">Formulaire d'inscription au site - S'incrire au site est écessaire pour s'inscrire aux séances en ligne.</p>
                             <form role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">

@@ -26,7 +26,6 @@ function insertUser()
         die();
     }
     $stmt = $sql->prepare("INSERT INTO usertable (nom, prenom, password, email, adresse, ville, villenaissance, datenaissance, tel, codepostal) VALUES (:nom, :prenom, :password, :email, :adresse, :ville, :villenaissance, :datenaissance, :tel, :codepostal)");
-//$stmt = $sql->prepare("INSERT INTO usertable (nom, prenom, password, email, adresse, ville, codepostal, villenaissance, datenaissance, tel) VALUES (:nom, :prenom, :password, :email, :adresse, :ville, :codepostal, :villenaissance, :datenaissance, :tel)");
     $stmt->bindParam(':nom', $nom);
     $nom = !empty($filteredPost['nom']) ? $filteredPost['nom'] : ' ';
     $stmt->bindParam(':prenom', $prenom);
@@ -62,6 +61,7 @@ function insertUser()
                     . $passage_ligne . $passage_ligne
                     . $passage_ligne . "Mon identifiant de connexion : " . $email
                     . $passage_ligne . "Mon mot de passe : " . $filteredPost['password']
+                    . $passage_ligne . "Vous pouvez désomrais vous inscrire en ligne aux séances!"
                     . $passage_ligne . ">A bientot dans notre centre K-Hylé!";
             $message_html = "<html><head></head><body>"
                     . "<p>Bonjour " . $prenom . $nom . ",</p>"
@@ -70,6 +70,7 @@ function insertUser()
                     . "<br>"
                     . "<p>Mon identifiant de connexion : " . $email . "</p>"
                     . "<p>Mon mot de passe : " . $filteredPost['password'] . "</p>"
+                    . "<p>Vous pouvez désomrais vous inscrire en ligne aux séances!</p>"
                     . "<br>"
                     . "<p>A bientot dans notre centre K-Hylé!"
                     . "</body></html>";
