@@ -20,7 +20,7 @@ function insertUser()
         exit();
     }
     try {
-        $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
+        $sql = new PDO('mysql:host=localhost;dbname=balneodb', 'root', 'MySQL');
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
         die();
@@ -43,7 +43,7 @@ function insertUser()
     $stmt->bindParam(':datenaissance', $datenaissance);
     $tmpdatenaissance = !empty($filteredPost['datenaissance']) ? $filteredPost['datenaissance'] : ' ';
     $tmp2datenaissance = new DateTime($tmpdatenaissance);
-    $datenaissance = $tmp2datenaissance->format('d-m-Y');
+    $datenaissance = $tmp2datenaissance->format('Y-m-d');
     $stmt->bindParam(':tel', $tel);
     $tel = !empty($filteredPost['tel']) ? $filteredPost['tel'] : ' ';
     $stmt->bindParam(':codepostal', $codepostal);
