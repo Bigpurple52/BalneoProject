@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) && $_SESSION['user'] !== 'k-hyle@aqua-balneo.fr') 
     }
 } elseif (isset($_SESSION['user']) && $_SESSION['user'] === 'k-hyle@aqua-balneo.fr') {
     try {
-        $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
+        $sql = new PDO('mysql:host=localhost;dbname=balneodb', 'root', 'MySQL');
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
         die();
@@ -109,6 +109,7 @@ function displayContent($userList)
     /* CONTENT */
     echo '<section class = "col-sm-8" id = "main">';
     echo '<div class = "accueilContent">';
+    /* FORMULAIRE 1 */
     echo '<form role="form" class="well" id="jetonform" name="jetons" method="POST" action="' . filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING) . '">';
     echo '<div class = "form-group">';
     echo '<label for = "user">Identifiant utilisateur (adresse mail):</label>';
@@ -139,13 +140,43 @@ function displayContent($userList)
     echo '</div>';
     echo '<button type="submit" class="btn btn-primary" name="submit">Enregistrer</button>';
     echo '</div>';
-    /* FIN FORMULAIRE1 */
-
-    /* FIN CONTENT */
+    echo '</form>';
+    /* FIN FORMULAIRE 1 */
+    /* FORMULAIRE 2 */
+    echo '<form role="form" class="well" id="planning" name="planning" method="POST" action="' . filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING) . '">';
+    echo '<div class = "form-group">';
+    echo '</select>';
+    echo '</div>';
+    echo '<div class = "form-group">';
+    echo '<label for = "activitePlanning">Activité : </label>';
+    echo '<select name="activitePlanning" class = "form-control" id = "activitePlanning">';
+    echo '<option>AquaDouce</option>';
+    echo '<option>AquaDynamic</option>';
+    echo '<option>AquaBike</option>';
+    echo '<option>AquaPhobie</option>';
+    echo '<option>AquaTraining</option>';
+    echo '<option>JardinAquatique</option>';
+    echo '<option>StageNatation</option>';
+    echo '<option>AquaBaby</option>';
+    echo '</select>';
+    echo '<div class = "form-group">';
+    echo '<label for = "start">Heure Debut :</label>';
+    echo '<input type = "datetime" name ="start" class = "form-control" id = "start"/>';
+    echo '</div>';
+    echo '<div class = "form-group">';
+    echo '<label for = "end">Heure Fin :</label>';
+    echo '<input type = "datetime" name ="end" class = "form-control" id = "end"/>';
+    echo '</div>';
+    echo '<button type="submit" class="btn btn-primary" name="submit">Ajouter</button>';
+    echo '<button type="submit" class="btn btn-danger" name="submit">Supprimer</button>';
+    echo '</div>';
+    /* FIN FORMULAIRE 2/
+      /* FIN CONTENT */
     echo '</section>';
 
     /* MENU DROITE */
     echo '<nav class="col-sm-2">';
+    echo '<button class="btn btn-info"><a href = "./src/sql/requete.php" rel = "section">Remplier planning</a> </button>';
     echo '<div class="user-info alert-info" style="padding: 20px;"><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
     echo '</nav>';
     /* FIN MENU DROITE */
