@@ -1,6 +1,13 @@
 <?php
 date_default_timezone_set("Europe/Paris"); 
 
+try {
+    $sql = new PDO('mysql:host=localhost;dbname=balneo', 'root', '');
+} catch (PDOException $e) {
+    print "Erreur !: " . $e->getMessage() . "<br/>";
+    die();
+}
+
 try{
     $monfichier = fopen('requete.txt', 'w+');
     
@@ -10,70 +17,81 @@ try{
     $date = new DateTime();
     $nextYear = new DateTime();
     $nextYear->modify('+1 year');
-    do {
-
-
+    $currentYear = clone $date;
+    $tableau = [ [ 'title' => 'Aquadouce', 'start' => '2016-08-22T10:30:00', 'end' => '2016-08-22T11:15:00', 'available' => true ], [ 'title' => 'Aquadouce', 'start' => '2016-08-22T16:30:00', 'end' => '2016-08-22T17:15:00', 'available' => true ]]; 
+    
+    while ($currentYear->format('Y') != $nextYear->format('Y')) {
+        $i = 0;
+        foreach ($tableau as $t){
+            $separateur = "";
+            $finalKey = "";
+            $finalValue = "";
+            foreach ($t as $key => $value) {
+                if($key === 'start' || $key === 'end'){
+                    $value = new DateTime($value);
+                    $value->modify('+'.$i.' week');
+                    $value = $value->format('Y-m-d\TH:i:s');
+                }
+                $finalKey .= $separateur . '`' . $key . '`';
+                $finalValue .= $separateur . $sql->quote($value);
+                $separateur = ', ';
+            }
+            $requete = 'INSERT INTO Planning ('.$finalKey.') VALUES ('.$finalValue.');';
+            $sql->query($requete);
+            fwrite($monfichier, $requete);
+        }
+        $i++;
+       
         $date = $date->modify('+1 week');
         $currentYear = clone $date;
-        $requete .= $currentYear->format('Y') . "   ";
-    }while ($currentYear->format('Y') != $nextYear->format('Y'));
+    };
 
     /*$planningEvent ="
             {
                 title:'Aquadouce',
                 start:'2016-08-22T10:30:00',
-                end: '2016-08-22T11:15:00',
-                allDay: false
+                end: '2016-08-22T11:15:00'
             },{
                 title:'Aquadouce',
                 start:'2016-08-22T16:30:00',
-                end: '2016-08-22T17:15:00',
-                allDay: false
+                end: '2016-08-22T17:15:00'
             },{
                 title:'Aquadouce',
                 start:'2016-08-23T11:00:00',
-                end: '2016-08-23T11:45:00',
-                allDay: false,
+                end: '2016-08-23T11:45:00'
                 available: false
             },{
                 title:'Aquadouce',
                 start:'2016-08-23T16:30:00',
-                end: '2016-08-23T17:15:00',
-                allDay: false
+                end: '2016-08-23T17:15:00'
             },{
                 title:'Aquadouce',
                 start:'2016-08-24T11:00:00',
-                end: '2016-08-24T11:45:00',
-                allDay: false,
+                end: '2016-08-24T11:45:00'
                 available: false
             },{
                 title:'Aquadouce',
                 start:'2016-08-25T11:00:00',
-                end: '2016-08-25T11:45:00',
-                allDay: false,
+                end: '2016-08-25T11:45:00'
                 available: false
             },{
                 title:'Aquadouce',
                 start:'2016-08-25T16:30:00',
-                end: '2016-08-25T17:15:00',
-                allDay: false,
+                end: '2016-08-25T17:15:00'
                 available: false
             },{
                 title:'Aquadouce',
                 start:'2016-08-26T10:30:00',
-                end: '2016-08-26T11:15:00',
-                allDay: false
+                end: '2016-08-26T11:15:00'
             },{
                 title:'Aquadouce',
                 start:'2016-08-26T16:30:00',
-                end: '2016-08-26T17:15:00',
-                allDay: false,
+                end: '2016-08-26T17:15:00'
                 available: false
             },{
                 title:'Aquadouce',
                 start:'2016-08-27T09:15:00',
-                end: '2016-08-27T10:00:00',
-                allDay: false,
+                end: '2016-08-27T10:00:00'
                 available: false
             }";*/
    
