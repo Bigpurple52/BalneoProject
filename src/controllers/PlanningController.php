@@ -36,15 +36,24 @@ $stmt->bindParam(':email', $email);
 try {
     $stmt->execute();
     $title = mb_strtolower($title);
+    if ($title === 'mixaquatraining') {
+        $title = 'aquatraining';
+    }
     while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
         if ((int) $data[$title] > 0) {
             $response = true;
+            $userId = $data['id'];
         } else {
             $response = 'jetons';
         }
     }
 } catch (PDOException $e) {
     echo "Erreur !: " . $e->getMessage() . "<br/>";
+}
+
+$today = new DateTime('now');
+if ($today->format('Y-m-d') > $start->format('Y-m-d')) {
+    $response = 'anterieur';
 }
 
 echo $response;

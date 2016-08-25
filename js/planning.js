@@ -22,10 +22,32 @@ $(document).ready(function(){
                                         end: endTime._i
                                     },
                                     success: function(response){
-                                        if(response === true){
-                                            alert(response);
+                                        if(response[0] === '1'){
+                                            bootbox.confirm('Si vous validez votre inscription, votre compte sera débité de 1 crédit', function (response) {
+                                                if (response) {
+                                                    $.ajax({
+                                                        url: '../../src/controllers/DebitJeton.php',
+                                                        type: 'POST',
+                                                        data: {
+                                                            event: eventTitle,
+                                                            start: startTime._i,
+                                                            end: endTime._i,
+                                                            response: response
+                                                        },
+                                                        success: function(response){
+                                                            if(response === '1'){
+                                                                bootbox.alert('Inscription réussie. Vous allez recevoir un mail de confirmation à cette adresse : k-hyle@aqua-balneo.fr . Rendez-vous dans la page \'Mon Profil\' pour voir toutes les séances auxquelles vous êtes inscrit.');
+                                                            } else if(response === '0'){
+                                                                bootbox.alert('Vous êtes déjà inscrit à cette séance. Votre compte n\'a pas été débité.');
+                                                            }
+                                                        }
+                                                    });
+                                                }
+                                            });
                                         }else if(response === 'jetons'){
-                                            alert('Vous devez posséder des jetons pour vous inscrire aux séances en ligne!');
+                                            bootbox.alert('Vous devez posséder des crédits pour vous inscrire à cette séance!');
+                                        }else if(response === 'anterieur'){
+                                            bootbox.alert('Vous ne pouvez pas vous inscrire à une séance dont la date est déjà passée!');
                                         }
                                     }
                                 }),

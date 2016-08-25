@@ -147,10 +147,11 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script src="../../js/jquery-3.1.0.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootbox.min.js"></script>
         <script src="../../js/moment.min.js"></script>
         <script src="../../js/fullcalendar.min.js"></script>
         <script src='../../lang/fr.js'></script>
-        <script src="../../js/planning.js"></script>
+        <script src="../../js/planning.js?rndstr=<?php echo uniqid() ?>"></script>
     </body>
 
 </html>
