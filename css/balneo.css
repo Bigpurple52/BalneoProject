@@ -331,6 +331,14 @@ a.AquaBaby{
     font-size: 1.8rem;
 }
 
+a.noClick{
+    pointer-events:none;
+    background-color: red;
+}
+
+#myForm2{
+    color: white;
+}
 /* For ff */
 @-moz-document url-prefix() {
     body{

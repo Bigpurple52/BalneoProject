@@ -87,7 +87,11 @@ try {
                 $startSep = "";
             }
         }
-        $planningEvent .= 'className : \'' . $data['title'] . '\'},';
+        if ($data['available']) {
+            $planningEvent .= 'className : \'' . $data['title'] . '\'},';
+        } else {
+            $planningEvent .= 'className : \'noClick\'},';
+        }
     }
     $planningFin = "
         ]

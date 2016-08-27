@@ -110,6 +110,60 @@ if ($response) {
     } catch (PDOException $ex) {
         echo "Erreur!: " . $e->getMessage() . "<br/>";
     }
+    if ($response) {
+        $passage_ligne = "\n";
+        $prenom = $_SESSION['prenom'];
+        $nom = $_SESSION['nom'];
+        $newStart = new DateTime($filteredPost['start']);
+        $newEnd = new DateTime($filteredPost['end']);
+        //=====Déclaration des messages au format texte et au format HTML.
+        $message_txt = "Bonjour " . $prenom . " " . $nom . ", "
+                . $passage_ligne . "Vous venez de vous inscrire à la séance : " . $filteredPost['event']
+                . $passage_ligne . "Ce mail est un récapitulatif de vos informations."
+                . $passage_ligne . $passage_ligne
+                . $passage_ligne . "Cette séance aura lieu du " . $newStart->format('d-m-Y H:i:s') . " au " . $newEnd->format('d-m-Y H:i:s')
+                . $passage_ligne . "A bientot dans notre centre K-Hyle!";
+        $message_html = "<html><head></head><body>"
+                . "<p>Bonjour " . $prenom . " " . $nom . ",</p>"
+                . "<p>vous venez de vous inscrire à la séance : " . $filteredPost['event']
+                . "<p>Ce mail est un récapitulatif de vos informations.</p>"
+                . "<br>"
+                . "Cette séance aura lieu du " . $newStart->format('d-m-Y H:i:s') . " au " . $newEnd->format('d-m-Y H:i:s')
+                . "<p>A bientot dans notre centre K-Hylé!"
+                . "</body></html>";
+        //==========
+        //=====Création de la boundary
+        $boundary = " -----=" . md5(rand());
+        //==========
+        //=====Définition du sujet.
+        $sujet = "Inscription à la séance : " . $filteredPost['event'];
+        //=========
+        //=====Création du header de l'e-mail.
+        $header = "From: \"K-Hyle\"<k-hyle@aqua-balneo.fr>" . $passage_ligne;
+        $header.= "Reply-to: \"K-Hyle\" <k-hyle@aqua-balneo.fr>" . $passage_ligne;
+        $header.= "MIME-Version: 1.0" . $passage_ligne;
+        $header.= "Content-Type: multipart/alternative;" . $passage_ligne . " boundary=\"$boundary\"" . $passage_ligne;
+        //==========
+        //=====Création du message.
+        $message = $passage_ligne . "--" . $boundary . $passage_ligne;
+        //=====Ajout du message au format texte.
+        $message.= "Content-Type: text/plain; charset=\"utf-8\"" . $passage_ligne;
+        $message.= "Content-Transfer-Encoding: 8bit" . $passage_ligne;
+        $message.= $passage_ligne . $message_txt . $passage_ligne;
+        //==========
+        $message.= $passage_ligne . "--" . $boundary . $passage_ligne;
+        //=====Ajout du message au format HTML
+        $message.= "Content-Type: text/html; charset=\"utf-8\"" . $passage_ligne;
+        $message.= "Content-Transfer-Encoding: 8bit" . $passage_ligne;
+        $message.= $passage_ligne . $message_html . $passage_ligne;
+        //==========
+        $message.= $passage_ligne . "--" . $boundary . "--" . $passage_ligne;
+        $message.= $passage_ligne . "--" . $boundary . "--" . $passage_ligne;
+        //==========
+        //=====Envoi de l'e-mail.
+        mail($email, $sujet, $message, $header);
+        //==========
+    }
 }
 
 

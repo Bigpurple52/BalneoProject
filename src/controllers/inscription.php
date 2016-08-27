@@ -189,6 +189,7 @@ if (!isset($_SESSION['user'])) {
                                         insertUser();
                                         if ($etatInscription) {
                                             echo '<p class = "alert-success">Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.</p>';
+                                            echo '<script type="text/javascript">window.alert("Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.");</script>';
                                         } elseif (!$etatInscription) {
                                             echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
                                         }
@@ -253,6 +254,7 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script src="../../js/jquery-3.1.0.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
+
 
     </body>
 

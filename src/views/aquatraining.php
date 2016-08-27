@@ -182,6 +182,7 @@ if (!isset($_SESSION['user'])) {
                             <div class="col-sm-12">
                                 <h2>Tarification</h2>
                                 <ul>
+                                    <li> 80€ les 5 séances</li>
                                     <li> 150€ les 10 séances</li>
                                     <li> 280€ les 20 séances</li>
                                     <li> 375€ les 30 séances</li>

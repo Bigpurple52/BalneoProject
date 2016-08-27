@@ -4,6 +4,27 @@ if (!isset($_SESSION['user'])) {
     session_unset();
     session_destroy();
 }
+try {
+    $sql = new PDO('mysql:host=localhost;dbname=balneodb', 'root', 'MySQL');
+} catch (PDOException $e) {
+    print "Erreur !: " . $e->getMessage() . "<br/>";
+    die();
+}
+
+$bdd = $sql->prepare('SELECT id FROM usertable WHERE email = :email');
+$email = $_SESSION['user'];
+$bdd->bindParam(':email', $email);
+if ($bdd->execute()) {
+    $firstResult = $bdd->fetch();
+    $userId = $firstResult['id'];
+    $bdd2 = $sql->prepare('SELECT p.title, p.`start`, p.`end` FROM activite as a INNER JOIN planning as p ON a.idactivite = p.id WHERE iduser = :idUser');
+    $bdd2->bindParam(':idUser', $userId);
+    $bdd2->execute();
+    $activite = [];
+    while ($result = $bdd2->fetch(PDO::FETCH_ASSOC)) {
+        $activite[] = $result;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -20,10 +41,10 @@ if (!isset($_SESSION['user'])) {
         <link rel="stylesheet" href="../../css/balneo.css">
         <meta name="robots" content="noindex,nofollow" />
         <?php
-         if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
-            echo'<meta http-equiv="refresh" content="0">';
-         }
-         ?>
+        if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
+            echo'<meta http-equiv = "refresh" content = "0">';
+        }
+        ?>
     </head>
 
     <body>
@@ -42,9 +63,9 @@ if (!isset($_SESSION['user'])) {
                         <div class="col-sm-2 blockConnection">
                             <?php
                             if (isset($_SESSION['user'])) {
-                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="../controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                                echo'<div class = "user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href = "../controllers/logout.php" rel = "nofollow"><button type = "button" class = "btn btn-danger">Se déconnecter</button></a></div>';
                             } else {
-                                echo '<form class="well" name="connexion" method="POST" action="../controllers/connexion.php">';
+                                echo '<form class = "well" name = "connexion" method = "POST" action = "../controllers/connexion.php">';
                                 echo '<div class = "form-group" id = "login-form">';
                                 echo '<div>';
                                 echo '<label class = "control-label" for = "emailId".php>Mon adresse email</label>';
@@ -116,9 +137,10 @@ if (!isset($_SESSION['user'])) {
                         <div class="accueilContent">
                             <h2 class="inscription">Inscription</h2>
                             <hr class="hrtrait" />
-                            <h2 class="inscription">Vos informations personnelles</h2>
+                            <h2 class="inscription" id="toHide">Vos informations personnelles</h2>
+                            <h2 class="inscription" id="toShow">Mes séances réservées</h2>
                             <hr />
-                            <form role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
+                            <form role="form" class="well" name="inscription1" method="POST" id="myForm" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">
                                         <label class="control-label" for="nom">Nom</label>
@@ -180,7 +202,35 @@ if (!isset($_SESSION['user'])) {
                                     <input type="submit" class="btn btn-primary" name="submit" value="Enregistrer" />
                                 </div>
                             </form>
-                        </div>
+                            <table id="myForm2" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Activité</th>
+                                        <th>Heure Début</th>
+                                        <th>Heure fin</th>
+                                        <th>Annuler un cours</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    if (!empty($activite)) {
+                                        for ($i = 0; $i < count($activite); $i++) {
+                                            echo '<tr id=' . $i . '>';
+                                            foreach ($activite[$i] as $a) {
+                                                echo '<td>' . $a . '</td>';
+                                            }
+                                            echo '<td><button type="button" class="btn btn-danger" onclick="goDelete(this)">Annuler ce cours</button></td>';
+                                            echo '</tr>';
+                                        }
+                                    }
+                                    ?>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="4" class='underbar'>Pour annuler une séance vous devez vous y prendre au minimum 48H à l'avance. Une fois passé ce délai, votre compte ne pourra pas être recrédité.</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
@@ -211,8 +261,14 @@ if (!isset($_SESSION['user'])) {
             </div>
         </div>
         <script src="../../js/jquery-3.1.0.min.js"></script>
+        <script src="../../js/bootbox.min.js"></script>
+        <script src="../../js/commonJS.js?rndstr=<?php echo uniqid() ?>"></script>
         <script src="../../js/bootstrap.min.js"></script>
-
+        <?php
+        if (isset($_SESSION['user']) && !empty($activite)) {
+            echo '<script type="text/javascript">$(\'#myForm\').hide();$(\'#toHide\').hide();$(\'#myForm2\').show();$(\'#toShow\').show()</script>';
+        }
+        ?>
     </body>
 
 </html>
