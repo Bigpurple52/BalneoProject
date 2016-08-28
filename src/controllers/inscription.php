@@ -114,7 +114,8 @@ if (!isset($_SESSION['user'])) {
                         <div class="accueilContent">
                             <h2 class="inscription">Inscription</h2>
                             <hr class="hrtrait" />
-                            <h2 class="inscription">Vos informations personnelles</h2>
+                            <h2 class="inscription" id="toHide">Vos informations personnelles</h2>
+                            <h2 class="inscription" style="display:none" id="toShow">Choix d'une formule</h2>
                             <hr />
                             <form action="fileDownload.php" method="post">
                                 <button class="btn btn-primary" type="submit" type="button" name="submit">Télécharger le formulaire d'inscription</button>
@@ -124,8 +125,207 @@ if (!isset($_SESSION['user'])) {
                                 <a href="mailto:k-hyle@aqua-balneo.fr">k-hyle@aqua-balneo.fr</a>
                             <p style='color:white'>Lorsque votre fiche d'inscription aura été validé, vous pourrez réserver vos créneaux en ligne.<p>
                             <hr />
-                            <p class="centered underbar" style="color:red; text-decoration:underline; text-align: center">Formulaire d'inscription au site - S'incrire au site est écessaire pour s'inscrire aux séances en ligne.</p>
-                            <form role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
+                            <p id="toHide2" class="centered underbar" style="color:red; text-decoration:underline; text-align: center">Formulaire d'inscription au site - S'incrire au site est nécessaire pour s'inscrire aux séances en ligne.</p>
+                            <p id="toShow2" class="centered underbar" style="color:red; text-decoration:underline; text-align: center;display:none">Formulaire de souscription à une formule - En cours de construction</p>
+
+                            <form role="form" id="myForm3" style="display:none" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
+                             <div id="login-form">
+                                    <div class="row">
+                                         <div class="form-group col-sm-3 col-sm-offset-3">
+                                            <p class="radioTitle">Aquadouce</p>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadouce">
+                                                    <input id="" type="radio" name="aquadouce"  value="" />
+                                                5 séances 70€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadouce">
+                                                    <input id="" type="radio" name="aquadouce"  value="" />
+                                                10 séances 130€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadouce">
+                                                    <input id="" type="radio" name="aquadouce"  value="" />
+                                                20 séances 250€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadouce">
+                                                    <input id="" type="radio" name="aquadouce"  value="" />
+                                                30 séances 360€</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                    <div class="form-group col-sm-3 col-sm-offset-3">
+                                            <p class="radioTitle">
+                                        Aquadynamic</p>
+                                        </div>
+                                            <div class="form-group col-sm-3">
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadynamic">
+                                                    <input id="" type="radio" name="aquadynamic"  value="" />
+                                                5 séances 70€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadynamic">
+                                                    <input id="" type="radio" name="aquadynamic"  value="" />
+                                                10 séances 130€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadynamic">
+                                                    <input id="" type="radio" name="aquadynamic"  value="" />
+                                                20 séances 250€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadynamic">
+                                                    <input id="" type="radio" name="aquadynamic"  value="" />
+                                                30 séances 360€</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                    <div class="form-group col-sm-3 col-sm-offset-3">
+                                            <p class="radioTitle">Aquabike</p>
+                                        </div>
+                                            <div class="form-group col-sm-3">
+                                            <div class="radio">
+                                                <label class="control-label" for="aquabike">
+                                                    <input id="" type="radio" name="aquabike"  value="" />
+                                                5 séances 70€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquabike">
+                                                    <input id="" type="radio" name="aquabike"  value="" />
+                                                10 séances 130€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquabike">
+                                                    <input id="" type="radio" name="aquabike"  value="" />
+                                                20 séances 250€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquabike">
+                                                    <input id="" type="radio" name="aquabike"  value="" />
+                                                30 séances 360€</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                    <div class="form-group col-sm-3 col-sm-offset-3">
+                                            <p class="radioTitle">Mix Aquatraining</p>
+                                        </div>
+                                            <div class="form-group col-sm-3">
+                                            <div class="radio">
+                                                <label class="control-label" for="aquatraining">
+                                                    <input id="" type="radio" name="aquatraining"  value="" />
+                                                5 séances 70€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquatraining">
+                                                    <input id="" type="radio" name="aquatraining"  value="" />
+                                                10 séances 130€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquatraining">
+                                                    <input id="" type="radio" name="aquatraining"  value="" />
+                                                20 séances 250€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquatraining">
+                                                    <input id="" type="radio" name="aquatraining"  value="" />
+                                                30 séances 360€</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                    <div class="form-group col-sm-3 col-sm-offset-3">
+                                            <p class="radioTitle">Aquaphobie</p>
+                                        </div>
+                                            <div class="form-group col-sm-3">
+                                            <div class="radio">
+                                                <label class="control-label" for="aquaphobie">
+                                                    <input id="" type="radio" name="aquaphobie"  value="" />
+                                                5 séances 70€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquaphobie">
+                                                    <input id="" type="radio" name="aquaphobie"  value="" />
+                                                10 séances 130€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquadouce">
+                                                    <input id="" type="radio" name="aquadouce"  value="" />
+                                                20 séances 250€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquaphobie">
+                                                    <input id="" type="radio" name="aquaphobie"  value="" />
+                                                30 séances 360€</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                    <div class="form-group col-sm-3 col-sm-offset-3">
+                                            <p class="radioTitle">Aquababy</p>
+                                        </div>
+                                            <div class="form-group col-sm-3">
+                                            <div class="radio">
+                                                <label class="control-label" for="aquababy">
+                                                    <input id="" type="radio" name="aquababy"  value="" />
+                                                5 séances 70€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquababy">
+                                                    <input id="" type="radio" name="aquababy"  value="" />
+                                                10 séances 130€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquababy">
+                                                    <input id="" type="radio" name="aquababy"  value="" />
+                                                20 séances 250€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="aquababy">
+                                                    <input id="" type="radio" name="aquababy"  value="" />
+                                                30 séances 360€</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                    <div class="form-group col-sm-3 col-sm-offset-3">
+                                        <p class="radioTitle">Jardin aquatique</p>
+                                    </div>
+                                        <div class="form-group col-sm-3">
+                                            <div class="radio">
+                                                <label class="control-label" for="jardinaquatique">
+                                                    <input id="" type="radio" name="jardinaquatique"  value="" />
+                                                5 séances 70€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="jardinaquatique">
+                                                    <input id="" type="radio" name="jardinaquatique"  value="" />
+                                                10 séances 130€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="jardinaquatique">
+                                                    <input id="" type="radio" name="jardinaquatique"  value="" />
+                                                20 séances 250€</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label class="control-label" for="jardinaquatique">
+                                                    <input id="" type="radio" name="jardinaquatique"  value="" />
+                                                30 séances 360€</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align:center">
+                                        <input type="submit"  class="btn btn-primary" name="submit" value="Souscrire" />
+                                    </div>       
+                                </div>                    
+                            </form>                       
+                            <form id="myForm" role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">
                                         <label class="control-label" for="nom">Nom</label>
@@ -201,6 +401,7 @@ if (!isset($_SESSION['user'])) {
                                     <input type="submit" class="btn btn-primary" name="submit" value="S'incrire" />
                                 </div>
                             </form>
+
                         </div>
                     </section>
                     <!-- sidebar droite-->
@@ -254,8 +455,11 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script src="../../js/jquery-3.1.0.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
-
-
+        <?php
+        if (isset($_SESSION['user'])) {
+            echo '<script type="text/javascript">$(\'#myForm\').hide();$(\'#toHide\').hide();$(\'#myForm3\').show();$(\'#toHide2\').hide();$(\'#toShow2\').show();$(\'#toShow\').show()</script>';
+        }
+        ?>
     </body>
 
 </html>

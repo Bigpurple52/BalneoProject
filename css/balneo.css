@@ -339,6 +339,12 @@ a.noClick{
 #myForm2{
     color: white;
 }
+
+.radioTitle{
+        margin-top: 20%;
+        font-size: 24px;
+    }
+
 /* For ff */
 @-moz-document url-prefix() {
     body{
@@ -410,6 +416,10 @@ a.noClick{
         background-color: hotpink;
         text-align: center;
         font-size: 1.4rem;
+    }
+    .radioTitle{
+        margin-top: 20%;
+        font-size: 20px;
     }
 
 }
