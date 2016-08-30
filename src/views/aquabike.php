@@ -126,7 +126,7 @@ if (!isset($_SESSION['user'])) {
                                     </article>
                                 </div>
                                 <div class="col-sm-12 col-sm-offset-3">
-                                    <img src="../../assets/cours-MIX.JPG" id="imgJardin" class="img-thumbnail" alt="aquabike" style="width:50%;height: 50%"
+                                    <img src="../../assets/aquabike.JPG" id="imgJardin" class="img-thumbnail" alt="aquabike" style="width:50%;height: 50%"
                                          />
                                 </div>
                             </div>

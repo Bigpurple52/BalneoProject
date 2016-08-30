@@ -125,7 +125,7 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                             <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
                             <h1 class="contentTitle">SPA & FORME</h1>
                             <div class="col-sm-12 col-sm-offset-3">
-                                <img src="./assets/acceuil.JPG" id="imgJardin" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
+                                <img src="./assets/acceuil.JPG" id="indexPhoto" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
                             </div>
                             <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à <strong>Teyran</strong>, à 12km de la Comédie de <strong>Montpellier.</strong>
                                 Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.

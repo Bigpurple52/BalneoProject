@@ -2,7 +2,7 @@
 date_default_timezone_set("Europe/Paris"); 
 
 try {
-    $sql = new PDO('mysql:host=localhost;dbname=balneodb', 'root', 'MySQL');
+    $sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
