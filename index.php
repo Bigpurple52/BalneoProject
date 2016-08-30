@@ -9,6 +9,7 @@ if (!isset($_SESSION['user'])) {
         die();
     }
 }
+$boot = filter_input(INPUT_GET, 'bootbox');
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -41,7 +42,12 @@ if (!isset($_SESSION['user'])) {
                         <div class="col-sm-2 blockConnection">
                             <?php
                             if (isset($_SESSION['user'])) {
-                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
+                                if (!empty($boot) && $boot === 'true') {
+                                    $bootMsg = '<p>Votre choix a bien été pris en compte. Vous devrez régler la somme dûe lors de la première séance.';
+                                } else {
+                                    $bootMsg = '';
+                                }
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a>' . $bootMsg . '</div>';
                             } else {
                                 echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
                                 echo '<div class = "form-group" id = "login-form">';
@@ -206,6 +212,7 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script src="./js/jquery-3.1.0.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/bootbox.min.js"></script>
         <script src="./js/map.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrSCEwPcWzYm6Z9ZVFCN_ZmeXGcB0E--0&callback=initMap"
         async defer></script>

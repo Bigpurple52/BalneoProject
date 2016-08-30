@@ -29,27 +29,42 @@ $email = $_SESSION['user'];
 $bdd = $sql->prepare('SELECT * FROM usertable WHERE email = :email');
 $bdd->bindParam('email', $email);
 $bdd->execute();
-$actResult = $bdd->fetch();
+$oldToken = [];
+$actResult = $bdd->fetch(PDO::FETCH_ASSOC);
 foreach ($filteredPost as $key => $value) {
-    if (in_array($actArray, $key)) {
+    if (in_array($key, $actArray)) {
         array_push($choosenActArray, $key);
-        array_push($valArray, $value);
+        $valArray[$key] = $value;
+        $oldToken[$key] = $actResult[$key];
     }
 }
 
 $finalActArray = implode(', ', $choosenActArray);
-$finalValueArray = implode(', ', $valArray);
 $queryString = 'UPDATE usertable SET ';
 $i = 0;
+$sep = ', ';
 while ($i < count($choosenActArray)) {
-    $queryString .= '`' . $choosenActArray[$i] . '` = :' . $choosenActArray[$i];
+    if ($i === count($choosenActArray) - 1) {
+        $sep = '';
+    }
+    $queryString .= '`' . $choosenActArray[$i] . '` = :' . $choosenActArray[$i] . $sep;
     $i++;
 }
+$queryString .= ' WHERE email = :email';
 $bdd2 = $sql->prepare($queryString);
 //HERE I AM
-while ($i < count($choosenActArray)) {
-    $bdd2->bindParam($bdd2, $i);
-    $i++;
+$j = 0;
+$newValue = [];
+while ($j < count($choosenActArray)) {
+    $newValue[$j] = $oldToken[$choosenActArray[$j]] + $valArray[$choosenActArray[$j]];
+    $bdd2->bindParam(':' . $choosenActArray[$j], $newValue[$j]);
+    $j++;
+}
+$bdd2->bindParam('email', $email);
+if ($bdd2->execute()) {
+    $gg = true;
+} else {
+    $gg = false;
 }
 
-
+header('Location: ../../index.php?bootbox=' . $gg);

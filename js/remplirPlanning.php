@@ -2,7 +2,7 @@
 
 session_start();
 try {
-    $sql = new PDO('mysql:host=localhost;dbname=balneo', 'root', '');
+    $sql = new PDO('mysql:host=localhost;dbname=balneodb', 'root', 'MySQL');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
