@@ -28,7 +28,6 @@ try {
 
             header('Content-Type: text/html; charset=utf-8');
             header('Location: ../../index.php');
-            die();
         }
     }
 } catch (Exception $e) {
@@ -37,4 +36,3 @@ try {
 }
 header('Content-Type: text/html; charset=utf-8');
 header('Location: ../../index.php');
-die();

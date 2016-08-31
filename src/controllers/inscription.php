@@ -117,16 +117,8 @@ if (!isset($_SESSION['user'])) {
                             <h2 class="inscription" id="toHide">Vos informations personnelles</h2>
                             <h2 class="inscription" style="display:none" id="toShow">Choix d'une formule</h2>
                             <hr />
-                            <form action="fileDownload.php" method="post">
-                                <button class="btn btn-primary" type="submit" type="button" name="submit">Télécharger le formulaire d'inscription</button>
-                            </form>
-                            <br>
-                            <p style='color:white'>Pour vous inscrire à une activité, veuillez retourner le formulaire dûment rempli à l'adresse suivante :<p>
-                                <a href="mailto:k-hyle@aqua-balneo.fr">k-hyle@aqua-balneo.fr</a>
-                            <p style='color:white'>Lorsque votre fiche d'inscription aura été validé, vous pourrez réserver vos créneaux en ligne.<p>
-                            <hr />
                             <p id="toHide2" class="centered underbar" style="color:red; text-decoration:underline; text-align: center">Formulaire d'inscription au site - S'incrire au site est nécessaire pour s'inscrire aux séances en ligne.</p>
-                            <p id="toShow2" class="centered underbar" style="color:red; text-decoration:underline; text-align: center;display:none">Formulaire de souscription à une formule - En cours de construction</p>
+                            <p id="toShow2" class="centered underbar" style="color:red; text-decoration:underline; text-align: center;display:none">Formulaire de souscription à une formule</p>
 
                             <form role="form" id="myForm3" style="display:none" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                              <div id="login-form">
@@ -358,7 +350,7 @@ if (!isset($_SESSION['user'])) {
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="datenaissance">Date de naissance *</label>
-                                        <input id="datenaissance" class="form-control" type="date" placeholder="Date de naissance" name="datenaissance" data-placement="right"
+                                        <input id="datenaissance" class="form-control" type="date" placeholder="jj/mm/aaaa - 10/07/1998" name="datenaissance" data-placement="right"
                                                data-trigger="manual" value="" data-content="Date de naissance" required="required"/>
                                     </div>
                                     <div class="form-group">

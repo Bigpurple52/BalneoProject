@@ -197,6 +197,11 @@ if (!isset($_SESSION['user'])) {
                                             <h2>Ecole de kite surf à Narbonne</h2>
                                             <a href="http://www.narbonnekitepassion.com/fr/" rel="site partenaire" style="color: #204d74;">http://www.narbonnekitepassion.com/fr/</a>
                                         </address>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <img alt="kite surf logo" class="thumbnail" src="../../assets/kitesurf-narbonne.jpg"/>
+                                            </div>
+                                        </div>
                                         <br>
                                         <address>
                                             <h2>Activités nautiques au lac du Salagou (34)</h2>
