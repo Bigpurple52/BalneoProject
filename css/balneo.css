@@ -191,6 +191,15 @@ th{
     width: 100%;
 }
 
+#indexPhoto{
+    width: 100%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 em, strong{
     font-weight: inherit;
     font-style:inherit;
@@ -341,9 +350,9 @@ a.noClick{
 }
 
 .radioTitle{
-        margin-top: 20%;
-        font-size: 24px;
-    }
+    margin-top: 20%;
+    font-size: 24px;
+}
 
 /* For ff */
 @-moz-document url-prefix() {

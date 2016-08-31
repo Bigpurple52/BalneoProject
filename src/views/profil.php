@@ -135,10 +135,39 @@ if ($bdd->execute()) {
                     <!-- content -->
                     <section class="col-sm-8">
                         <div class="accueilContent">
-                            <h2 class="inscription">Inscription</h2>
+                            <hr>
+                            <h2 class="inscription" id="toShow">Mes séances réservées</h2>
+                            <table id="myForm2" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Activité</th>
+                                        <th>Heure Début</th>
+                                        <th>Heure fin</th>
+                                        <th>Annuler un cours</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    if (!empty($activite)) {
+                                        for ($i = 0; $i < count($activite); $i++) {
+                                            echo '<tr id=' . $i . '>';
+                                            foreach ($activite[$i] as $a) {
+                                                echo '<td>' . $a . '</td>';
+                                            }
+                                            echo '<td><button type="button" class="btn btn-danger" onclick="goDelete(this)">Annuler ce cours</button></td>';
+                                            echo '</tr>';
+                                        }
+                                    }
+                                    ?>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="4" class='underbar'>Pour annuler une séance vous devez vous y prendre au minimum 48H à l'avance. Une fois passé ce délai, votre compte ne pourra pas être recrédité.</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
                             <hr class="hrtrait" />
                             <h2 class="inscription" id="toHide">Vos informations personnelles</h2>
-                            <h2 class="inscription" id="toShow">Mes séances réservées</h2>
                             <hr />
                             <form role="form" class="well" name="inscription1" method="POST" id="myForm" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
@@ -202,35 +231,7 @@ if ($bdd->execute()) {
                                     <input type="submit" class="btn btn-primary" name="submit" value="Enregistrer" />
                                 </div>
                             </form>
-                            <table id="myForm2" class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Activité</th>
-                                        <th>Heure Début</th>
-                                        <th>Heure fin</th>
-                                        <th>Annuler un cours</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    if (!empty($activite)) {
-                                        for ($i = 0; $i < count($activite); $i++) {
-                                            echo '<tr id=' . $i . '>';
-                                            foreach ($activite[$i] as $a) {
-                                                echo '<td>' . $a . '</td>';
-                                            }
-                                            echo '<td><button type="button" class="btn btn-danger" onclick="goDelete(this)">Annuler ce cours</button></td>';
-                                            echo '</tr>';
-                                        }
-                                    }
-                                    ?>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th colspan="4" class='underbar'>Pour annuler une séance vous devez vous y prendre au minimum 48H à l'avance. Une fois passé ce délai, votre compte ne pourra pas être recrédité.</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                        </div>
                     </section>
                     <!-- sidebar droite-->
                     <nav class="col-sm-2">
@@ -264,11 +265,6 @@ if ($bdd->execute()) {
         <script src="../../js/bootbox.min.js"></script>
         <script src="../../js/commonJS.js?rndstr=<?php echo uniqid() ?>"></script>
         <script src="../../js/bootstrap.min.js"></script>
-        <?php
-        if (isset($_SESSION['user']) && !empty($activite)) {
-            echo '<script type="text/javascript">$(\'#myForm\').hide();$(\'#toHide\').hide();$(\'#myForm2\').show();$(\'#toShow\').show()</script>';
-        }
-        ?>
     </body>
 
 </html>

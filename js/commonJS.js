@@ -26,7 +26,7 @@ function goDelete(btn) {
                     if (response === '1') {
                         setTimeout(function () {
                             location.reload();
-                        }, 3000);
+                        }, 1000);
                         bootbox.alert('L\'annulation de votre séance a bien été prise en compte. Votre crédit vous a été restitué');
                     } else if (response === '0') {
                         bootbox.alert('Pour annuler une séance, vous devez vous y prendre au moins 48H à l\'avance.');
