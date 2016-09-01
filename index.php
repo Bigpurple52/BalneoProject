@@ -42,7 +42,7 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                         <div class="col-sm-2 blockConnection">
                             <?php
                             if (isset($_SESSION['user'])) {
-                                if (!empty($boot) && $boot === 'true') {
+                                if (!empty($boot) && $boot == 1) {
                                     $bootMsg = '<p>Votre choix a bien été pris en compte. Vous devrez régler la somme dûe lors de la première séance.';
                                 } else {
                                     $bootMsg = '';
