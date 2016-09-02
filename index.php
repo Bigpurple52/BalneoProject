@@ -131,6 +131,20 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                                 Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
                             </p>
                             <br/>
+                            <p>Nous vous proposons des activités aquatiques pour petits et grands au centre Balnéo K-Hylé:</p>
+                            <ul>
+                                <li><strong>AquaDouce</strong></li>
+                                <li><strong>AquaDynamic</strong></li>
+                                <li><strong></strong></li>
+                                <li><strong>Mix AquaTraining</strong></li>
+                                <li><strong>Jardin Aquatique</strong></li>
+                                <li><strong>Bébés nageurs</strong></li>
+                                <li><strong>Aquaphobie</strong></li>
+                                <li><strong>Stage de natation enfants</strong></li>
+                            </ul>
+                            <br>
+                            <p class="underbar centered">Les inscriptions s'effectuent en ligne: des crédits seront attribués sur votre compte et vous aurez la possibilité de réserver, modifier et annuler vos séances directement via le planning</p>
+                            <br>
                             <h3>Equipement</h3>
                             <p>Les séances se déroulent dans une <em>piscine</em> de 6m par 3m, profonde de 1,2m, chauffée entre
                                 31°c et 33°c.</p>
@@ -178,10 +192,10 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                             <h4>Informations complémentaires</h4>
                             <p>Les séances sont dispensées en petits groupes (10 personnes maximum)</p>
 
-                            <p>Suite à votre inscription en ligne, vous recevrez un mail de confirmation</p>
+                            <p>Suite à votre inscription en ligne, vous aurez la possibilité de choisir votre formule de réserver (toujours dans l'onglet inscription et ce, une fois que vous serez connecté) et de choisir de(s) créneau(x) horaire(s) de votre choix en cliquant directement sur le planning</p>
 
-                            <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB
-                                non acceptée</p>
+                            <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB non acceptée</p>
+                            <br>
                             <p>Vacances scolaires :<p>
                             <ul>
                                 <li>- Les créneaux du midi sont maintenus et restent inchangés</li>
@@ -189,6 +203,7 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                                 <li>- MIX (AquaDynamic + Aquabike) à 19H (du lundi au vendredi)</li>
                                 <li>- PAS DE JARDIN AQUATIQUE ET DE COURS AQUABABY PENDANT LES PETITES VACANCES SCOLAIRE</li>
                             </ul>
+                            <br>
                             <p>Pour tous les cours :</p>
                             <ul>
                                 <li>- 5 séances valable 6 semaines</li>

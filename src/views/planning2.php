@@ -115,7 +115,7 @@ if (!isset($_SESSION['user'])) {
                     <!--Reussir à choper les dates..-->
                     <section class="col-sm-8" id="main">
                         <h2>Planning</h2>
-                        <h4 class="underbar centered">Les séances en rouge ne sont actuellement pas disponibles!</h4>
+                        <h4 class="underbar centered">Les créneaux en rouge ne sont actuellement pas disponibles!</h4>
                         <div id='calendar'></div>
                     </section>
                     <!-- sidebar droite-->

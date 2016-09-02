@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
         <meta name="description" content="activité aquatique à Montpellier : Aquadouce">
-        <meta name="keywords" content="Activités aquatiques;AquaGym;Aquadouce;Montpellier">
+        <meta name="keywords" content="Activités aquatiques;AquaGym;Aquadouce;Montpellier,senior, obésité">
         <title>aqua-balneo.fr : Aquadouce</title>
         <link rel="icon" href="../../favicon.ico" />
         <link rel="stylesheet" href="../../css/bootstrap-theme.min.css">
@@ -118,6 +118,8 @@ if (!isset($_SESSION['user'])) {
                             <div class="row marginTop50">
                                 <div class="col-sm-12">
                                     <article>
+                                        <p class='underbar'>ADAPTES AUX <strong>SENIORS</strong> ET AUX PERSONNES SOUFFRANT D'<strong>OBESITE</strong></p>
+                                        <p class='underbar'>Votre coach vous guide dans chacune de vos difficultés rencontrées et trouve des alternatives adaptées à vos besoins <p>
                                         <p>Cours d’<strong>aquagym</strong> douce permettant de raffermir son corps, de se maintenir en forme et de se muscler en douceur.</p>
 
                                         <p>Après plusieurs séances d’<strong>aquagym</strong>, <span class="bold">les bienfaits sont multiples :</span></p>

@@ -79,7 +79,7 @@ if ($gg) {
             . $passage_ligne . "*sous réserve du nombre de personne minimum inscrit"
             . $passage_ligne . $passage_ligne
             . $passage_ligne . "RDV AU CENTRE BALNEO K-HYLE"
-            . $passage_ligne . "100 impasse des Fabriquants 34820 Teyran"
+            . $passage_ligne . "100 impasse des Fabricants 34820 Teyran"
             . $passage_ligne . $passage_ligne
             . $passage_ligne . "N’oubliez pas d’imprimer et d’apporter la fiche d'inscription (en pièce jointe) faisant foi ainsi que votre règlement lors de votre première séance"
             . $passage_ligne . "(Attention les cartes bancaires ne sont pas acceptées)"
@@ -105,7 +105,7 @@ if ($gg) {
             . "<p>*sous réserve du nombre de personne minimum inscrit</p>"
             . "<br>"
             . "<p>RDV AU CENTRE BALNEO K-HYLE</p>"
-            . "<p>100 impasse des Fabriquants 34820 Teyran</p>"
+            . "<p>100 impasse des Fabricants 34820 Teyran</p>"
             . "<br>"
             . "<p>N’oubliez pas d’imprimer et d’apporter la fiche d'inscription (en pièce jointe) faisant foi ainsi que votre règlement lors de votre première séance</p>"
             . "<p>(Attention les cartes bancaires ne sont pas acceptées)</p>"
