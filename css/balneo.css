@@ -343,6 +343,8 @@ a.AquaBaby{
 a.noClick{
     pointer-events:none;
     background-color: red;
+    text-align: center;
+    font-size: 1.8rem;
 }
 
 #myForm2{
