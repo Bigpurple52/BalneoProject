@@ -43,7 +43,7 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                             <?php
                             if (isset($_SESSION['user'])) {
                                 if (!empty($boot) && $boot == 1) {
-                                    $bootMsg = '<p>Votre choix a bien été pris en compte. Vous devrez régler la somme dûe lors de la première séance.';
+                                    $bootMsg = '<p>Votre choix a bien été pris en compte. <span class="underbar">Vous devrez régler la somme dûe lors de la première séance.<span></p>';
                                 } else {
                                     $bootMsg = '';
                                 }
