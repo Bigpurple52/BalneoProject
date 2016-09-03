@@ -344,7 +344,7 @@ if (!isset($_SESSION['user'])) {
                             <form id="myForm" role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">
-                                        <label class="control-label" for="nom">Nom</label>
+                                        <label class="control-label" for="nom">Nom *</label>
                                         <input id="nom" class="form-control" type="text" placeholder="Mon nom" name="nom" autofocus value="" data-placement="right"
                                                data-trigger="manual" data-content="Doit contenir entre 2 et 20 caracteres, uniquement de lettres" required="required"
                                                />
@@ -362,7 +362,7 @@ if (!isset($_SESSION['user'])) {
                                                required="required"/>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="mail">Emai *</label>
+                                        <label class="control-label" for="mail">Email *</label>
                                         <input id="mail" class="form-control" type="text" placeholder="Mon email" name="email" data-placement="right" data-trigger="manual"
                                                value="" data-content="Doit etre une adresse mail valide (user@gmail.com)" required="required"/>
                                     </div>

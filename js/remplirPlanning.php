@@ -49,7 +49,7 @@ try {
                                                 }
                                             });
                                         }else if(response === 'jetons'){
-                                            bootbox.alert('Vous devez posséder des crédits pour vous inscrire à cette séance!');
+                                            bootbox.alert('Vous devez posséder des crédits pour vous inscrire à cette séance! Pour cela, cliquer sur l\'onglet inscription pour valider une nouvelle formule.');
                                         }else if(response === 'anterieur'){
                                             bootbox.alert('Vous ne pouvez pas vous inscrire à une séance dont la date est déjà passée!');
                                         }

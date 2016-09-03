@@ -47,7 +47,7 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                                 } else {
                                     $bootMsg = '';
                                 }
-                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a>' . $bootMsg . '</div>';
+                                echo'<div class="user-info alert-info">Connecté en tant que : <br>' . $_SESSION['user'] . '<br><a href="./src/controllers/logout.php" rel="nofollow"><button type="button" class="btn btn-danger">Se déconnecter</button></a></div>';
                             } else {
                                 echo '<form class="well" name="connexion" method="POST" action="./src/controllers/connexion.php">';
                                 echo '<div class = "form-group" id = "login-form">';
@@ -124,18 +124,21 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                         <div class="accueilContent">
                             <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
                             <h1 class="contentTitle">SPA & FORME</h1>
+                            <?php
+                                echo $bootMsg
+                            ?>
                             <div class="col-sm-12 col-sm-offset-3">
                                 <img src="./assets/acceuil.JPG" id="indexPhoto" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
                             </div>
-                            <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à <strong>Teyran</strong>, à 12km de la Comédie de <strong>Montpellier.</strong>
-                                Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.
-                            </p>
+                            <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à <strong>Teyran</strong>, à 12km de la Comédie de <strong>Montpellier.</strong></p>
+                            <p> Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.</p>                           
+                            
                             <br/>
                             <p>Nous vous proposons des activités aquatiques pour petits et grands au centre Balnéo K-Hylé:</p>
                             <ul>
                                 <li><strong>AquaDouce</strong></li>
                                 <li><strong>AquaDynamic</strong></li>
-                                <li><strong></strong></li>
+                                <li><strong>AquaBike</strong></li>
                                 <li><strong>Mix AquaTraining</strong></li>
                                 <li><strong>Jardin Aquatique</strong></li>
                                 <li><strong>Bébés nageurs</strong></li>
