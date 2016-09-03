@@ -67,7 +67,7 @@ function insertUser()
                     . $passage_ligne . ">A bientot dans notre centre K-Hylé!";
             $message_html = "<html><head></head><body>"
                     . "<p>Bonjour " . $prenom . " " . $nom . ",</p>"
-                    . "<p>vous venez de vous inscrire sur le site <b>aqua-baleno.fr</b>.</p>"
+                    . "<p>vous venez de vous inscrire sur le site <b>aqua-balneo.fr</b>.</p>"
                     . "<p>Ce mail est un récapitulatif de vos informations.</p>"
                     . "<br>"
                     . "<p>Mon identifiant de connexion : " . $email . "</p>"

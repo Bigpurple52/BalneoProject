@@ -341,6 +341,21 @@ if (!isset($_SESSION['user'])) {
                                     </div>
                                 </div>
                             </form>
+                            <?php
+                                if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
+                                    include_once('./InscriptionCheck.php');
+                                    insertUser();
+                                    if ($etatInscription) {
+                                        echo '<p class = "alert-success">Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé. Veuillez choisir votre(vos) activité(s) et formule(s) dans l\'onglet INSCRIPTION. Vous avez dès à présent la possibilité de réserver vos séances en ligne via l\'onglet PLANNING</p>';
+                                        echo '<script type="text/javascript">window.alert("Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.");</script>';
+                                    } elseif (!$etatInscription) {
+                                        echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
+                                    }
+                                } else {
+                                    echo '<p class = "alert-danger">* Tous les champs sont obligatoires.</p>';
+                                }
+                                unset($etatInscription);
+                            ?>
                             <form id="myForm" role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
                                     <div class="form-group">
@@ -399,21 +414,6 @@ if (!isset($_SESSION['user'])) {
                                                data-trigger="manual" value="" data-content="Code Postal" required="required"/>
                                     </div>
                                     <hr/>
-                                    <?php
-                                    if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
-                                        include_once('./InscriptionCheck.php');
-                                        insertUser();
-                                        if ($etatInscription) {
-                                            echo '<p class = "alert-success">Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé. Veuillez choisir votre(vos) activité(s) et formule(s) dans l\'onglet INSCRIPTION. Vous avez dès à présent la possibilité de réserver vos séances en ligne via l\'onglet PLANNING</p>';
-                                            echo '<script type="text/javascript">window.alert("Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.");</script>';
-                                        } elseif (!$etatInscription) {
-                                            echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
-                                        }
-                                    } else {
-                                        echo '<p class = "alert-danger">* Tous les champs sont obligatoires.</p>';
-                                    }
-                                    unset($etatInscription);
-                                    ?>
                                     <input type="submit" class="btn btn-primary" name="submit" value="S'incrire" />
                                 </div>
                             </form>
