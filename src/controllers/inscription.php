@@ -185,22 +185,22 @@ if (!isset($_SESSION['user'])) {
                                             <div class="radio">
                                                 <label class="control-label" for="aquabike1">
                                                     <input id="aquabike1" type="radio" name="aquabike"  value="5" />
-                                                    5 séances 70€</label>
+                                                    5 séances 90€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="aquabike2">
                                                     <input id="aquabike2" type="radio" name="aquabike"  value="10" />
-                                                    10 séances 130€</label>
+                                                    10 séances 165€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="aquabike3">
                                                     <input id="aquabike3" type="radio" name="aquabike"  value="20" />
-                                                    20 séances 250€</label>
+                                                    20 séances 300€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="aquabike4">
                                                     <input id="aquabike4" type="radio" name="aquabike"  value="30" />
-                                                    30 séances 360€</label>
+                                                    30 séances 390€</label>
                                             </div>
                                         </div>
                                     </div>
@@ -212,22 +212,22 @@ if (!isset($_SESSION['user'])) {
                                             <div class="radio">
                                                 <label class="control-label" for="aquatraining1">
                                                     <input id="aquatraining1" type="radio" name="aquatraining"  value="5" />
-                                                    5 séances 70€</label>
+                                                    5 séances 80€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="aquatraining2">
                                                     <input id="aquatraining2" type="radio" name="aquatraining"  value="10" />
-                                                    10 séances 130€</label>
+                                                    10 séances 150€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="aquatraining3">
                                                     <input id="aquatraining3" type="radio" name="aquatraining"  value="20" />
-                                                    20 séances 250€</label>
+                                                    20 séances 280€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="aquatraining4">
                                                     <input id="aquatraining4" type="radio" name="aquatraining"  value="30" />
-                                                    30 séances 360€</label>
+                                                    30 séances 375€</label>
                                             </div>
                                         </div>
                                     </div>
@@ -237,24 +237,9 @@ if (!isset($_SESSION['user'])) {
                                         </div>
                                         <div class="form-group col-sm-3">
                                             <div class="radio">
-                                                <label class="control-label" for="aquaphobie1">
-                                                    <input id="aquaphobie1" type="radio" name="aquaphobie"  value="5" />
-                                                    5 séances 70€</label>
-                                            </div>
-                                            <div class="radio">
                                                 <label class="control-label" for="aquaphobie2">
                                                     <input id="aquaphobie2" type="radio" name="aquaphobie"  value="10" />
-                                                    10 séances 130€</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label class="control-label" for="aquaphobie3">
-                                                    <input id="aquaphobie3" type="radio" name="aquaphobie"  value="20" />
-                                                    20 séances 250€</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label class="control-label" for="aquaphobie4">
-                                                    <input id="aquaphobie4" type="radio" name="aquaphobie"  value="30" />
-                                                    30 séances 360€</label>
+                                                    10 séances 205€</label>
                                             </div>
                                         </div>
                                     </div>
@@ -264,24 +249,14 @@ if (!isset($_SESSION['user'])) {
                                         </div>
                                         <div class="form-group col-sm-3">
                                             <div class="radio">
-                                                <label class="control-label" for="aquababy1">
-                                                    <input id="aquababy1" type="radio" name="aquababy"  value="5" />
-                                                    5 séances 70€</label>
-                                            </div>
-                                            <div class="radio">
                                                 <label class="control-label" for="aquababy2">
                                                     <input id="aquababy2" type="radio" name="aquababy"  value="10" />
-                                                    10 séances 130€</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label class="control-label" for="aquababy3">
-                                                    <input id="aquababy3" type="radio" name="aquababy"  value="20" />
-                                                    20 séances 250€</label>
+                                                    10 séances 170€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="aquababy4">
                                                     <input id="aquababy4" type="radio" name="aquababy"  value="30" />
-                                                    30 séances 360€</label>
+                                                    265€ les 6 mois</label>
                                             </div>
                                         </div>
                                     </div>
@@ -291,24 +266,14 @@ if (!isset($_SESSION['user'])) {
                                         </div>
                                         <div class="form-group col-sm-3">
                                             <div class="radio">
-                                                <label class="control-label" for="jardinaquatique1">
-                                                    <input id="jardinaquatique1" type="radio" name="jardinaquatique"  value="5" />
-                                                    5 séances 70€</label>
-                                            </div>
-                                            <div class="radio">
                                                 <label class="control-label" for="jardinaquatique2">
                                                     <input id="jardinaquatique2" type="radio" name="jardinaquatique"  value="10" />
-                                                    10 séances 130€</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label class="control-label" for="jardinaquatique3">
-                                                    <input id="jardinaquatique3" type="radio" name="jardinaquatique"  value="20" />
-                                                    20 séances 250€</label>
+                                                    10 séances 160€</label>
                                             </div>
                                             <div class="radio">
                                                 <label class="control-label" for="jardinaquatique4">
                                                     <input id="jardinaquatique4" type="radio" name="jardinaquatique"  value="30" />
-                                                    30 séances 360€</label>
+                                                    230€ les 6 mois</label>
                                             </div>
                                         </div>
                                     </div>
@@ -342,19 +307,19 @@ if (!isset($_SESSION['user'])) {
                                 </div>
                             </form>
                             <?php
-                                if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
-                                    include_once('./InscriptionCheck.php');
-                                    insertUser();
-                                    if ($etatInscription) {
-                                        echo '<p class = "alert-success">Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé. Veuillez choisir votre(vos) activité(s) et formule(s) dans l\'onglet INSCRIPTION. Vous avez dès à présent la possibilité de réserver vos séances en ligne via l\'onglet PLANNING</p>';
-                                        echo '<script type="text/javascript">window.alert("Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.");</script>';
-                                    } elseif (!$etatInscription) {
-                                        echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
-                                    }
-                                } else {
-                                    echo '<p class = "alert-danger">* Tous les champs sont obligatoires.</p>';
+                            if (filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING) === 'POST') {
+                                include_once('./InscriptionCheck.php');
+                                insertUser();
+                                if ($etatInscription) {
+                                    echo '<p class = "alert-success">Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé. Veuillez choisir votre(vos) activité(s) et formule(s) dans l\'onglet INSCRIPTION. Vous avez dès à présent la possibilité de réserver vos séances en ligne via l\'onglet PLANNING</p>';
+                                    echo '<script type="text/javascript">window.alert("Inscription réussie avec succès. Un mail récapitulatif contenant vos informations va vous être envoyé.");</script>';
+                                } elseif (!$etatInscription) {
+                                    echo '<p class = "alert-danger">L\'inscription a échoué. Tous les champs sont obligatoires.</p>';
                                 }
-                                unset($etatInscription);
+                            } else {
+                                echo '<p class = "alert-danger">* Tous les champs sont obligatoires.</p>';
+                            }
+                            unset($etatInscription);
                             ?>
                             <form id="myForm" role="form" class="well" name="inscription1" method="POST" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_STRING); ?>">
                                 <div class="form-group" id="login-form">
@@ -439,11 +404,11 @@ if (!isset($_SESSION['user'])) {
                         <h4>Informations complémentaires</h4>
                         <p>Les séances sont dispensées en petits groupes (10 personnes maximum)</p>
                         <p>Suite à votre inscription au site :</p>
-                            <ul style="font-weight: bold; font-size: 14">
-                                <li>1) Vous connecter</li>
-                                <li>2) Choisir votre formule et activité dans l'onglet 'Inscription'</li>
-                                <li>3) Réserver vos créneaux directement via le planning</li>
-                            </ul>
+                        <ul style="font-weight: bold; font-size: 14">
+                            <li>1) Vous connecter</li>
+                            <li>2) Choisir votre formule et activité dans l'onglet 'Inscription'</li>
+                            <li>3) Réserver vos créneaux directement via le planning</li>
+                        </ul>
 
                         <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB
                             non acceptée</p>
