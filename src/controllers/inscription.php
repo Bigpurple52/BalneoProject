@@ -282,7 +282,7 @@ if (!isset($_SESSION['user'])) {
                                             <p class="radioTitle">Stage enfant</p>
                                         </div>
                                         <div class="form-group col-sm-3">
-                                            <div class="radio" style="margin-top:20%">
+                                            <div class="radio">
                                                 <label class="control-label" for="stage">
                                                     <input id="stage" type="radio" name="stagenatation"  value="5" />
                                                     La semaine à 105€</label>
@@ -294,7 +294,7 @@ if (!isset($_SESSION['user'])) {
                                             <p class="radioTitle">Cours particuliers</p>
                                         </div>
                                         <div class="form-group col-sm-3">
-                                            <div class="radio" style="margin-top:20%">
+                                            <div class="radio">
                                                 <label class="control-label" for="particulier">
                                                     <input id="particulier" type="radio" name="particulier" value="10"/>
                                                     10 séances à 245€</label>
