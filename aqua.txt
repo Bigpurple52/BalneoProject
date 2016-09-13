@@ -1,0 +1,67 @@
+id: aquabalncxaquadb
+mdp: 3Kp6aSDbgkK7
+
+mdp email: noemiekhyle33
+
+need srv ftp
+
+OVH:
+id: jn29144-ovh
+mdp: noemie33
+
+
+myDB:
+$sql = new PDO('mysql:host=localhost;dbname=balneodb', 'root', 'MySQL');
+OVH DB:
+$sql = new PDO('mysql:host=aquabalncxaquadb.mysql.db;dbname=aquabalncxaquadb', 'aquabalncxaquadb', '3Kp6aSDbgkK7');
+
+
+////////////////////
+//Trace mail type://
+////////////////////
+Madame, Monsieur,
+ 
+Nous avons bien reçut votre fiche d’inscription et avons le plaisir de vous informer sa validation* 
+
+ 
+Vos coachs Noémie ou Damien vous attendent donc pour votre première séance !
+ 
+ 
+*sous réserve du nombre de personne minimum inscrit
+ 
+ 
+RDV AU CENTRE BALNEO K-HYLE
+100 impasse des Fabriquants 34820 Teyran
+
+
+ 
+N’oubliez pas d’imprimer et d’apporter la fiche d'inscription (en pièce jointe) faisant foi ainsi que votre règlement lors de votre première séance
+(Attention les cartes bancaires ne sont pas acceptées)
+ 
+ 
+
+Toute inscription non décommandée moins de 48H à l’avance sera due.
+Toute activité commencée est due, il ne sera effectué aucun remboursement.
+ 
+ 
+ 
+Il est vivement recommandé de vous inscrire sur notre page Facebook pour vous tenir au courant de l’actualité et des offres du moment:
+ 
+Ø  www.facebook.com/Aquagym.Natation.Teyran/
+ 
+ 
+ 
+ 
+
+
+En vous remerciant de votre intérêt et à très bientôt
+
+Cordialement,
+
+Noémie Joulie
++33 783 552 013
+www.aqua-balneo.fr
+www.facebook.com/Aquagym.Natation.Teyran
+
+
+Mettre la fiche d'inscription en PJ

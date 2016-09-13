@@ -195,7 +195,12 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                             <h4>Informations complémentaires</h4>
                             <p>Les séances sont dispensées en petits groupes (10 personnes maximum)</p>
 
-                            <p>Suite à votre inscription en ligne, vous aurez la possibilité de choisir votre formule de réserver (toujours dans l'onglet inscription et ce, une fois que vous serez connecté) et de choisir de(s) créneau(x) horaire(s) de votre choix en cliquant directement sur le planning</p>
+                            <p>Suite à votre inscription au site :</p>
+                            <ul style="font-weight: bold; font-size: 14">
+                            	<li>1) Vous connecter</li>
+                            	<li>2) Choisir votre formule et activité dans l'onglet 'Inscription'</li>
+                            	<li>3) Réserver vos créneaux directement via le planning</li>
+                        	</ul>
 
                             <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB non acceptée</p>
                             <br>
