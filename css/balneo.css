@@ -346,8 +346,12 @@ a.noClick{
     text-align: center;
     font-size: 1.8rem;
 }
+.msgSuccess{
+    border: 1px solid black;
+    background-color: lightblue;
+}
 
-#myForm2{
+#myForm2, #myFormJeton{
     color: white;
 }
 

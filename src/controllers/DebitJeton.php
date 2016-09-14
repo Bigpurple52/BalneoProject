@@ -43,7 +43,7 @@ try {
     (int) $userId = (int) $userToken['id'];
     $success = true;
 
-    $bdd = $sql->prepare("SELECT id, maxUser FROM planning WHERE start = :start AND title = :title");
+    $bdd = $sql->prepare("SELECT id, maxUser FROM planning WHERE planning.start = :start AND title = :title");
     $start = $start->format('Y-m-d H:i:s');
     $bdd->bindParam(':start', $start);
     $bdd->bindParam(':title', $filteredPost['event']);
@@ -62,7 +62,9 @@ if (!empty($idAct) && !empty($maxUser) && !empty($userId)) {
         $counter = $bdd2->fetch();
         $maxTest = (int) $counter['COUNT(*)'];
         if ($maxTest >= $maxUser) {
-            $response = false;
+            $response = 'full';
+            echo $response;
+            exit();
         } elseif ($maxTest < $maxUser) {
             $response = true;
         }

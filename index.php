@@ -43,7 +43,8 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                             <?php
                             if (isset($_SESSION['user'])) {
                                 if (!empty($boot) && $boot == 1) {
-                                    $bootMsg = '<p>Votre choix a bien été pris en compte. <span class="underbar">Vous devrez régler la somme dûe lors de la première séance.<span></p>';
+                                    $bootMsg = '<p class="centered success msgSuccess">Votre choix a bien été pris en compte. <span class="underbar">Vous devrez régler la somme dûe lors de la première séance.<span></p>';
+                                    echo '<script type=text/javascript>window.alert("Vous avez réservé une formule. Votre choix a bien été pris en compte.");</script>';
                                 } else {
                                     $bootMsg = '';
                                 }
@@ -125,14 +126,14 @@ $boot = filter_input(INPUT_GET, 'bootbox');
                             <h1 class="contentTitle">ACTIVITES AQUATIQUES CENTRE BALNEO K-HYLE</h1>
                             <h1 class="contentTitle">SPA & FORME</h1>
                             <?php
-                                echo $bootMsg
+                            echo $bootMsg
                             ?>
                             <div class="col-sm-12 col-sm-offset-3">
                                 <img src="./assets/acceuil.JPG" id="indexPhoto" class="img-thumbnail img-accueil" alt="Acceuil" style="width:50%;height: 50%" />
                             </div>
                             <p class="marginTop50">Notre centre est situé 100 impasse des fabricants à <strong>Teyran</strong>, à 12km de la Comédie de <strong>Montpellier.</strong></p>
-                            <p> Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.</p>                           
-                            
+                            <p> Un parking privatif, avec places handicapées, vous permet de stationner juste devant l’entrée.</p>
+
                             <br/>
                             <p>Nous vous proposons des activités aquatiques pour petits et grands au centre Balnéo K-Hylé:</p>
                             <ul>
@@ -197,10 +198,10 @@ $boot = filter_input(INPUT_GET, 'bootbox');
 
                             <p>Suite à votre inscription au site :</p>
                             <ul style="font-weight: bold; font-size: 14">
-                            	<li>1) Vous connecter</li>
-                            	<li>2) Choisir votre formule et activité dans l'onglet 'Inscription'</li>
-                            	<li>3) Réserver vos créneaux directement via le planning</li>
-                        	</ul>
+                                <li>1) Vous connecter</li>
+                                <li>2) Choisir votre formule et activité dans l'onglet 'Inscription'</li>
+                                <li>3) Réserver vos créneaux directement via le planning</li>
+                            </ul>
 
                             <p>La totalité du règlement s’effectue en début de première séance par chèque ou espèces : CB non acceptée</p>
                             <br>

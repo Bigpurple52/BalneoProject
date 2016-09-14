@@ -25,6 +25,15 @@ if ($bdd->execute()) {
         $activite[] = $result;
     }
 }
+$bdd3 = $sql->prepare('SELECT aquadouce, aquadynamic, aquabike, aquaphobie, aquatraining, jardinaquatique, stagenatation, aquababy, particulier FROM usertable WHERE email = :email');
+$bdd3->bindParam(':email', $email);
+if ($bdd3->execute()) {
+    while ($reqRes = $bdd3->fetch(PDO::FETCH_ASSOC)) {
+        $token[] = $reqRes;
+    }
+} else {
+    $token = 0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -166,6 +175,26 @@ if ($bdd->execute()) {
                                     </tr>
                                 </tfoot>
                             </table>
+                            <hr>
+                            <h2 class="inscription" id="toShow">Mes jetons restant</h2>
+                            <?php
+                            if (!empty($token) && $token !== 0) {
+                                echo '<table id="myFormJeton" class="table">';
+                                echo '<thead>';
+                                echo '<tr>';
+                                echo '<th>Activité</th>';
+                                echo '<th>Nombre de jetons restant</th>';
+                                for ($i = 0; $i < count($token); $i++) {
+                                    foreach ($token[$i] as $key => $value) {
+                                        echo '<tr>';
+                                        echo '<td>' . $key . '</td>';
+                                        echo '<td>' . $value . '</td>';
+                                        echo '</tr>';
+                                    }
+                                }
+                                echo '</table>';
+                            }
+                            ?>
                             <hr class="hrtrait" />
                             <h2 class="inscription" id="toHide">Vos informations personnelles</h2>
                             <hr />

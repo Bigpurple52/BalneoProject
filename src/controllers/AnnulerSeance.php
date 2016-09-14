@@ -29,9 +29,6 @@ $start->modify('-2 days');
 $activite = mb_strtolower($filteredPost['event']);
 $realStart = $start->format('Y-m-d H:i:s');
 if ($realStart >= $realToday) {
-    if ($activite === 'mixaquatraining') {
-        $activite = 'aquatraining';
-    }
     $email = $_SESSION['email'];
     $bdd = $sql->prepare('SELECT id FROM planning WHERE `title` = :activite AND `start` = :start');
     $bdd->bindParam(':activite', $activite);
@@ -48,6 +45,9 @@ if ($realStart >= $realToday) {
     $bdd2->bindParam(':activite', $idActivite);
     $bdd2->bindParam(':user', $idUser);
     if ($bdd2->execute()) {
+        if ($activite === 'mixaquatraining') {
+            $activite = 'aquatraining';
+        }
         $bdd3 = $sql->prepare('SELECT ' . $activite . ' FROM usertable WHERE email = :email');
         $bdd3->bindParam(':email', $email);
         $bdd3->execute();

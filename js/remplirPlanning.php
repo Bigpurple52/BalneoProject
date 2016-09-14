@@ -43,6 +43,8 @@ try {
                                                                 bootbox.alert('Inscription réussie. Vous allez recevoir un mail de confirmation à cette adresse : " . htmlentities($_SESSION['user']) . " . Rendez-vous dans la page \'Mon Profil\' pour voir toutes les séances auxquelles vous êtes inscrit.');
                                                             } else if(response === '0'){
                                                                 bootbox.alert('Vous êtes déjà inscrit à cette séance. Votre compte n\'a pas été débité.');
+                                                            } else if(response === 'full'){
+                                                                bootbox.alert('Cette séance est complète. Veuillez en choisir une autre.');
                                                             }
                                                         }
                                                     });
