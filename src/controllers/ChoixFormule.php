@@ -31,12 +31,19 @@ $bdd->bindParam('email', $email);
 $bdd->execute();
 $oldToken = [];
 $actResult = $bdd->fetch(PDO::FETCH_ASSOC);
+$tokenForMail = '';
 foreach ($filteredPost as $key => $value) {
     if (in_array($key, $actArray)) {
         array_push($choosenActArray, $key);
         $valArray[$key] = $value;
         $oldToken[$key] = $actResult[$key];
+        $tokenForMail .= $value . ', ';
     }
+}
+if (is_array($choosenActArray)) {
+    $stringForMail = implode(', ', $choosenActArray);
+} elseif (is_string($choosenActArray)) {
+    $stringForMail = $choosenActArray;
 }
 
 $finalActArray = implode(', ', $choosenActArray);
@@ -156,6 +163,54 @@ if ($gg) {
     //==========
     //=====Envoi de l'e-mail.
     mail($email, $sujet, $message, $header);
+    //==========
+
+
+
+    $dateNow = new DateTime('now');
+    $dateToSend = $dateNow->format('d-m-Y');
+    //=====Déclaration des messages au format texte et au format HTML.
+    $message_txt2 = "Confirmation d'inscription à une formule."
+            . $passage_ligne . "L'utilisateur " . $_SESSION['nom'] . "  " . $_SESSION['prenom']
+            . $passage_ligne . "A choisi " . $stringForMail . " avec ce nombre de jeton respectivement " . $tokenForMail
+            . $passage_ligne . "Au jour du:" . $dateToSend;
+    $message_html2 = "<html><head></head><body>"
+            . "<pConfirmation d'inscription à une formule.</p>"
+            . "<p>L'utilisateur " . $_SESSION['nom'] . "  " . $_SESSION['prenom'] . "</p>"
+            . "<p>A choisi " . $stringForMail . " avec ce nombre de jeton respectivement " . $tokenForMail . "</p>"
+            . "<p>Au jour du:" . $dateToSend . "</p>"
+            . "</body></html>";
+    //==========
+    //=====Création de la boundary
+    $boundary = " -----=" . md5(rand());
+    //==========
+    //=====Définition du sujet.
+    $subject = "Inscription aux formules";
+    //=========
+    //=====Création du header de l'e-mail.
+    $header2 = "From: \"K-Hyle\"<k-hyle@aqua-balneo.fr>" . $passage_ligne;
+    $header2.= "Reply-to: \"K-Hyle\" <k-hyle@aqua-balneo.fr>" . $passage_ligne;
+    $header2.= "MIME-Version: 1.0" . $passage_ligne;
+    $header2.= "Content-Type: multipart/alternative;" . $passage_ligne . " boundary=\"$boundary\"" . $passage_ligne;
+    //==========
+    //=====Création du message.
+    $message2 = $passage_ligne . "--" . $boundary . $passage_ligne;
+    //=====Ajout du message au format texte.
+    $message2.= "Content-Type: text/plain; charset=\"utf-8\"" . $passage_ligne;
+    $message2.= "Content-Transfer-Encoding: 8bit" . $passage_ligne;
+    $message2.= $passage_ligne . $message_txt2 . $passage_ligne;
+    //==========
+    $message2.= $passage_ligne . "--" . $boundary . $passage_ligne;
+    //=====Ajout du message au format HTML
+    $message2.= "Content-Type: text/html; charset=\"utf-8\"" . $passage_ligne;
+    $message2.= "Content-Transfer-Encoding: 8bit" . $passage_ligne;
+    $message2.= $passage_ligne . $message_html2 . $passage_ligne;
+    //==========
+    $message2.= $passage_ligne . "--" . $boundary . "--" . $passage_ligne;
+    $message2.= $passage_ligne . "--" . $boundary . "--" . $passage_ligne;
+    //==========
+    //=====Envoi de l'e-mail.
+    mail('noem00@hotmail.fr', $subject, $message2, $header2);
     //==========
 }
 
